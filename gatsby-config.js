@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Rocsites Gastby template 3`,
-    description: `Generic Gatsby template for businesses`,
+    title: `Beth Rogers Agency Inc.`,
+    description: `We are a local, third generation, friendly insurance agency`,
     author: `Doug Kellermeyer`,
   },
   plugins: [
