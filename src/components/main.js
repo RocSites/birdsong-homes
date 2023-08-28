@@ -5,7 +5,7 @@ import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
 import { Link } from "gatsby"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import rocBuildingOne from "../images/yassine-khalfalli-roc-image.jpg"
+import bethRogersBuilding from "../images/beth_rogers_office.jpeg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
@@ -385,7 +385,7 @@ const withStyles = makeStyles(() => ({
         textAlign: "center",
         fontSize: "2rem",
         color: "black",
-        textTransform: "uppercase",
+        // textTransform: "uppercase",
         marginBottom: 0
     },
     addressText: {
@@ -405,7 +405,7 @@ const withStyles = makeStyles(() => ({
         fontSize: "2rem",
         textAlign: "center",
         color: "black",
-        textTransform: "uppercase"
+        // textTransform: "uppercase"
     },
     socialLinkWrapper: {
         display: "flex",
@@ -480,19 +480,41 @@ const withStyles = makeStyles(() => ({
     },
     mainBanner: {
         display: "flex",
-        marginTop: "25%",
-        marginLeft: "25%",
-        marginRight: "15%",
-        textAlign: "center",
-        position: "absolute",
-        backgroundColor: "white",
-        justifyContent: "center",
-        padding: "20px",
-        borderRadius: "35px",
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ),url(${bethRogersBuilding})`,
+        backgroundSize: "cover",
+        justifyContent: "flex-end",
+        marginTop: "112px",
+        height: "100vh",
         "@media(max-width:600px)": {
-            marginTop: "50%",
-            marginLeft: "15%",
-            marginRight: "15%",
+            justifyContent: "center",
+            padding: "5%"
+        }
+    },
+    mainBannerText: {
+        color: "white",
+        fontSize: "3.5rem",
+        textAlign: "center",
+        fontWeight: "bold",
+        fontFamily: "Nanum Gothic, sans-serif",
+        zIndex: 1,
+        height: "fit-content",
+        backgroundColor: "#0047bb",
+        opacity: "0.85",
+        // borderRadius: "35px",
+        padding: "20px",
+        "@media(max-width:600px)": {
+            fontSize: "2rem",
+            textAlign: "center",
+            padding: "10px",
+        }
+    },
+    mainBannerTextWrapper: {
+        display: "flex",
+        margin: "25% auto",
+        width: "100%",
+        flexDirection: "column",
+        "@media(max-width:600px)": {
+            margin: "25% auto"
         }
     },
 
@@ -540,16 +562,20 @@ const Main = () => {
     return (
         <div className={classes.mainRoot}>
             {/* <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen Wednesday, August 2nd</div> */}
-
-            <img src={rocBuildingOne} className={classes.landingImage} />
-
+            <div className={classes.mainBanner}>
+                <div className={classes.mainBannerTextWrapper}>
+                    <Typography className={classes.mainBannerText}>Beth Rogers Agency <br />
+                        {/* <i>every time</i> */}
+                    </Typography>
+                </div>
+            </div>
             <section class="sectionWrapper">
                 <div className={classes.container}>
                     <div className={classes.container}>
                         <span className={classes.scrollToSectionOne} id="sectionOne"></span>
                     </div>
                     <div className={classes.containerMarginBottomSmall}>
-                        <Typography className={classes.someOfWorkHeader}>Section 1 Header Line 1... <br /> Section 1 Line 2.</Typography>
+                        <Typography className={classes.someOfWorkHeader}>We strive to provide the best possible service while meeting your insurance needs.</Typography>
                     </div>
                 </div>
 
@@ -558,14 +584,14 @@ const Main = () => {
                 <span className={classes.scrollToSectionOne} id="sectionTwo"></span>
             </div>
             <section class="sectionWrapper">
-                <Typography className={classes.someOfWorkHeader}>Section 2 Header Line 1... <br /> Section 2 Line 2.</Typography>
+                <Typography className={classes.someOfWorkHeader}>Products</Typography>
 
-                <Link to="/chill-menu" class="menuContent menuLink chillBlock">
+                {/* <Link to="/chill-menu" class="menuContent menuLink chillBlock">
                     Page 2
                 </Link>
                 <Link to="/grill-menu" class="menuContent menuLink grillBlock">
                     Page 3
-                </Link>
+                </Link> */}
             </section>
             <span className={classes.scrollToLocation} id="sectionThree"></span>
 
@@ -573,8 +599,9 @@ const Main = () => {
                 <div className={classes.container}>
                     <div className={classes.aboutWrapper}>
                         <div className={classes.aboutSectionWrapper}>
-                            <Typography className={classes.aboutTitleHeader}>Section 3</Typography>
-                            <Typography className={classes.addressText}>Section 3 subtext</Typography>
+                            <Typography className={classes.aboutTitleHeader}>Get a quote</Typography>
+                            <Typography className={classes.addressText}>Use the link below to get a free quote</Typography>
+                            <a href="https://nwexpress.com/beth-rogers/multi-quote/getting-started?fbclid=IwAR3_P2WjSWAkt608SHBMEdq3BjuIp3ahR5jyoWmEqHdbTyKPXOIJZqG2mD8" target="_blank">Free Quote</a>
                         </div>
                     </div>
                 </div>
@@ -584,12 +611,12 @@ const Main = () => {
             <section class="py-5 section-bubble4">
                 <div className={classes.container}>
                     <div>
-                        <Typography className={classes.connectHeader}>Connect With Us</Typography>
+                        <Typography className={classes.connectHeader}>Contact Us</Typography>
                         <div className={classes.phoneEmailWrapper}>
-                            <a href="tel:" className={classes.contactPhone}>
+                            <a href="tel:(585) 321-0015" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
                                     <PhoneIcon className={classes.phoneIcon} />
-                                    (123) 456-7890
+                                    (585) 321-0015
                                 </Button>
                             </a>
                             <div className={classes.socialLinkWrapper}>

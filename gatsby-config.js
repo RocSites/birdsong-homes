@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Beth Rogers Agency Inc.`,
-    description: `We are a local, third generation, friendly insurance agency`,
+    description: `We are a local, third generation, friendly insurance agency.`,
     author: `Doug Kellermeyer`,
   },
   plugins: [
@@ -15,7 +15,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },
+    },  
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo/logo.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,

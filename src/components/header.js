@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { makeStyles } from '@material-ui/core'
+import { Typography, makeStyles } from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
 import chillGrillLogoOG from '../images/chill_logo_og.jpeg'
-import RocSitesLogo from "../images/logo/logo.png"
+import NationWideLogoBird from "../images/logo/logo.svg"
 import coneIcon from "../images/cone_icon.png"
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -29,19 +29,19 @@ const withStyles = makeStyles(() => ({
   navBarRoot: {
     position: "fixed",
     display: "flex",
-    background: "gray",
+    // background: "#4c86d1",
+    backgroundColor: "white",
     color: "white",
     justifyContent: "space-between",
     width: "100%",
     height: "112px",
     top: 0,
     boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
-    zIndex: "1",
-    opacity: "0.85"
+    zIndex: 2,
   },
   navBarTitle: {
     maxWidth: 960,
-    padding: `1.45rem 1.0875rem`,
+    padding: "1rem",
   },
   navButton: {
     color: "black",
@@ -88,17 +88,21 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "20px",
     fontSize: "2.5rem",
-    color: "red",
+    color: "white",
     "@media(min-width: 601px)": {
       display: "none"
     }
   },
   navLeftWrapper: {
     display: "flex",
+    justifyContent: "space-between",
+    width: "100%"
   },
   navCallButton: {
     display: "flex",
-    backgroundColor: "#f03d3dcf",
+    backgroundColor: "#0047bb",
+    textDecoration: "none",
+    alignItems: "center",
     padding: "8px 16px",
     color: "white",
     textTransform: "none",
@@ -108,7 +112,7 @@ const withStyles = makeStyles(() => ({
   },
   navCallButtonMobile: {
     display: "flex",
-    backgroundColor: "#f03d3dcf",
+    backgroundColor: "#0047bb",
     padding: "8px 16px",
     color: "white",
     textTransform: "none",
@@ -125,12 +129,19 @@ const withStyles = makeStyles(() => ({
     flexDirection: "column",
   },
   navButtonMobile: {
-  color: "white",
-  // fontWeight: "bold",
-  textTransform: "none",
-  margin: "10px 16px",
-  textDecoration: "none"
-}
+    color: "white",
+    // fontWeight: "bold",
+    textTransform: "none",
+    margin: "10px 16px",
+    textDecoration: "none"
+  },
+  navLogoLink: {
+    color: 'black', 
+    textDecoration: `none`, 
+    display: "flex", 
+    justifyContent: "center", 
+    alignItems: "center"
+  }
 }))
 
 
@@ -149,47 +160,52 @@ const Header = ({ siteTitle }) => {
     >
       <div className={classes.navLeftWrapper}>
         <div className={classes.navBarTitle}>
-          <Link to="/" style={{ color: '#001841', textDecoration: `none` }}>
-            <img className={classes.navLogo} src={RocSitesLogo} alt="company logo" />
+          <Link to="/" className={classes.navLogoLink}>
+            <img className={classes.navLogo} src={NationWideLogoBird} alt="company logo" />
+            <Typography>Beth Rogers Agency</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
           <AnchorLink className={classes.navButton}
-            to="/#sectionOne" title="Section 1">
+            to="/#sectionOne" title="About Us">
           </AnchorLink>
           <AnchorLink className={classes.navButton}
-            to="/#sectionTwo" title="Section 2">
+            to="/#sectionTwo" title="Products">
           </AnchorLink>
           <AnchorLink className={classes.navButton}
-            to="/#sectionThree" title="Section 3">
+            to="/#sectionThree" title="Get a Quote">
           </AnchorLink>
+          <AnchorLink className={classes.navCallButton}
+            to="/#sectionThree" title="Contact Us">
+          </AnchorLink>
+       
 
-          <Button
+          {/* <Button
             className={classes.navCallButton}
-            target="_blank" href="tel:"
+            target="_blank" href="tel:(585) 321-0015"
           >
             <PhoneIcon class="drawerPhoneIcon" />
             Call Us
-          </Button>
+          </Button> */}
         </div>
       </div>
 
-      <div class="socialLinkWrapperNav">
+      {/* <div class="socialLinkWrapperNav">
         <a href="" target="_blank" class="socialLink">
           <img class="socialNav" src={InstagramIcon} />
         </a>
         <a href="" target="_blank" class="socialLink">
           <img class="socialNavFb" src={FacebookIcon} />
         </a>
-      </div>
+      </div> */}
       <div className={classes.navBarHamburgerDrawerWrapper}>
-        <Button
+        {/* <Button
           className={classes.navCallButtonMobile}
           target="_blank" href="tel:"
         >
           <PhoneIcon class="drawerPhoneIcon" />
           Call Us
-        </Button>
+        </Button> */}
         <MenuIcon
           className={classes.hamburgerIcon}
           onClick={toggleDrawer}
@@ -221,7 +237,7 @@ const Header = ({ siteTitle }) => {
 
               <Button
                 class="drawerItemLogin"
-                target="_blank" href="tel:"
+                target="_blank" href="tel:(585) 321-0015"
               >
                 <PhoneIcon class="drawerPhoneIcon" />
                 Call Us
