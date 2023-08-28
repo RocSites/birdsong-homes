@@ -88,7 +88,7 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "20px",
     fontSize: "2.5rem",
-    color: "white",
+    color: "#0047bb",
     "@media(min-width: 601px)": {
       display: "none"
     }
