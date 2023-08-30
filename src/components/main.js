@@ -487,7 +487,7 @@ const withStyles = makeStyles(() => ({
         height: "100vh",
         "@media(max-width:600px)": {
             justifyContent: "center",
-            padding: "5%"
+            // padding: "5%"
         }
     },
     mainBannerText: {
@@ -505,7 +505,7 @@ const withStyles = makeStyles(() => ({
         "@media(max-width:600px)": {
             fontSize: "2rem",
             textAlign: "center",
-            padding: "10px",
+            padding: "15px",
         }
     },
     mainBannerTextWrapper: {
@@ -575,7 +575,7 @@ const Main = () => {
                         <span className={classes.scrollToSectionOne} id="sectionOne"></span>
                     </div>
                     <div className={classes.containerMarginBottomSmall}>
-                        <Typography className={classes.someOfWorkHeader}>We strive to provide the best possible service while meeting your insurance needs.</Typography>
+                        <Typography className={classes.someOfWorkHeader}>We strive to provide the best possible service, while meeting your insurance needs.</Typography>
                     </div>
                 </div>
 
@@ -585,6 +585,13 @@ const Main = () => {
             </div>
             <section class="sectionWrapper">
                 <Typography className={classes.someOfWorkHeader}>Products</Typography>
+                <ul style={{color: "black"}}>
+                    <li>Auto</li>
+                    <li>Commercial</li>
+                    <li>Farm</li>
+                    <li>Home</li>
+                    <li>Powersports</li>
+                </ul>
 
                 {/* <Link to="/chill-menu" class="menuContent menuLink chillBlock">
                     Page 2
@@ -595,14 +602,12 @@ const Main = () => {
             </section>
             <span className={classes.scrollToLocation} id="sectionThree"></span>
 
-            <section class="py-5 section-bubble3">
-                <div className={classes.container}>
-                    <div className={classes.aboutWrapper}>
-                        <div className={classes.aboutSectionWrapper}>
-                            <Typography className={classes.aboutTitleHeader}>Get a quote</Typography>
-                            <Typography className={classes.addressText}>Use the link below to get a free quote</Typography>
-                            <a href="https://nwexpress.com/beth-rogers/multi-quote/getting-started?fbclid=IwAR3_P2WjSWAkt608SHBMEdq3BjuIp3ahR5jyoWmEqHdbTyKPXOIJZqG2mD8" target="_blank">Free Quote</a>
-                        </div>
+            <section style={{ border: "1px solid red", minHeight: "300px" }} className={classes.container}>
+                <div className={classes.aboutWrapper}>
+                    <div className={classes.aboutSectionWrapper}>
+                        <Typography className={classes.aboutTitleHeader}>Get a quote</Typography>
+                        <Typography className={classes.addressText}>Use the link below to get a free quote</Typography>
+                        <a href="https://nwexpress.com/beth-rogers/multi-quote/getting-started?fbclid=IwAR3_P2WjSWAkt608SHBMEdq3BjuIp3ahR5jyoWmEqHdbTyKPXOIJZqG2mD8" target="_blank">Free Quote</a>
                     </div>
                 </div>
             </section>
@@ -612,6 +617,23 @@ const Main = () => {
                 <div className={classes.container}>
                     <div>
                         <Typography className={classes.connectHeader}>Contact Us</Typography>
+                        <br />
+                        <Typography className={classes.connectHeader}>Hours</Typography>
+                        <p>put hours here - see if you can mirror the functionality of sorting the current day of the week to the top like the nationwide does</p>
+                        <p>Day of the Week	Hours
+                            Wed
+                            Open until 5:00 PM
+                            Thu
+                            9:00 AM - 5:00 PM
+                            Fri
+                            9:00 AM - 4:30 PM
+                            Sat	Closed
+                            Sun	Closed
+                            Mon
+                            9:00 AM - 5:00 PM
+                            Tue
+                            9:00 AM - 5:00 PM
+                            Saturday by Appointment Only</p>
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:(585) 321-0015" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
@@ -620,15 +642,17 @@ const Main = () => {
                                 </Button>
                             </a>
                             <div className={classes.socialLinkWrapper}>
-                                <a href="" target="_blank" className={classes.socialLink}>
+                                {/* <a href="" target="_blank" className={classes.socialLink}>
                                     <img className={classes.socialFooter} src={InstagramIcon} />
-                                </a>
+                                </a> */}
+                                <p>move fb to footer</p>
                                 <a href="" target="_blank" className={classes.socialLink}>
                                     <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
                                 </a>
                             </div>
 
                         </div>
+                        <div>put map link here</div>
                         <div className={classes.reviewsWrapper}>
                             <a className={classes.reviewLink}
                                 href=""
@@ -638,7 +662,7 @@ const Main = () => {
                                     className={classes.reviewButton}
                                 >
                                     <div className={classes.reviewStarWrapper}>
-                                        <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
+                                        <Typography className={classes.reviewHeader}>refactor - Leave us a review!</Typography>
                                         <img className={classes.socialFooterMargin} src={GoogleIcon} />
                                         <FiveStar />
                                     </div>
