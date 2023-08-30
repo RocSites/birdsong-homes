@@ -22,7 +22,7 @@ import "./main.css"
 const withStyles = makeStyles(() => ({
   "@global": {
     "*": {
-      // fontFamily: "Angkor !important",
+     fontFamily: "'Montserrat', sans-serif !important",
       fontWeight: "100"
     }
   },
@@ -162,7 +162,7 @@ const Header = ({ siteTitle }) => {
         <div className={classes.navBarTitle}>
           <Link to="/" className={classes.navLogoLink}>
             <img className={classes.navLogo} src={NationWideLogoBird} alt="company logo" />
-            <Typography>Beth Rogers Agency</Typography>
+            <Typography>Beth Rogers Agency - add some pizazz to the nav? change color onScroll?</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>

@@ -3,6 +3,7 @@ import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import bethRogersBuilding from "../images/beth_rogers_office.jpeg"
@@ -12,6 +13,9 @@ import PhoneIcon from '@material-ui/icons/Phone'
 import StarRateIcon from '@material-ui/icons/StarRate';
 import FacebookIcon from "../images/facebook_icon4.svg"
 import InstagramIcon from "../images/instagram_icon4.svg"
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import GoogleIcon from "../images/google_icon.png"
 import "./main.css"
 
@@ -92,7 +96,28 @@ const withStyles = makeStyles(() => ({
         width: "100%",
         margin: "auto",
         "@media(max-width: 600px)": {
-            width: "90%"
+            // padding: "50px 25px",
+        }
+    },
+    someOfWorkHeaderProducts: {
+        textAlign: "center",
+        fontSize: "2rem",
+        color: "white",
+        backgroundColor: "#0047bb",
+        padding: "10px",
+        width: "100%",
+        margin: "auto",
+        "@media(max-width: 600px)": {
+            // padding: "50px 25px",
+        }
+    },
+    productCard: {
+        margin: "15px",
+        "& img": {
+            maxHeight: "345px",
+            width: "100%",
+            aspectRatio: "1/1",
+            objectFit: "cover"
         }
     },
     landingMessageWrapper: {
@@ -124,7 +149,7 @@ const withStyles = makeStyles(() => ({
         marginRight: "0px",
         fontSize: "2em",
         fontWeight: "500",
-        // fontFamily: "Angkor, sans-serif !important",
+        fontFamily: "'Montserrat', sans-serif !important",
         textAlign: "center",
         margin: "auto",
         "@media(max-width: 600px)": {
@@ -141,7 +166,7 @@ const withStyles = makeStyles(() => ({
             marginRight: "0px",
             fontSize: "2em",
             fontWeight: "100",
-            // fontFamily: "Raleway, sans-serif",
+            fontFamily: "'Montserrat', sans-serif !important",
             textAlign: "center",
             margin: "auto"
         }
@@ -230,7 +255,7 @@ const withStyles = makeStyles(() => ({
     contactPhone: {
         color: "black",
         textDecoration: "none",
-        // fontFamily: "Raleway, sans-serif",
+        fontFamily: "'Montserrat', sans-serif !important",
     },
     contactButton: {
         margin: "20px",
@@ -332,7 +357,7 @@ const withStyles = makeStyles(() => ({
         backgroundColor: "#1f5a76",
         margin: "auto",
         marginRight: "10px",
-        fontFamily: "proxima-nova, Helvetica, Arial, sans-serif",
+        fontFamily: "'Montserrat', sans-serif !important",
         borderRadius: "14px"
     },
     bbbCirleText: {
@@ -392,6 +417,13 @@ const withStyles = makeStyles(() => ({
         textAlign: "center",
         margin: "40px 0"
     },
+    quoteButtonLink: {
+        backgroundColor: "#0047bb",
+        color: "white",
+        textTransform: "none",
+        width: "300px",
+        borderRadius: "35px"
+    },
     aboutWrapper: {
         display: "flex",
         flexDirection: "column",
@@ -404,7 +436,8 @@ const withStyles = makeStyles(() => ({
     connectHeader: {
         fontSize: "2rem",
         textAlign: "center",
-        color: "black",
+        color: "white",
+        backgroundColor: "#0047bb"
         // textTransform: "uppercase"
     },
     socialLinkWrapper: {
@@ -464,11 +497,17 @@ const withStyles = makeStyles(() => ({
         flexDirection: "column",
         margin: "20px 0"
     },
+    containerSectionTwoScroll: {
+        display: "flex",
+        flexDirection: "column",
+        // backgroundColor: "#0047bb"
+    },
     containerMarginBottomSmall: {
         display: "flex",
         flexDirection: "column",
         margin: "20px 0",
-        marginBottom: "80px"
+        marginBottom: "80px",
+
     },
     landingImage: {
         width: "100%",
@@ -495,7 +534,7 @@ const withStyles = makeStyles(() => ({
         fontSize: "3.5rem",
         textAlign: "center",
         fontWeight: "bold",
-        fontFamily: "Nanum Gothic, sans-serif",
+        fontFamily: "'Montserrat', sans-serif !important",
         zIndex: 1,
         height: "fit-content",
         backgroundColor: "#0047bb",
@@ -550,6 +589,35 @@ const Main = () => {
         }
     ]
 
+    const productInfo = [
+        {
+            title: "Auto",
+            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
+            description: "auto insurance description"
+        },
+        {
+            title: "Commercial",
+            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
+            description: "commercial insurance description"
+        },
+        {
+            title: "Farm",
+            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
+            description: "farm insurance description"
+        },
+        {
+            title: "Home",
+            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
+            description: "home insurance description"
+        },
+        {
+            title: "Powersports",
+            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
+            description: "powersports insurance description"
+        },
+
+    ]
+
     const FiveStar = () => {
         return (
             <div className={classes.fiveStar}>
@@ -558,6 +626,24 @@ const Main = () => {
         )
     }
 
+    const ProductCard = ({ imagePath, title, description }) => {
+        return (
+            <Card sx={{ maxWidth: 345 }}>
+                <StaticImage src={imagePath} />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {description}
+                    </Typography>
+                </CardContent>
+            </Card>
+        )
+    }
+
+    const testImagePath = "../images/yassine-khalfalli-roc-image.jpg"
+
 
     return (
         <div className={classes.mainRoot}>
@@ -565,12 +651,13 @@ const Main = () => {
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
                     <Typography className={classes.mainBannerText}>Beth Rogers Agency <br />
+                        <Typography>A third generation, local, friendly insurance agency</Typography>
                         {/* <i>every time</i> */}
                     </Typography>
                 </div>
             </div>
-            <section class="sectionWrapper">
-                <div className={classes.container}>
+            <section class="sectionOneSectionWrapper">
+                <div className={classes.containerSectionTwoScroll}>
                     <div className={classes.container}>
                         <span className={classes.scrollToSectionOne} id="sectionOne"></span>
                     </div>
@@ -580,34 +667,111 @@ const Main = () => {
                 </div>
 
             </section>
-            <div className={classes.container}>
+            <div className={classes.containerSectionTwoScroll}>
                 <span className={classes.scrollToSectionOne} id="sectionTwo"></span>
             </div>
-            <section class="sectionWrapper">
-                <Typography className={classes.someOfWorkHeader}>Products</Typography>
-                <ul style={{color: "black"}}>
-                    <li>Auto</li>
-                    <li>Commercial</li>
-                    <li>Farm</li>
-                    <li>Home</li>
-                    <li>Powersports</li>
-                </ul>
+            <section class="productSectionWrapper">
+                <div>
+                    <Typography className={classes.someOfWorkHeaderProducts}>Products</Typography>
+                    <div class="productCardWrapper">
+                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
+                            <StaticImage src="../images/jamie-street-car-white.jpg" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Auto
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Auto description auto description auto description auto description auto description auto description auto description auto description
+                                </Typography>
+                            </CardContent>
 
-                {/* <Link to="/chill-menu" class="menuContent menuLink chillBlock">
-                    Page 2
-                </Link>
-                <Link to="/grill-menu" class="menuContent menuLink grillBlock">
-                    Page 3
-                </Link> */}
+                        </Card>
+                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
+                            <StaticImage src="../images/francesca-tosolini-home.jpg" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Home
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Home description Home description Home description Home description Home description Home description Home description Home description
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
+                            <StaticImage src="../images/tierra-mallorca-renters.jpg" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Renters
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Renters description Renters description Renters description Renters description Renters description Renters description Renters description Renters description
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
+                            <StaticImage src="../images/harley-davidson-one.jpg" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Motorcycle
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
+                            <StaticImage src="../images/vincent-ghilione-boat-one.jpg" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Boat
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Boat description Boat description Boat description Boat description Boat description Boat description Boat description Boat description
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
+                            <StaticImage src="../images/lawrence-crayton-life-one.jpg" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Life
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Life description Life description Life description Life description Life description Life description Life description Life description
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
+                            <StaticImage src="../images/yassine-khalfalli-business.jpg" />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Business
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Business description Business description Business description Business description Business description Business description Business description Business description
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </div>
+
+                    {/* {productInfo.length > 0 ? productInfo.map(obj =>
+                        <ProductCard key={obj.title} imagePath={obj.imagePath} title={obj.title} description={obj.description} />
+                    ) : null} */}
+                </div>
+
+
+
             </section>
             <span className={classes.scrollToLocation} id="sectionThree"></span>
 
-            <section style={{ border: "1px solid red", minHeight: "300px" }} className={classes.container}>
+            <section style={{ minHeight: "300px" }} className={classes.container}>
                 <div className={classes.aboutWrapper}>
                     <div className={classes.aboutSectionWrapper}>
                         <Typography className={classes.aboutTitleHeader}>Get a quote</Typography>
                         <Typography className={classes.addressText}>Use the link below to get a free quote</Typography>
-                        <a href="https://nwexpress.com/beth-rogers/multi-quote/getting-started?fbclid=IwAR3_P2WjSWAkt608SHBMEdq3BjuIp3ahR5jyoWmEqHdbTyKPXOIJZqG2mD8" target="_blank">Free Quote</a>
+                        <Button className={classes.quoteButtonLink} href="https://nwexpress.com/beth-rogers/multi-quote/getting-started?fbclid=IwAR3_P2WjSWAkt608SHBMEdq3BjuIp3ahR5jyoWmEqHdbTyKPXOIJZqG2mD8" target="_blank">
+                            Free Quote
+                        </Button>
                     </div>
                 </div>
             </section>
@@ -618,22 +782,7 @@ const Main = () => {
                     <div>
                         <Typography className={classes.connectHeader}>Contact Us</Typography>
                         <br />
-                        <Typography className={classes.connectHeader}>Hours</Typography>
-                        <p>put hours here - see if you can mirror the functionality of sorting the current day of the week to the top like the nationwide does</p>
-                        <p>Day of the Week	Hours
-                            Wed
-                            Open until 5:00 PM
-                            Thu
-                            9:00 AM - 5:00 PM
-                            Fri
-                            9:00 AM - 4:30 PM
-                            Sat	Closed
-                            Sun	Closed
-                            Mon
-                            9:00 AM - 5:00 PM
-                            Tue
-                            9:00 AM - 5:00 PM
-                            Saturday by Appointment Only</p>
+                        
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:(585) 321-0015" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
@@ -652,6 +801,22 @@ const Main = () => {
                             </div>
 
                         </div>
+                        <Typography className={classes.connectHeader}>Hours</Typography>
+                        <p>put hours here - see if you can mirror the functionality of sorting the current day of the week to the top like the nationwide does</p>
+                        <p>Day of the Week	Hours
+                            Wed
+                            Open until 5:00 PM
+                            Thu
+                            9:00 AM - 5:00 PM
+                            Fri
+                            9:00 AM - 4:30 PM
+                            Sat	Closed
+                            Sun	Closed
+                            Mon
+                            9:00 AM - 5:00 PM
+                            Tue
+                            9:00 AM - 5:00 PM
+                            Saturday by Appointment Only</p>
                         <div>put map link here</div>
                         <div className={classes.reviewsWrapper}>
                             <a className={classes.reviewLink}

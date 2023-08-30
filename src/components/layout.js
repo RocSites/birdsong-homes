@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
         <main className={classes.mainContent}>{children}</main>
         <footer class="footerRoot">
           <div className={classes.footerContent}>
-            <p className={classes.copyrightText}> © {new Date().getFullYear()} Beth Rogers Agency</p>
+            <p className={classes.copyrightText}> © {new Date().getFullYear()} Beth Rogers Agency Inc.</p>
             <a href="tel:(585) 321-0015" className={classes.footerPhone}>
               <PhoneIcon className={classes.phoneIcon} />
               (585) 624-9870
