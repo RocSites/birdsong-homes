@@ -163,7 +163,7 @@ const Header = ({ siteTitle }) => {
         <div className={classes.navBarTitle}>
           <Link to="/" className={classes.navLogoLink}>
             <img className={classes.navLogo} src={NationWideLogoBird} alt="company logo" />
-            <Typography>Beth Rogers Agency - add some pizazz to the nav? change color onScroll?</Typography>
+            <Typography>Beth Rogers Agency - refactor?</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>

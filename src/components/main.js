@@ -556,6 +556,20 @@ const withStyles = makeStyles(() => ({
             margin: "25% auto"
         }
     },
+    sectionTitleText: {
+        fontSize: "2rem",
+        textAlign: "center",
+        marginBottom: "40px"
+    },
+    teamImage: {
+        maxWidth: "500px",
+        padding: "10px",
+        "@media(max-width:600px)": {
+            width: "90%",
+            margin: "auto",
+            borderRadius: "10px"
+        }
+    },
 
 }))
 
@@ -672,12 +686,15 @@ const Main = () => {
                         <br /> <br />
                         Led by our Principal Agent and Owner, <b>Beth Rogers</b>, we strive to provide the best possible service while meeting your insurance needs.
                     </Typography>
-                    <StaticImage class="" src="../images/beth_sign.jpeg" />
+                    <StaticImage className={classes.teamImage} src="../images/beth_sign.jpeg" />
                 </div>
 
+                <Typography className={classes.sectionTitleText}>Meet the Team</Typography>
 
-                <StaticImage src="../images/ellie_image_1.jpeg" />
-                <StaticImage src="../images/mary_image_1.jpeg" />
+                <div class="teamImageWrapper">
+                    <StaticImage className={classes.teamImage} src="../images/ellie_image_1.jpeg" />
+                    <StaticImage className={classes.teamImage} src="../images/mary_image_1.jpeg" />
+                </div>
 
                 <div className={classes.containerSectionTwoScroll}>
                     <div className={classes.container}>

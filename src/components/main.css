@@ -143,11 +143,18 @@ body {
 .aboutWrapper {
     display: flex;
     justify-content: center;
+    padding: 35px;
 }
 
 .aboutUsText {
     padding: 30px;
     line-height: 2;
+    width: 50%
+}
+
+.teamImageWrapper {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .scrollToLocation {
@@ -346,5 +353,9 @@ body {
 
     .mapWrapper iframe {
         width: 90%;
+    }
+
+    .aboutWrapper {
+        flex-direction: column;
     }
 }
