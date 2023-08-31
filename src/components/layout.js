@@ -6,6 +6,8 @@ import Header from "./header"
 import PhoneIcon from '@material-ui/icons/Phone'
 import FaxIcon from '@mui/icons-material/Fax';
 import Typography from '@material-ui/core/Typography'
+import FacebookIcon from "../images/facebook_icon4_white.svg"
+import LinkedInIcon from "../images/linkedin_icon.svg"
 import "./layout.css"
 
 const withStyles = makeStyles(() => ({
@@ -30,8 +32,7 @@ const withStyles = makeStyles(() => ({
   },
   footerContent: {
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    margin: "30px",
     width: "100%",
     flexDirection: "column"
 
@@ -47,9 +48,10 @@ const withStyles = makeStyles(() => ({
     fontSize: "0.7rem"
   },
   footerPhone: {
-    marginTop: "auto",
-    marginBottom: "auto",
+    display: "flex",
+    margin: "5px 0",
     color: "white",
+    textDecoration: "none",
     "@media(max-width: 600px)": {
       textAlign: "center"
     }
@@ -86,15 +88,25 @@ const Layout = ({ children }) => {
         <main className={classes.mainContent}>{children}</main>
         <footer class="footerRoot">
           <div className={classes.footerContent}>
-            <p className={classes.copyrightText}> © {new Date().getFullYear()} Beth Rogers Agency Inc.</p>
             <a href="tel:(585) 321-0015" className={classes.footerPhone}>
               <PhoneIcon className={classes.phoneIcon} />
               (585) 624-9870
             </a>
-            <Typography>
+            <div class="contactNumberWrapper">
               <FaxIcon />
+              (585) 625-0460
+            </div>
+            <div class="socialLinkWrapper">
+              <a href="https://www.facebook.com/bethrogersagency/" target="_blank" class="socialLink">
+                <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
+              </a>
+              <a href="https://www.linkedin.com/in/beth-rogers-378a2710/" target="_blank" class="socialLink">
+                <img className={classes.socialFacebookSpacing} src={LinkedInIcon} />
+              </a>
+            </div>
 
-            </Typography>
+            <div style={{ width: "100%", border: "1px solid white", marginBottom: "20px" }}></div>
+            <p className={classes.copyrightText}> © {new Date().getFullYear()} Beth Rogers Agency Inc.</p>
             <p class="rocsitesText">Website created and maintained by <span><a href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
           </div>
         </footer>

@@ -629,7 +629,7 @@ const Main = () => {
     const ProductCard = ({ imagePath, title, description }) => {
         return (
             <Card sx={{ maxWidth: 345 }}>
-                <StaticImage src={imagePath} />
+                <StaticImage alt="" src={imagePath} />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {title}
@@ -642,8 +642,6 @@ const Main = () => {
         )
     }
 
-    const testImagePath = "../images/yassine-khalfalli-roc-image.jpg"
-
 
     return (
         <div className={classes.mainRoot}>
@@ -651,7 +649,7 @@ const Main = () => {
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
                     <Typography className={classes.mainBannerText}>Beth Rogers Agency <br />
-                        <Typography>A third generation, local, friendly insurance agency</Typography>
+                        <Typography>A third-generation, local, friendly insurance agency</Typography>
                         {/* <i>every time</i> */}
                     </Typography>
                 </div>
@@ -662,10 +660,30 @@ const Main = () => {
                         <span className={classes.scrollToSectionOne} id="sectionOne"></span>
                     </div>
                     <div className={classes.containerMarginBottomSmall}>
+                        {/* <Typography className={classes.someOfWorkHeader}>Our Mission:</Typography> */}
                         <Typography className={classes.someOfWorkHeader}>We strive to provide the best possible service, while meeting your insurance needs.</Typography>
                     </div>
                 </div>
+            </section>
+            <section class="aboutSectionWrapper">
+                <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
+                <div class="aboutWrapper">
+                    <Typography class="aboutUsText">We are <b>third-generation</b>, <b>local</b> Nationwide agency, started by my grandfather, Charles Crandall.
+                        <br /> <br />
+                        Led by our Principal Agent and Owner, <b>Beth Rogers</b>, we strive to provide the best possible service while meeting your insurance needs.
+                    </Typography>
+                    <StaticImage class="" src="../images/beth_sign.jpeg" />
+                </div>
 
+
+                <StaticImage src="../images/ellie_image_1.jpeg" />
+                <StaticImage src="../images/mary_image_1.jpeg" />
+
+                <div className={classes.containerSectionTwoScroll}>
+                    <div className={classes.container}>
+                        <span className={classes.scrollToSectionOne} id="sectionOne"></span>
+                    </div>
+                </div>
             </section>
             <div className={classes.containerSectionTwoScroll}>
                 <span className={classes.scrollToSectionOne} id="sectionTwo"></span>
@@ -754,7 +772,11 @@ const Main = () => {
                         </Card>
                     </div>
 
-                    {/* {productInfo.length > 0 ? productInfo.map(obj =>
+                    {/* {console.log(productInfo.map(obj => obj.imagePath))}
+
+                    <img src={productInfo[0].imagePath}/>
+
+                    {productInfo.length > 0 ? productInfo.map(obj =>
                         <ProductCard key={obj.title} imagePath={obj.imagePath} title={obj.title} description={obj.description} />
                     ) : null} */}
                 </div>
@@ -782,7 +804,7 @@ const Main = () => {
                     <div>
                         <Typography className={classes.connectHeader}>Contact Us</Typography>
                         <br />
-                        
+
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:(585) 321-0015" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
@@ -790,19 +812,16 @@ const Main = () => {
                                     (585) 321-0015
                                 </Button>
                             </a>
-                            <div className={classes.socialLinkWrapper}>
-                                {/* <a href="" target="_blank" className={classes.socialLink}>
-                                    <img className={classes.socialFooter} src={InstagramIcon} />
-                                </a> */}
-                                <p>move fb to footer</p>
-                                <a href="" target="_blank" className={classes.socialLink}>
-                                    <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
-                                </a>
-                            </div>
 
                         </div>
+                        <div class="mapWrapper">
+                            <Typography style={{ margin: "15px" }}>4072 W Henrietta Rd, Rochester, NY 14623</Typography>
+                            <Button className={classes.quoteButtonLink} href="https://www.google.com/maps/dir/?api=1&destination_place_id=ChIJmWIbp49L0YkRIDrRV_zTZyc&destination=direct" target="_blank">
+                                Get Directions
+                            </Button>
+                            <iframe style={{ margin: "25px" }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11658.336155770092!2d-77.6448535!3d43.0712153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d14b8fa71b6299%3A0x2767d3fc57d13a20!2sNationwide%20Insurance%3A%20Beth%20Rogers%20Agency%20Inc.!5e0!3m2!1sen!2sus!4v1693494349904!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         <Typography className={classes.connectHeader}>Hours</Typography>
-                        <p>put hours here - see if you can mirror the functionality of sorting the current day of the week to the top like the nationwide does</p>
                         <p>Day of the Week	Hours
                             Wed
                             Open until 5:00 PM

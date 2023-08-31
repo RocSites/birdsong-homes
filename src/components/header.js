@@ -14,6 +14,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from "../images/facebook_icon4.svg"
+import LinkedInIcon from "../images/linkedin_icon_blue.svg"
 import InstagramIcon from "../images/instagram_icon4.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
@@ -22,7 +23,7 @@ import "./main.css"
 const withStyles = makeStyles(() => ({
   "@global": {
     "*": {
-     fontFamily: "'Montserrat', sans-serif !important",
+      fontFamily: "'Montserrat', sans-serif !important",
       fontWeight: "100"
     }
   },
@@ -129,17 +130,17 @@ const withStyles = makeStyles(() => ({
     flexDirection: "column",
   },
   navButtonMobile: {
-    color: "white",
+    color: "black",
     // fontWeight: "bold",
     textTransform: "none",
     margin: "10px 16px",
     textDecoration: "none"
   },
   navLogoLink: {
-    color: 'black', 
-    textDecoration: `none`, 
-    display: "flex", 
-    justifyContent: "center", 
+    color: 'black',
+    textDecoration: `none`,
+    display: "flex",
+    justifyContent: "center",
     alignItems: "center"
   }
 }))
@@ -178,7 +179,7 @@ const Header = ({ siteTitle }) => {
           <AnchorLink className={classes.navCallButton}
             to="/#sectionThree" title="Contact Us">
           </AnchorLink>
-       
+
 
           {/* <Button
             className={classes.navCallButton}
@@ -225,13 +226,13 @@ const Header = ({ siteTitle }) => {
             <List>
               <div className={classes.drawerLinkWrapper}>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionOne" title="Section 1">
+                  to="/#sectionOne" title="About Us">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionTwo" title="Section 2">
+                  to="/#sectionTwo" title="Products">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionThree" title="Section 3">
+                  to="/#sectionThree" title="Get a Quote">
                 </AnchorLink>
               </div>
 
@@ -243,11 +244,14 @@ const Header = ({ siteTitle }) => {
                 Call Us
               </Button>
               <div class="socialLinkWrapperNavMobile">
-                <a href="" target="_blank" class="socialLink">
+                {/* <a href="" target="_blank" class="socialLink">
                   <img class="socialDrawer" src={InstagramIcon} />
-                </a>
-                <a href="" target="_blank" class="socialLink">
+                </a> */}
+                <a href="https://www.facebook.com/bethrogersagency/" target="_blank" class="socialLink">
                   <img class="socialDrawerFb" src={FacebookIcon} />
+                </a>
+                <a href="https://www.linkedin.com/in/beth-rogers-378a2710/" target="_blank" class="socialLink">
+                  <img className={classes.socialFacebookSpacing} src={LinkedInIcon} />
                 </a>
               </div>
             </List>

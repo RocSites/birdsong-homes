@@ -590,6 +590,30 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+
+.contactNumberWrapper {
+  display: flex;
+  margin: 5px 0;
+}
+
+.socialLink {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.socialLinkWrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.socialLink > img {
+  margin: 10px 5px 0 0;
+  width: 25px;
+}
+
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
