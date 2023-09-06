@@ -291,7 +291,6 @@ const withStyles = makeStyles(() => ({
     },
     reviewStarWrapper: {
         display: "flex",
-        flexDirection: "column"
     },
     reviewLink: {
         textDecoration: "none"
@@ -461,7 +460,7 @@ const withStyles = makeStyles(() => ({
         fontSize: "1.2rem",
         textTransform: "none",
         color: "white",
-        margin: 0,
+        margin: "auto 10px",
     },
     socialFooterMargin: {
         height: "40px",
@@ -489,7 +488,8 @@ const withStyles = makeStyles(() => ({
         borderRadius: "25px",
         padding: "20px",
         marginBottom: "20px",
-        border: "none"
+        border: "none",
+        height: "50px"
     },
     container: {
         display: "flex",
@@ -868,9 +868,8 @@ const Main = () => {
                                     className={classes.reviewButton}
                                 >
                                     <div className={classes.reviewStarWrapper}>
-                                        <Typography className={classes.reviewHeader}>refactor - Leave us a review!</Typography>
+                                        <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
                                         <img className={classes.socialFooterMargin} src={GoogleIcon} />
-                                        <FiveStar />
                                     </div>
                                 </Button>
                             </a>

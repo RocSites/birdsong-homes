@@ -32,7 +32,7 @@ const withStyles = makeStyles(() => ({
   },
   footerContent: {
     display: "flex",
-    margin: "30px",
+    padding: "1rem",
     width: "100%",
     flexDirection: "column"
 
