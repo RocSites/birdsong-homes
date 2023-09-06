@@ -143,18 +143,53 @@ body {
 .aboutWrapper {
     display: flex;
     justify-content: center;
-    padding: 35px;
+    padding: 2rem 1rem;
 }
 
 .aboutUsText {
-    padding: 30px;
     line-height: 2;
-    width: 50%
+    margin-bottom: 0;
+}
+
+.aboutUsTextWrapper {
+    padding: 1rem 0;
+    margin-right: 1rem;
+}
+
+.hoursWrapper {
+    display: flex;
+    margin: 30px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+
+}
+
+.hoursWrapper p {
+    text-align: left;
+    font-weight: bold;
+}
+
+.hoursTime {
+    color: #0047bb;
+    font-weight: normal !important;
+}
+
+.hoursDayTime {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.saturdayAppt {
+    text-align: left;
 }
 
 .teamImageWrapper {
     display: flex;
     justify-content: space-evenly;
+    padding: 16px;
 }
 
 .scrollToLocation {
@@ -192,7 +227,7 @@ body {
     justify-content: center;
     /* background-color: #0047bb; */
     min-height: 500px;
-    padding: 50px 25px;
+    padding: 50px 1rem;
 }
 
 .sectionOneSectionWrapper p {
@@ -357,5 +392,29 @@ body {
 
     .aboutWrapper {
         flex-direction: column;
+        padding: 1rem;
     }
+
+    .aboutUsText {
+        width: 100%;
+    }
+
+    .teamImageWrapper {
+        flex-direction: column;
+    }
+
+    .aboutUsTextWrapper {
+        margin-right: 0;
+    }
+
+    .hoursDayTime {
+        margin: auto;
+        align-items: center;
+        width: 90%;
+    }
+
+    .hoursWrapper {
+        width: 100%;
+    }
+
 }

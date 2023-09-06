@@ -92,7 +92,6 @@ const withStyles = makeStyles(() => ({
         textAlign: "center",
         fontSize: "2rem",
         color: "black",
-        padding: "10px",
         width: "100%",
         margin: "auto",
         "@media(max-width: 600px)": {
@@ -549,7 +548,7 @@ const withStyles = makeStyles(() => ({
     },
     mainBannerTextWrapper: {
         display: "flex",
-        margin: "25% auto",
+        margin: "20% auto",
         width: "100%",
         flexDirection: "column",
         "@media(max-width:600px)": {
@@ -559,15 +558,15 @@ const withStyles = makeStyles(() => ({
     sectionTitleText: {
         fontSize: "2rem",
         textAlign: "center",
-        marginBottom: "40px"
+        margin: "40px 0"
     },
     teamImage: {
         maxWidth: "500px",
         padding: "10px",
+        borderRadius: "10px",
         "@media(max-width:600px)": {
             width: "90%",
-            margin: "auto",
-            borderRadius: "10px"
+            margin: "15px auto",
         }
     },
 
@@ -682,10 +681,14 @@ const Main = () => {
             <section class="aboutSectionWrapper">
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">
-                    <Typography class="aboutUsText">We are <b>third-generation</b>, <b>local</b> Nationwide agency, started by my grandfather, Charles Crandall.
-                        <br /> <br />
-                        Led by our Principal Agent and Owner, <b>Beth Rogers</b>, we strive to provide the best possible service while meeting your insurance needs.
-                    </Typography>
+                    <div class="aboutUsTextWrapper">
+                        <Typography class="aboutUsText">We are <b>third-generation</b>, <b>local</b> Nationwide agency, started by my grandfather, Charles Crandall.
+                            <br /> <br />
+                            Led by our Principal Agent and Owner, <b>Beth Rogers</b>, we strive to provide the best possible service while meeting your insurance needs.
+                        </Typography>
+                        <br />
+                        <Typography class="aboutUsText">Whether it's coverage for your family, home, or business, we've got you covered.</Typography>
+                    </div>
                     <StaticImage className={classes.teamImage} src="../images/beth_sign.jpeg" />
                 </div>
 
@@ -839,21 +842,23 @@ const Main = () => {
                             <iframe style={{ margin: "25px" }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11658.336155770092!2d-77.6448535!3d43.0712153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d14b8fa71b6299%3A0x2767d3fc57d13a20!2sNationwide%20Insurance%3A%20Beth%20Rogers%20Agency%20Inc.!5e0!3m2!1sen!2sus!4v1693494349904!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <Typography className={classes.connectHeader}>Hours</Typography>
-                        <p>Day of the Week	Hours
-                            Wed
-                            Open until 5:00 PM
-                            Thu
-                            9:00 AM - 5:00 PM
-                            Fri
-                            9:00 AM - 4:30 PM
-                            Sat	Closed
-                            Sun	Closed
-                            Mon
-                            9:00 AM - 5:00 PM
-                            Tue
-                            9:00 AM - 5:00 PM
-                            Saturday by Appointment Only</p>
-                        <div>put map link here</div>
+
+                        <div class="hoursWrapper">
+                            <div class="hoursDayTime">
+                                <p>Monday - Thursday</p>
+                                <p class="hoursTime">9:00 AM - 5:00 PM</p>
+                            </div>
+                            <div class="hoursDayTime">
+                                <p>Friday</p>
+                                <p class="hoursTime">9:00 AM - 4:30 PM</p>
+                            </div>
+                            <div class="hoursDayTime">
+                                <p>Saturday<span>*</span> - Sunday</p>
+                                <p class="hoursTime">Closed</p>
+                            </div>
+
+                            <p class="saturdayAppt">*<i>Saturday by Appointment Only</i></p>
+                        </div>
                         <div className={classes.reviewsWrapper}>
                             <a className={classes.reviewLink}
                                 href=""
