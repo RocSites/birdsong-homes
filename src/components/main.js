@@ -7,6 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import bethRogersBuilding from "../images/beth_rogers_office.jpeg"
+import kidBackgroundImage from "../images/kelli-mcclintock-kid-1.jpg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
@@ -518,14 +519,13 @@ const withStyles = makeStyles(() => ({
     },
     mainBanner: {
         display: "flex",
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ),url(${bethRogersBuilding})`,
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${kidBackgroundImage})`,
         backgroundSize: "cover",
         justifyContent: "flex-end",
-        marginTop: "112px",
         height: "100vh",
         "@media(max-width:600px)": {
             justifyContent: "center",
-            // padding: "5%"
+            backgroundPosition: "center"
         }
     },
     mainBannerText: {
@@ -536,7 +536,6 @@ const withStyles = makeStyles(() => ({
         fontFamily: "'Montserrat', sans-serif !important",
         zIndex: 1,
         height: "fit-content",
-        backgroundColor: "#0047bb",
         opacity: "0.85",
         // borderRadius: "35px",
         padding: "20px",
@@ -548,11 +547,11 @@ const withStyles = makeStyles(() => ({
     },
     mainBannerTextWrapper: {
         display: "flex",
-        margin: "20% auto",
+        margin: "10% auto",
         width: "100%",
         flexDirection: "column",
         "@media(max-width:600px)": {
-            margin: "25% auto"
+            margin: "9% auto"
         }
     },
     sectionTitleText: {

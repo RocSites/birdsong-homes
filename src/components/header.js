@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Typography, makeStyles } from '@material-ui/core'
@@ -28,6 +28,19 @@ const withStyles = makeStyles(() => ({
     }
   },
   navBarRoot: {
+    position: "fixed",
+    display: "flex",
+    // background: "#4c86d1",
+    backgroundColor: "transparent",
+    color: "white",
+    justifyContent: "space-between",
+    width: "100%",
+    height: "112px",
+    top: 0,
+    boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
+    zIndex: 2,
+  },
+  navBarRootScroll: {
     position: "fixed",
     display: "flex",
     // background: "#4c86d1",
@@ -146,6 +159,8 @@ const withStyles = makeStyles(() => ({
 }))
 
 
+
+
 const Header = ({ siteTitle }) => {
 
   const classes = withStyles();
@@ -155,9 +170,46 @@ const Header = ({ siteTitle }) => {
     setOpenDrawer(drawerOpen => !drawerOpen)
   }
 
+    //navbar scroll when active state
+    const [navbar, setNavbar] = useState(false)
+
+    //logo scroll when active
+    const [navBarColor, setNavBarColor] = useState("white")
+  
+    //navbar scroll changeBackground function
+    const changeBackground = () => {
+      console.log(window.scrollY)
+      if (window.scrollY >= 66) {
+        setNavbar(true)
+      } else {
+        setNavbar(false)
+      }
+    }
+  
+    useEffect(() => {
+      changeBackground()
+      // adding the event when scroll change background
+      window.addEventListener("scroll", changeBackground)
+    })
+  
+    //logo scroll function
+    const changeColor = () => {
+      if (window.scrollY >= 60) {
+        setNavBarColor("blue")
+      } else {
+        setNavBarColor("white")
+      }
+    }
+  
+    useEffect(() => {
+      changeColor()
+      // adding the event when scroll change Logo
+      window.addEventListener("scroll", changeColor)
+    })
+
   return (
     <header
-      className={classes.navBarRoot}
+    className={navbar ? classes.navBarRootScroll : classes.navBarRoot}
     >
       <div className={classes.navLeftWrapper}>
         <div className={classes.navBarTitle}>
