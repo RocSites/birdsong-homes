@@ -88,6 +88,8 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     padding: 50px 25px;
+    background-color: #0047bb4d;
+    
 }
 
 .marginBottomSmall {
@@ -144,6 +146,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 2rem 1rem;
+    background-color: #0047bb4d;
 }
 
 .aboutUsText {

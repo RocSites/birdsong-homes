@@ -497,6 +497,12 @@ const withStyles = makeStyles(() => ({
         flexDirection: "column",
         margin: "20px 0"
     },
+    containerContactUs: {
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#0047bb4d"
+
+    },
     containerSectionTwoScroll: {
         display: "flex",
         flexDirection: "column",
@@ -819,8 +825,8 @@ const Main = () => {
 
             <span className={classes.scrollToContact} id="contactForm"></span>
             <section class="py-5 section-bubble4">
-                <div className={classes.container}>
-                    <div>
+                <div className={classes.containerContactUs}>
+                    <div style={{ backgroundColor: "#0047bb4d" }}>
                         <Typography className={classes.connectHeader}>Contact Us</Typography>
                         <br />
 
@@ -840,39 +846,41 @@ const Main = () => {
                             </Button>
                             <iframe style={{ margin: "25px" }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11658.336155770092!2d-77.6448535!3d43.0712153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d14b8fa71b6299%3A0x2767d3fc57d13a20!2sNationwide%20Insurance%3A%20Beth%20Rogers%20Agency%20Inc.!5e0!3m2!1sen!2sus!4v1693494349904!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        <Typography className={classes.connectHeader}>Hours</Typography>
+                        <div style={{ backgroundColor: "white" }}>
+                            <Typography className={classes.connectHeader}>Hours</Typography>
+                            <div class="hoursWrapper">
+                                <div class="hoursDayTime">
+                                    <p>Monday - Thursday</p>
+                                    <p class="hoursTime">9:00 AM - 5:00 PM</p>
+                                </div>
+                                <div class="hoursDayTime">
+                                    <p>Friday</p>
+                                    <p class="hoursTime">9:00 AM - 4:30 PM</p>
+                                </div>
+                                <div class="hoursDayTime">
+                                    <p>Saturday<span>*</span> - Sunday</p>
+                                    <p class="hoursTime">Closed</p>
+                                </div>
 
-                        <div class="hoursWrapper">
-                            <div class="hoursDayTime">
-                                <p>Monday - Thursday</p>
-                                <p class="hoursTime">9:00 AM - 5:00 PM</p>
+                                <p class="saturdayAppt">*<i>Saturday by Appointment Only</i></p>
                             </div>
-                            <div class="hoursDayTime">
-                                <p>Friday</p>
-                                <p class="hoursTime">9:00 AM - 4:30 PM</p>
-                            </div>
-                            <div class="hoursDayTime">
-                                <p>Saturday<span>*</span> - Sunday</p>
-                                <p class="hoursTime">Closed</p>
-                            </div>
-
-                            <p class="saturdayAppt">*<i>Saturday by Appointment Only</i></p>
-                        </div>
-                        <div className={classes.reviewsWrapper}>
-                            <a className={classes.reviewLink}
-                                href=""
-                                target="_blank"
-                            >
-                                <Button
-                                    className={classes.reviewButton}
+                            <div className={classes.reviewsWrapper}>
+                                <a className={classes.reviewLink}
+                                    href=""
+                                    target="_blank"
                                 >
-                                    <div className={classes.reviewStarWrapper}>
-                                        <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
-                                        <img className={classes.socialFooterMargin} src={GoogleIcon} />
-                                    </div>
-                                </Button>
-                            </a>
+                                    <Button
+                                        className={classes.reviewButton}
+                                    >
+                                        <div className={classes.reviewStarWrapper}>
+                                            <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
+                                            <img className={classes.socialFooterMargin} src={GoogleIcon} />
+                                        </div>
+                                    </Button>
+                                </a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </section>
