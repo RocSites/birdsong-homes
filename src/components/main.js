@@ -587,6 +587,11 @@ const withStyles = makeStyles(() => ({
         textAlign: "center",
         margin: "10px 0",
         fontSize: "1.25rem"
+    },
+    aboutUsText: {
+        lineHeight: 2,
+        marginBottom: 0,
+        color: "white"
     }
 
 }))
@@ -701,12 +706,12 @@ const Main = () => {
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">
                     <div class="aboutUsTextWrapper">
-                        <Typography class="aboutUsText">We are <b>third-generation</b>, <b>local</b> Nationwide agency, started by my grandfather, Charles Crandall.
+                        <Typography className={classes.aboutUsText}>We are <b>third-generation</b>, <b>local</b> Nationwide agency, started by my grandfather, Charles Crandall.
                             <br /> <br />
                             Led by our Principal Agent and Owner, <b>Beth Rogers</b>, we strive to provide the best possible service while meeting your insurance needs.
                         </Typography>
                         <br />
-                        <Typography class="aboutUsText">Whether it's coverage for your family, home, or business, we've got you covered.</Typography>
+                        <Typography className={classes.aboutUsText}>Whether it's coverage for your family, home, or business, we've got you covered.</Typography>
                     </div>
                     <StaticImage className={classes.teamImage} src="../images/beth_sign.jpeg" />
                 </div>
