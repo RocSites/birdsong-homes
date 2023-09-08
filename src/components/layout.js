@@ -90,7 +90,7 @@ const Layout = ({ children }) => {
           <div className={classes.footerContent}>
             <a href="tel:(585) 321-0015" className={classes.footerPhone}>
               <PhoneIcon className={classes.phoneIcon} />
-              585-321-0015
+              (585) 321-0015
             </a>
             <div class="contactNumberWrapper">
               <FaxIcon />
