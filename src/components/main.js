@@ -11,6 +11,7 @@ import kidBackgroundImage from "../images/kelli-mcclintock-kid-1.jpg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
+import EmailIcon from '@mui/icons-material/Email';
 import StarRateIcon from '@material-ui/icons/StarRate';
 import FacebookIcon from "../images/facebook_icon4.svg"
 import InstagramIcon from "../images/instagram_icon4.svg"
@@ -423,6 +424,13 @@ const withStyles = makeStyles(() => ({
         width: "300px",
         borderRadius: "35px"
     },
+    getDirectionsLinkDark: {
+        backgroundColor: "#333333",
+        color: "white",
+        textTransform: "none",
+        width: "300px",
+        borderRadius: "35px"
+    },
     aboutWrapper: {
         display: "flex",
         flexDirection: "column",
@@ -566,14 +574,20 @@ const withStyles = makeStyles(() => ({
         margin: "40px 0"
     },
     teamImage: {
-        maxWidth: "500px",
+        maxWidth: "600px",
         padding: "10px",
         borderRadius: "10px",
+        height: "100%",
         "@media(max-width:600px)": {
             width: "90%",
             margin: "15px auto",
         }
     },
+    employeeNameText: {
+        textAlign: "center",
+        margin: "10px 0",
+        fontSize: "1.25rem"
+    }
 
 }))
 
@@ -700,8 +714,26 @@ const Main = () => {
                 <Typography className={classes.sectionTitleText}>Meet the Team</Typography>
 
                 <div class="teamImageWrapper">
-                    <StaticImage className={classes.teamImage} src="../images/ellie_image_1.jpeg" />
-                    <StaticImage className={classes.teamImage} src="../images/mary_image_1.jpeg" />
+                    <div class="teamNameImageWrapper">
+                        <Typography className={classes.employeeNameText}>Ellie</Typography>
+                        <StaticImage className={classes.teamImage} src="../images/ellie_image_1.jpeg" />
+                        <br />
+                        <a class="emailButtonLink" href="mailto:ellie@bethrogersagency.com" target="_blank">
+                            <EmailIcon style={{ color: "white", marginRight: "10px" }} />
+                            Ellie@bethrogersagency.com
+                        </a>
+                    </div>
+                    <br /><br />
+                    <div class="teamNameImageWrapper">
+                        <Typography className={classes.employeeNameText}>Mary Rogers</Typography>
+                        <StaticImage className={classes.teamImage} src="../images/mary_image_1.jpeg" />
+                        <br />
+                        <a class="emailButtonLink" href="mailto:mary@bethrogersagency.com" target="_blank">
+                            <EmailIcon style={{ color: "white", marginRight: "10px" }} />
+                            Mary@bethrogersagency.com
+                        </a>
+                    </div>
+
                 </div>
 
                 <div className={classes.containerSectionTwoScroll}>
@@ -826,7 +858,7 @@ const Main = () => {
             <span className={classes.scrollToContact} id="contactForm"></span>
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
-                    <div style={{ backgroundColor: "#0047bb4d" }}>
+                    <div style={{ backgroundColor: "#0047bbb0" }}>
                         <Typography className={classes.connectHeader}>Contact Us</Typography>
                         <br />
 
@@ -840,8 +872,8 @@ const Main = () => {
 
                         </div>
                         <div class="mapWrapper">
-                            <Typography style={{ margin: "15px" }}>4072 W Henrietta Rd, Rochester, NY 14623</Typography>
-                            <Button className={classes.quoteButtonLink} href="https://www.google.com/maps/dir/?api=1&destination_place_id=ChIJmWIbp49L0YkRIDrRV_zTZyc&destination=direct" target="_blank">
+                            <Typography style={{ margin: "15px", color: "white" }}>4072 W Henrietta Rd, Rochester, NY 14623</Typography>
+                            <Button className={classes.getDirectionsLinkDark} href="https://www.google.com/maps/dir/?api=1&destination_place_id=ChIJmWIbp49L0YkRIDrRV_zTZyc&destination=direct" target="_blank">
                                 Get Directions
                             </Button>
                             <iframe style={{ margin: "25px" }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11658.336155770092!2d-77.6448535!3d43.0712153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d14b8fa71b6299%3A0x2767d3fc57d13a20!2sNationwide%20Insurance%3A%20Beth%20Rogers%20Agency%20Inc.!5e0!3m2!1sen!2sus!4v1693494349904!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

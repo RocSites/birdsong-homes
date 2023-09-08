@@ -88,8 +88,8 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     padding: 50px 25px;
-    background-color: #0047bb4d;
-    
+    background-color: #0047bbb0;
+
 }
 
 .marginBottomSmall {
@@ -146,17 +146,38 @@ body {
     display: flex;
     justify-content: center;
     padding: 2rem 1rem;
-    background-color: #0047bb4d;
+    background-color: #0047bbbd;
 }
 
 .aboutUsText {
     line-height: 2;
     margin-bottom: 0;
+    color: white;
 }
 
 .aboutUsTextWrapper {
     padding: 1rem 0;
     margin-right: 1rem;
+}
+
+.emailButtonLink {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    background-color: #0047bb;
+    padding: 15px;
+    border-radius: 20px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-height: 40px;
+    z-index: 2;
+}
+
+.teamNameImageWrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .hoursWrapper {
