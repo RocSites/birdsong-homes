@@ -58,8 +58,14 @@ const withStyles = makeStyles(() => ({
     padding: "1rem",
   },
   navButton: {
-    color: "black",
+    color: "white",
     // fontWeight: "bold",
+    textTransform: "none",
+    margin: "auto 10px",
+    textDecoration: "none"
+  },
+  navButtonScroll: {
+    color: "black",
     textTransform: "none",
     margin: "auto 10px",
     textDecoration: "none"
@@ -102,7 +108,15 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "20px",
     fontSize: "2.5rem",
+    color: "white",
+    "@media(min-width: 601px)": {
+      display: "none"
+    }
+  },
+  hamburgerIconScroll: {
     color: "#0047bb",
+    margin: "20px",
+    fontSize: "2.5rem",
     "@media(min-width: 601px)": {
       display: "none"
     }
@@ -155,6 +169,12 @@ const withStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center"
+  },
+  navLogoText: {
+    color: "white"
+  },
+  navLogoTextScroll: {
+    color: "black"
   }
 }))
 
@@ -171,7 +191,7 @@ const Header = ({ siteTitle }) => {
   }
 
     //navbar scroll when active state
-    const [navbar, setNavbar] = useState(false)
+    const [navbarScroll, setNavbarScroll] = useState(false)
 
     //logo scroll when active
     const [navBarColor, setNavBarColor] = useState("white")
@@ -180,9 +200,9 @@ const Header = ({ siteTitle }) => {
     const changeBackground = () => {
       console.log(window.scrollY)
       if (window.scrollY >= 66) {
-        setNavbar(true)
+        setNavbarScroll(true)
       } else {
-        setNavbar(false)
+        setNavbarScroll(false)
       }
     }
   
@@ -209,23 +229,23 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header
-    className={navbar ? classes.navBarRootScroll : classes.navBarRoot}
+    className={navbarScroll ? classes.navBarRootScroll : classes.navBarRoot}
     >
       <div className={classes.navLeftWrapper}>
         <div className={classes.navBarTitle}>
           <Link to="/" className={classes.navLogoLink}>
             <img className={classes.navLogo} src={NationWideLogoBird} alt="company logo" />
-            <Typography>Beth Rogers Agency</Typography>
+            <Typography className={navbarScroll ? classes.navLogoTextScroll : classes.navLogoText}>Beth Rogers Agency</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
-          <AnchorLink className={classes.navButton}
+          <AnchorLink className={navbarScroll ? classes. navButtonScroll : classes.navButton}
             to="/#sectionOne" title="About Us">
           </AnchorLink>
-          <AnchorLink className={classes.navButton}
+          <AnchorLink className={navbarScroll ? classes. navButtonScroll : classes.navButton}
             to="/#sectionTwo" title="Products">
           </AnchorLink>
-          <AnchorLink className={classes.navButton}
+          <AnchorLink className={navbarScroll ? classes. navButtonScroll : classes.navButton}
             to="/#sectionThree" title="Get a Quote">
           </AnchorLink>
           <AnchorLink className={classes.navCallButton}
@@ -260,7 +280,7 @@ const Header = ({ siteTitle }) => {
           Call Us
         </Button> */}
         <MenuIcon
-          className={classes.hamburgerIcon}
+          className={navbarScroll ? classes.hamburgerIconScroll : classes.hamburgerIcon}
           onClick={toggleDrawer}
         />
         <Drawer

@@ -557,7 +557,7 @@ const withStyles = makeStyles(() => ({
         width: "100%",
         flexDirection: "column",
         "@media(max-width:600px)": {
-            margin: "9% auto"
+            margin: "30% auto"
         }
     },
     sectionTitleText: {
