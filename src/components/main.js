@@ -578,6 +578,7 @@ const withStyles = makeStyles(() => ({
         padding: "10px",
         borderRadius: "10px",
         height: "100%",
+        margin: "20px",
         "@media(max-width:600px)": {
             width: "90%",
             margin: "15px auto",
@@ -720,19 +721,24 @@ const Main = () => {
 
                 <div class="teamImageWrapper">
                     <div class="teamNameImageWrapper">
+                        <Typography className={classes.employeeNameText}>Beth Rogers</Typography>
+                        <StaticImage className={classes.teamImage} src="../images/Beth_desk_pic.jpg" />
+                        <a class="emailButtonLink" href="mailto:beth@bethrogersagency.com" target="_blank">
+                            <EmailIcon style={{ color: "white", marginRight: "10px" }} />
+                            Beth@bethrogersagency.com
+                        </a>
+                    </div>
+                    <div class="teamNameImageWrapper">
                         <Typography className={classes.employeeNameText}>Ellie</Typography>
                         <StaticImage className={classes.teamImage} src="../images/ellie_image_1.jpeg" />
-                        <br />
                         <a class="emailButtonLink" href="mailto:ellie@bethrogersagency.com" target="_blank">
                             <EmailIcon style={{ color: "white", marginRight: "10px" }} />
                             Ellie@bethrogersagency.com
                         </a>
                     </div>
-                    <br /><br />
                     <div class="teamNameImageWrapper">
                         <Typography className={classes.employeeNameText}>Mary Rogers</Typography>
                         <StaticImage className={classes.teamImage} src="../images/mary_image_1.jpeg" />
-                        <br />
                         <a class="emailButtonLink" href="mailto:mary@bethrogersagency.com" target="_blank">
                             <EmailIcon style={{ color: "white", marginRight: "10px" }} />
                             Mary@bethrogersagency.com
