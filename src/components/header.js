@@ -82,7 +82,7 @@ const withStyles = makeStyles(() => ({
     display: "none",
     "@media(max-width: 601px)": {
       display: "flex",
-      margin: "auto 10px"
+      margin: "auto"
     }
   },
   navLogo: {
@@ -106,7 +106,7 @@ const withStyles = makeStyles(() => ({
     width: "250px"
   },
   hamburgerIcon: {
-    margin: "20px",
+    margin: "1rem",
     fontSize: "2.5rem",
     color: "white",
     "@media(min-width: 601px)": {
@@ -115,7 +115,7 @@ const withStyles = makeStyles(() => ({
   },
   hamburgerIconScroll: {
     color: "#0047bb",
-    margin: "20px",
+    margin: "1rem",
     fontSize: "2.5rem",
     "@media(min-width: 601px)": {
       display: "none"
