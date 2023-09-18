@@ -58,7 +58,7 @@ const withStyles = makeStyles(() => ({
     padding: "1rem",
   },
   navButton: {
-    color: "white",
+    color: "gold",
     // fontWeight: "bold",
     textTransform: "none",
     margin: "auto 10px",
@@ -134,6 +134,7 @@ const withStyles = makeStyles(() => ({
     padding: "8px 16px",
     color: "white",
     textTransform: "none",
+    border: "1px solid gold",
     borderRadius: "35px",
     height: "50px",
     margin: "auto 20px"
@@ -171,7 +172,7 @@ const withStyles = makeStyles(() => ({
     alignItems: "center"
   },
   navLogoText: {
-    color: "white"
+    color: "gold"
   },
   navLogoTextScroll: {
     color: "black"

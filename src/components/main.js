@@ -105,6 +105,7 @@ const withStyles = makeStyles(() => ({
         padding: "10px",
         width: "100%",
         margin: "auto",
+        borderBottom: "5px solid gold",
         "@media(max-width: 600px)": {
             // padding: "50px 25px",
         }
@@ -118,6 +119,9 @@ const withStyles = makeStyles(() => ({
             aspectRatio: "1/1",
             objectFit: "cover"
         }
+    },
+    productTitleText: {
+        textAlign: "center"
     },
     landingMessageWrapper: {
         display: "flex",
@@ -442,7 +446,9 @@ const withStyles = makeStyles(() => ({
         fontSize: "2rem",
         textAlign: "center",
         color: "white",
-        backgroundColor: "#0047bb"
+        padding: "10px",
+        backgroundColor: "#0047bb",
+        borderBottom: "5px solid gold"
         // textTransform: "uppercase"
     },
     socialLinkWrapper: {
@@ -541,7 +547,7 @@ const withStyles = makeStyles(() => ({
         }
     },
     mainBannerText: {
-        color: "white",
+        color: "gold",
         fontSize: "3.5rem",
         textAlign: "center",
         fontWeight: "bold",
@@ -685,7 +691,7 @@ const Main = () => {
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
                     <Typography className={classes.mainBannerText}>Beth Rogers Agency <br />
-                        <Typography>A fourth-generation, local, friendly insurance agency</Typography>
+                        <Typography style={{color: "white"}}>A fourth-generation, local, friendly insurance agency</Typography>
                         {/* <i>every time</i> */}
                     </Typography>
                 </div>
@@ -761,7 +767,7 @@ const Main = () => {
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
                             <StaticImage src="../images/jamie-street-car-white.jpg" />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Auto
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
@@ -773,7 +779,7 @@ const Main = () => {
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
                             <StaticImage src="../images/francesca-tosolini-home.jpg" />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Home
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
@@ -784,7 +790,7 @@ const Main = () => {
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
                             <StaticImage src="../images/tierra-mallorca-renters.jpg" />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Renters
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
@@ -795,7 +801,7 @@ const Main = () => {
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
                             <StaticImage src="../images/harley-davidson-one.jpg" />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Motorcycle
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
@@ -806,7 +812,7 @@ const Main = () => {
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
                             <StaticImage src="../images/vincent-ghilione-boat-one.jpg" />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Boat
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
@@ -817,7 +823,7 @@ const Main = () => {
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
                             <StaticImage src="../images/lawrence-crayton-life-one.jpg" />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Life
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
@@ -828,7 +834,7 @@ const Main = () => {
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
                             <StaticImage src="../images/yassine-khalfalli-business.jpg" />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Business
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">

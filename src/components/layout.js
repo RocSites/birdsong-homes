@@ -40,6 +40,7 @@ const withStyles = makeStyles(() => ({
   copyrightText: {
     marginTop: "auto",
     marginBottom: "auto",
+    color: "gold",
     "@media(max-width: 600px)": {
       textAlign: "center"
     }
@@ -50,7 +51,7 @@ const withStyles = makeStyles(() => ({
   footerPhone: {
     display: "flex",
     margin: "5px 0",
-    color: "white",
+    color: "gold",
     textDecoration: "none",
     "@media(max-width: 600px)": {
       textAlign: "center"
