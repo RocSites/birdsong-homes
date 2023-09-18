@@ -34,9 +34,6 @@ const withStyles = makeStyles(() => ({
         margin: "auto"
 
     },
-    aboutBackgroundImage: {
-        width: "100%",
-    },
     servicesWrapper: {
         display: "flex",
         flexDirection: "column",
@@ -114,6 +111,7 @@ const withStyles = makeStyles(() => ({
     },
     productCard: {
         margin: "15px",
+        height: "10%",
         "& img": {
             maxHeight: "345px",
             width: "100%",
@@ -533,13 +531,13 @@ const withStyles = makeStyles(() => ({
     },
     mainBanner: {
         display: "flex",
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${kidBackgroundImage})`,
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${bethRogersBuilding})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
         justifyContent: "flex-end",
         height: "100vh",
         "@media(max-width:600px)": {
             justifyContent: "center",
-            backgroundPosition: "center"
         }
     },
     mainBannerText: {
@@ -687,7 +685,7 @@ const Main = () => {
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
                     <Typography className={classes.mainBannerText}>Beth Rogers Agency <br />
-                        <Typography>A third-generation, local, friendly insurance agency</Typography>
+                        <Typography>A fourth-generation, local, friendly insurance agency</Typography>
                         {/* <i>every time</i> */}
                     </Typography>
                 </div>
@@ -707,7 +705,7 @@ const Main = () => {
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">
                     <div class="aboutUsTextWrapper">
-                        <Typography className={classes.aboutUsText}>We are <b>third-generation</b>, <b>local</b> Nationwide agency, started by my grandfather, Charles Crandall.
+                        <Typography className={classes.aboutUsText}>We are <b>fourth-generation</b>, <b>local</b> Nationwide agency, started by my grandfather, Charles Crandall.
                             <br /> <br />
                             Led by our Principal Agent and Owner, <b>Beth Rogers</b>, we strive to provide the best possible service while meeting your insurance needs.
                         </Typography>
@@ -766,9 +764,9 @@ const Main = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     Auto
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                {/* <Typography variant="body2" color="text.secondary">
                                     Auto description auto description auto description auto description auto description auto description auto description auto description
-                                </Typography>
+                                </Typography> */}
                             </CardContent>
 
                         </Card>
@@ -778,9 +776,9 @@ const Main = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     Home
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                {/* <Typography variant="body2" color="text.secondary">
                                     Home description Home description Home description Home description Home description Home description Home description Home description
-                                </Typography>
+                                </Typography> */}
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
@@ -789,9 +787,9 @@ const Main = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     Renters
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                {/* <Typography variant="body2" color="text.secondary">
                                     Renters description Renters description Renters description Renters description Renters description Renters description Renters description Renters description
-                                </Typography>
+                                </Typography> */}
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
@@ -800,9 +798,9 @@ const Main = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     Motorcycle
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                {/* <Typography variant="body2" color="text.secondary">
                                     Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description
-                                </Typography>
+                                </Typography> */}
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
@@ -811,9 +809,9 @@ const Main = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     Boat
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                {/* <Typography variant="body2" color="text.secondary">
                                     Boat description Boat description Boat description Boat description Boat description Boat description Boat description Boat description
-                                </Typography>
+                                </Typography> */}
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
@@ -822,9 +820,9 @@ const Main = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     Life
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                {/* <Typography variant="body2" color="text.secondary">
                                     Life description Life description Life description Life description Life description Life description Life description Life description
-                                </Typography>
+                                </Typography> */}
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
@@ -833,9 +831,9 @@ const Main = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     Business
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                {/* <Typography variant="body2" color="text.secondary">
                                     Business description Business description Business description Business description Business description Business description Business description Business description
-                                </Typography>
+                                </Typography> */}
                             </CardContent>
                         </Card>
                     </div>
