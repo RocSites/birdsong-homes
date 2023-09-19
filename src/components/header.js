@@ -191,45 +191,45 @@ const Header = ({ siteTitle }) => {
     setOpenDrawer(drawerOpen => !drawerOpen)
   }
 
-    //navbar scroll when active state
-    const [navbarScroll, setNavbarScroll] = useState(false)
+  //navbar scroll when active state
+  const [navbarScroll, setNavbarScroll] = useState(false)
 
-    //logo scroll when active
-    const [navBarColor, setNavBarColor] = useState("white")
-  
-    //navbar scroll changeBackground function
-    const changeBackground = () => {
-      if (window.scrollY >= 66) {
-        setNavbarScroll(true)
-      } else {
-        setNavbarScroll(false)
-      }
+  //logo scroll when active
+  const [navBarColor, setNavBarColor] = useState("white")
+
+  //navbar scroll changeBackground function
+  const changeBackground = () => {
+    if (window.scrollY >= 66) {
+      setNavbarScroll(true)
+    } else {
+      setNavbarScroll(false)
     }
-  
-    useEffect(() => {
-      changeBackground()
-      // adding the event when scroll change background
-      window.addEventListener("scroll", changeBackground)
-    })
-  
-    //logo scroll function
-    const changeColor = () => {
-      if (window.scrollY >= 60) {
-        setNavBarColor("blue")
-      } else {
-        setNavBarColor("white")
-      }
+  }
+
+  useEffect(() => {
+    changeBackground()
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground)
+  })
+
+  //logo scroll function
+  const changeColor = () => {
+    if (window.scrollY >= 60) {
+      setNavBarColor("blue")
+    } else {
+      setNavBarColor("white")
     }
-  
-    useEffect(() => {
-      changeColor()
-      // adding the event when scroll change Logo
-      window.addEventListener("scroll", changeColor)
-    })
+  }
+
+  useEffect(() => {
+    changeColor()
+    // adding the event when scroll change Logo
+    window.addEventListener("scroll", changeColor)
+  })
 
   return (
     <header
-    className={navbarScroll ? classes.navBarRootScroll : classes.navBarRoot}
+      className={navbarScroll ? classes.navBarRootScroll : classes.navBarRoot}
     >
       <div className={classes.navLeftWrapper}>
         <div className={classes.navBarTitle}>
@@ -239,17 +239,20 @@ const Header = ({ siteTitle }) => {
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
-          <AnchorLink className={navbarScroll ? classes. navButtonScroll : classes.navButton}
+          <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#sectionOne" title="About Us">
           </AnchorLink>
-          <AnchorLink className={navbarScroll ? classes. navButtonScroll : classes.navButton}
+          <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#sectionTwo" title="Products">
           </AnchorLink>
-          <AnchorLink className={navbarScroll ? classes. navButtonScroll : classes.navButton}
+          <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#sectionThree" title="Get a Quote">
           </AnchorLink>
+          <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
+            to="/#sectionFour" title="Carriers">
+          </AnchorLink>
           <AnchorLink className={classes.navCallButton}
-            to="/#sectionThree" title="Contact Us">
+            to="/#contactForm" title="Contact Us">
           </AnchorLink>
 
 
@@ -305,6 +308,9 @@ const Header = ({ siteTitle }) => {
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
                   to="/#sectionThree" title="Get a Quote">
+                </AnchorLink>
+                <AnchorLink className={classes.navButtonMobile}
+                  to="/#sectionFour" title="Carriers">
                 </AnchorLink>
               </div>
 

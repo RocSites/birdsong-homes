@@ -44,7 +44,18 @@ const withStyles = makeStyles(() => ({
         margin: "auto",
         margin: "20px",
         color: "black",
-        marginBottom: "50px",
+        flexDirection: "column",
+        justifyContent: "center",
+        "@media(max-width: 600px)": {
+            flexDirection: "column"
+        }
+    },
+    carrierWrapper:{
+        display: "flex",
+        margin: "auto",
+        color: "black",
+        flexDirection: "column",
+        justifyContent: "center",
         "@media(max-width: 600px)": {
             flexDirection: "column"
         }
@@ -433,11 +444,6 @@ const withStyles = makeStyles(() => ({
         width: "300px",
         borderRadius: "35px"
     },
-    aboutWrapper: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center"
-    },
     scrollToLocation: {
         height: "100px",
         flexDirection: "column"
@@ -690,10 +696,12 @@ const Main = () => {
             {/* <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen Wednesday, August 2nd</div> */}
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
-                    <Typography className={classes.mainBannerText}>Beth Rogers Agency <br />
-                        <Typography style={{color: "white"}}>A fourth-generation, local, friendly insurance agency</Typography>
-                        {/* <i>every time</i> */}
-                    </Typography>
+                    <Typography className={classes.mainBannerText}>Beth Rogers Agency <br /></Typography>
+                    <Typography style={{ color: "white", textAlign: "center" }}>A fourth-generation, local, friendly insurance agency</Typography>
+                    {/* <i>every time</i> */}
+                    <button class="bannerCallButton">(585) 321-0015</button>
+                    <Typography style={{ color: "white", textAlign: "center" }}>Call or Text Us</Typography>
+
                 </div>
             </div>
             <section class="sectionOneSectionWrapper">
@@ -711,14 +719,12 @@ const Main = () => {
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">
                     <div class="aboutUsTextWrapper">
-                        <Typography className={classes.aboutUsText}>We are <b>fourth-generation</b>, <b>local</b> Nationwide agency, started by my grandfather, Charles Crandall.
-                            <br /> <br />
-                            Led by our Principal Agent and Owner, <b>Beth Rogers</b>, we strive to provide the best possible service while meeting your insurance needs.
-                        </Typography>
-                        <br />
-                        <Typography className={classes.aboutUsText}>Whether it's coverage for your family, home, or business, we've got you covered.</Typography>
+                        <Typography className={classes.aboutUsText}>We are a <b>local, fourth generation,</b>  friendly insurance agency. Our top priority is providing you with the best possible experience while meeting your insurance needs.
+                            <br /> <br /> Located in Henrietta, New York, we are licensed to serve all of New York.  You can call us at <a href="tel:585-321-0015">585-321-0015</a>- no pressing numbers- either Mary, Ellie or Beth will answer the phone to greet you.
+                            <br /><br />
+                            If it is easier, text us at <a href="tel:585-321-0015">585-321-0015</a> and we will respond promptly.</Typography>
                     </div>
-                    <StaticImage className={classes.teamImage} src="../images/beth_sign.jpeg" />
+                    <StaticImage className={classes.teamImage} src="../images/new_sign_pic.JPG" />
                 </div>
 
                 <Typography className={classes.sectionTitleText}>Meet the Team</Typography>
@@ -777,7 +783,7 @@ const Main = () => {
 
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/francesca-tosolini-home.jpg" />
+                            <StaticImage src="../images/beth_wedding_home_pic.jpeg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Home
@@ -799,7 +805,7 @@ const Main = () => {
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/harley-davidson-one.jpg" />
+                            <StaticImage src="../images/new_motorcyle_pic.jpg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Motorcycle
@@ -810,7 +816,7 @@ const Main = () => {
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/vincent-ghilione-boat-one.jpg" />
+                            <StaticImage src="../images/new_boat_pic.jpg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Boat
@@ -832,10 +838,10 @@ const Main = () => {
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/yassine-khalfalli-business.jpg" />
+                            <StaticImage src="../images/alex-haney-food.jpg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Business
+                                    Food
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
                                     Business description Business description Business description Business description Business description Business description Business description Business description
@@ -856,6 +862,7 @@ const Main = () => {
 
 
             </section>
+
             <span className={classes.scrollToLocation} id="sectionThree"></span>
 
             <section style={{ minHeight: "300px" }} className={classes.container}>
@@ -870,7 +877,99 @@ const Main = () => {
                 </div>
             </section>
 
+            <span className={classes.scrollToLocation} id="sectionFour"></span>
+            <section style={{ minHeight: "300px" }} className={classes.container}>
+                <div className={classes.carrierWrapper}>
+                    <div className={classes.aboutSectionWrapper}>
+                        <Typography className={classes.someOfWorkHeaderProducts}>Carriers</Typography>
+                        {/* <Typography className={classes.addressText}></Typography> */}
+                        <div class="carrierWrapperRoot">
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo/logo.svg" />
+                                <Typography>Nationwide</Typography>
+                                <a href="tel:1-800-421-3535" target="_blank">
+                                    1-800-421-3535
+                                </a>
+                            </div>
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo-progressive.svg" />
+                                <Typography>Progressive</Typography>
+                                <a href="tel:1-800-776-4737" target="_blank">
+                                    1-800-776-4737
+                                </a>
+                            </div>
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo-travelers.svg" />
+                                <Typography>Travelers</Typography>
+                                <a href="tel:1-800-776-4737" target="_blank">
+                                    1-800-776-4737
+                                </a>
+                            </div>
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo-farmers.webp" />
+                                <Typography>Farmers</Typography>
+                                <a href="tel:1-800-854-6011" target="_blank">
+                                    1-800-854-6011
+                                </a>
+                            </div>
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo-foremost.png" />
+                                <Typography>Foremost Star</Typography>
+                                <a href="tel:1-800-527-3907" target="_blank">
+                                    1-800-527-3907
+                                </a>
+                            </div>
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo-bristol-west.png" />
+                                <Typography>Bristol West</Typography>
+                                <a href="tel:1-800-274-7865" target="_blank">
+                                    1-800-274-7865
+                                </a>
+                            </div>
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo-hagerty.svg" />
+                                <Typography>Hagerty</Typography>
+                                <a href="tel:1-800-385-0274" target="_blank">
+                                    1-800-385-0274
+                                </a>
+                            </div>
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo-amer-modern.png" />
+                                <Typography>American Modern</Typography>
+                                <a href="tel:1-800-375-2075" target="_blank">
+                                    1-800-375-2075
+                                </a>
+                            </div>
+                            <div class="carrierWrapper">
+                                <StaticImage src="../images/logo-assurant.webp" />
+                                <Typography>Assurant Flood</Typography>
+                                <a href="tel:1-800-423-4403" target="_blank">
+                                    1-800-423-4403
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <span className={classes.scrollToLocation} id="sectionFive"></span>
+
+            <section style={{ minHeight: "300px" }} className={classes.container}>
+                <div className={classes.aboutWrapper}>
+                    <div className={classes.aboutSectionWrapper}>
+                        <Typography className={classes.aboutTitleHeader}>Save on Your Insurance</Typography>
+                        <Typography className={classes.addressText}>Completing one of the Approved Defensive Driving Courses below will help you save on your insurance.</Typography>
+                        <Button className={classes.quoteButtonLink} href="https://dmv.ny.gov/pirp/online" target="_blank">
+                            Approved Courses
+                        </Button>
+                    </div>
+                </div>
+            </section>
+
             <span className={classes.scrollToContact} id="contactForm"></span>
+            <br />
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
                     <div style={{ backgroundColor: "#0047bbb0" }}>

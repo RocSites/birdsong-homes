@@ -217,9 +217,35 @@ body {
     padding: 16px;
 }
 
+.carrierWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    max-width: 150px;
+}
+
+.carrierWrapperRoot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+}
+
 .scrollToLocation {
     height: 100px;
     background-color: white;
+}
+
+.bannerCallButton {
+    background-color: #0047bb;
+    color: white;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 35px;
+    border: 1px solid gold;
+    padding: 5px;
 }
 
 .sectionWrapper {

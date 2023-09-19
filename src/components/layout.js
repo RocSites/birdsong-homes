@@ -40,7 +40,7 @@ const withStyles = makeStyles(() => ({
   copyrightText: {
     marginTop: "auto",
     marginBottom: "auto",
-    color: "gold",
+    color: "white",
     "@media(max-width: 600px)": {
       textAlign: "center"
     }
@@ -51,7 +51,7 @@ const withStyles = makeStyles(() => ({
   footerPhone: {
     display: "flex",
     margin: "5px 0",
-    color: "gold",
+    color: "white",
     textDecoration: "none",
     "@media(max-width: 600px)": {
       textAlign: "center"
@@ -106,7 +106,7 @@ const Layout = ({ children }) => {
               </a>
             </div>
 
-            <div style={{ width: "100%", border: "1px solid white", marginBottom: "20px" }}></div>
+            <div style={{ width: "100%", border: "1px solid gold", marginBottom: "20px" }}></div>
             <p className={classes.copyrightText}> © {new Date().getFullYear()} Beth Rogers Agency Inc.</p>
             <p class="rocsitesText">Website created and maintained by <span><a href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
           </div>
