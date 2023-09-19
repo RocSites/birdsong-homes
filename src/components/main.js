@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import bethRogersBuilding from "../images/beth_rogers_office.jpeg"
+import bethRogersBuilding from "../images/office-photo.jpg"
 import kidBackgroundImage from "../images/kelli-mcclintock-kid-1.jpg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
@@ -50,7 +50,7 @@ const withStyles = makeStyles(() => ({
             flexDirection: "column"
         }
     },
-    carrierWrapper:{
+    carrierWrapper: {
         display: "flex",
         margin: "auto",
         color: "black",
@@ -720,9 +720,9 @@ const Main = () => {
                 <div class="aboutWrapper">
                     <div class="aboutUsTextWrapper">
                         <Typography className={classes.aboutUsText}>We are a <b>local, fourth generation,</b>  friendly insurance agency. Our top priority is providing you with the best possible experience while meeting your insurance needs.
-                            <br /> <br /> Located in Henrietta, New York, we are licensed to serve all of New York.  You can call us at <a href="tel:585-321-0015">585-321-0015</a>- no pressing numbers- either Mary, Ellie or Beth will answer the phone to greet you.
+                            <br /> <br /> Located in Henrietta, New York, we are licensed to serve all of New York.  You can call us at <a style={{ color: "#d4af37", fontWeight: "bold" }} href="tel:585-321-0015">585-321-0015</a>- no pressing numbers- either Mary, Ellie or Beth will answer the phone to greet you.
                             <br /><br />
-                            If it is easier, text us at <a href="tel:585-321-0015">585-321-0015</a> and we will respond promptly.</Typography>
+                            If it is easier, text us at <a style={{ color: "#d4af37", fontWeight: "bold" }} href="tel:585-321-0015">585-321-0015</a> and we will respond promptly.</Typography>
                     </div>
                     <StaticImage className={classes.teamImage} src="../images/new_sign_pic.JPG" />
                 </div>
@@ -732,7 +732,7 @@ const Main = () => {
                 <div class="teamImageWrapper">
                     <div class="teamNameImageWrapper">
                         <Typography className={classes.employeeNameText}>Beth Rogers</Typography>
-                        <StaticImage className={classes.teamImage} src="../images/Beth_desk_pic.jpg" />
+                        <StaticImage className={classes.teamImage} src="../images/beth_new_pic.JPG" />
                         <a class="emailButtonLink" href="mailto:beth@bethrogersagency.com" target="_blank">
                             <EmailIcon style={{ color: "white", marginRight: "10px" }} />
                             Beth@bethrogersagency.com
@@ -771,7 +771,7 @@ const Main = () => {
                     <Typography className={classes.someOfWorkHeaderProducts}>Products</Typography>
                     <div class="productCardWrapper">
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/jamie-street-car-white.jpg" />
+                            <StaticImage src="../images/car-photo.JPG" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Auto
@@ -827,7 +827,7 @@ const Main = () => {
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/lawrence-crayton-life-one.jpg" />
+                            <StaticImage src="../images/beth_wedding_home_pic.jpeg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Life
@@ -838,10 +838,10 @@ const Main = () => {
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/alex-haney-food.jpg" />
+                            <StaticImage src="../images/flood-photo.png" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Food
+                                    Flood
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
                                     Business description Business description Business description Business description Business description Business description Business description Business description
@@ -881,7 +881,7 @@ const Main = () => {
             <section style={{ minHeight: "300px" }} className={classes.container}>
                 <div className={classes.carrierWrapper}>
                     <div className={classes.aboutSectionWrapper}>
-                        <Typography className={classes.someOfWorkHeaderProducts}>Carriers</Typography>
+                        <Typography className={classes.someOfWorkHeaderProducts}>File a Claim</Typography>
                         {/* <Typography className={classes.addressText}></Typography> */}
                         <div class="carrierWrapperRoot">
                             <div class="carrierWrapper">
@@ -1004,11 +1004,11 @@ const Main = () => {
                                     <p class="hoursTime">9:00 AM - 4:30 PM</p>
                                 </div>
                                 <div class="hoursDayTime">
-                                    <p>Saturday<span>*</span> - Sunday</p>
+                                    <p>Saturday - Sunday</p>
                                     <p class="hoursTime">Closed</p>
                                 </div>
 
-                                <p class="saturdayAppt">*<i>Saturday by Appointment Only</i></p>
+                                {/* <p class="saturdayAppt">*<i>Saturday by Appointment Only</i></p> */}
                             </div>
                             <div className={classes.reviewsWrapper}>
                                 <a className={classes.reviewLink}

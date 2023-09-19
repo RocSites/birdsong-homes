@@ -249,7 +249,7 @@ const Header = ({ siteTitle }) => {
             to="/#sectionThree" title="Get a Quote">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#sectionFour" title="Carriers">
+            to="/#sectionFour" title="File a Claim">
           </AnchorLink>
           <AnchorLink className={classes.navCallButton}
             to="/#contactForm" title="Contact Us">
@@ -311,6 +311,9 @@ const Header = ({ siteTitle }) => {
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
                   to="/#sectionFour" title="Carriers">
+                </AnchorLink>
+                <AnchorLink className={classes.navButtonMobile}
+                  to="/#contactForm" title="Contact Us">
                 </AnchorLink>
               </div>
 
