@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import bethRogersBuilding from "../images/office-photo.jpg"
+import bethRogersBuilding from "../images/office_photo.jpg"
 import kidBackgroundImage from "../images/kelli-mcclintock-kid-1.jpg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
@@ -543,7 +543,7 @@ const withStyles = makeStyles(() => ({
     },
     mainBanner: {
         display: "flex",
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${kidBackgroundImage})`,
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${bethRogersBuilding})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         justifyContent: "flex-end",
@@ -771,7 +771,7 @@ const Main = () => {
                     <Typography className={classes.someOfWorkHeaderProducts}>Products</Typography>
                     <div class="productCardWrapper">
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/car-photo.JPG" />
+                            <StaticImage src="../images/car_photo.jpg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Auto
@@ -1012,7 +1012,7 @@ const Main = () => {
                             </div>
                             <div className={classes.reviewsWrapper}>
                                 <a className={classes.reviewLink}
-                                    href=""
+                                    href="https://g.page/r/CSA60Vf802cnEB0/review"
                                     target="_blank"
                                 >
                                     <Button
