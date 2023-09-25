@@ -783,7 +783,7 @@ const Main = () => {
 
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/beth_wedding_home_pic.jpeg" />
+                            <StaticImage src="../images/house_pic.jpg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Home
