@@ -724,7 +724,7 @@ const Main = () => {
                             <br /><br />
                             If it is easier, text us at <a style={{ color: "#d4af37", fontWeight: "bold" }} href="tel:585-321-0015">585-321-0015</a> and we will respond promptly.</Typography>
                     </div>
-                    <StaticImage className={classes.teamImage} src="../images/new_sign_pic.JPG" />
+                    <StaticImage className={classes.teamImage} src="../images/new_sign_pic.jpg" />
                 </div>
 
                 <Typography className={classes.sectionTitleText}>Meet the Team</Typography>
@@ -732,7 +732,7 @@ const Main = () => {
                 <div class="teamImageWrapper">
                     <div class="teamNameImageWrapper">
                         <Typography className={classes.employeeNameText}>Beth Rogers</Typography>
-                        <StaticImage className={classes.teamImage} src="../images/beth_new_pic.JPG" />
+                        <StaticImage className={classes.teamImage} src="../images/beth_new_pic.jpg" />
                         <a class="emailButtonLink" href="mailto:beth@bethrogersagency.com" target="_blank">
                             <EmailIcon style={{ color: "white", marginRight: "10px" }} />
                             Beth@bethrogersagency.com
