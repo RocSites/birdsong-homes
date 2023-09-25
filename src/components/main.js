@@ -543,7 +543,7 @@ const withStyles = makeStyles(() => ({
     },
     mainBanner: {
         display: "flex",
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${bethRogersBuilding})`,
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${kidBackgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         justifyContent: "flex-end",
