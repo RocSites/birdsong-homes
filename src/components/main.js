@@ -794,7 +794,7 @@ const Main = () => {
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/tierra-mallorca-renters.jpg" />
+                            <StaticImage src="../images/apt_pic_2.jpg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                     Renters
