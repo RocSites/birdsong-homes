@@ -52,7 +52,6 @@ const withStyles = makeStyles(() => ({
     },
     carrierWrapper: {
         display: "flex",
-        margin: "auto",
         color: "black",
         flexDirection: "column",
         justifyContent: "center",
