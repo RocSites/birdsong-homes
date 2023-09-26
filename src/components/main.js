@@ -698,7 +698,7 @@ const Main = () => {
                     <Typography className={classes.mainBannerText}>Beth Rogers Agency <br /></Typography>
                     <Typography style={{ color: "white", textAlign: "center" }}>A fourth-generation, local, friendly insurance agency</Typography>
                     {/* <i>every time</i> */}
-                    <button class="bannerCallButton">(585) 321-0015</button>
+                    <a href="tel:(585) 321-0015" class="bannerCallButton">(585) 321-0015</a>
                     <Typography style={{ color: "white", textAlign: "center" }}>Call or Text Us</Typography>
 
                 </div>

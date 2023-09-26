@@ -246,6 +246,8 @@ body {
     border-radius: 35px;
     border: 1px solid gold;
     padding: 5px;
+    text-decoration: none;
+    text-align: center;
 }
 
 .sectionWrapper {
