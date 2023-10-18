@@ -900,8 +900,8 @@ const Main = () => {
                             <div class="carrierWrapper">
                                 <StaticImage src="../images/logo-travelers.svg" />
                                 <Typography>Travelers</Typography>
-                                <a href="tel:1-800-776-4737" target="_blank">
-                                    1-800-776-4737
+                                <a href="tel:1-800-238-6225" target="_blank">
+                                    1-800-238-6225
                                 </a>
                             </div>
                             <div class="carrierWrapper">
