@@ -125,7 +125,7 @@ const withStyles = makeStyles(() => ({
     },
     productCard: {
         margin: "15px",
-        height: "10%",
+        height: "455px",
         "& img": {
             maxHeight: "345px",
             width: "100%",
@@ -453,10 +453,8 @@ const withStyles = makeStyles(() => ({
     connectHeader: {
         fontSize: "2rem",
         textAlign: "center",
-        color: "white",
+        color: "#6198eb",
         padding: "10px",
-        backgroundColor: "#6198eb",
-        borderBottom: "5px solid gold"
         // textTransform: "uppercase"
     },
     socialLinkWrapper: {
@@ -520,7 +518,6 @@ const withStyles = makeStyles(() => ({
     containerContactUs: {
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#6198eb4d"
 
     },
     containerSectionTwoScroll: {
@@ -573,7 +570,7 @@ const withStyles = makeStyles(() => ({
     },
     mainBannerTextWrapper: {
         display: "flex",
-        margin: "10% auto",
+        margin: "auto",
         width: "100%",
         flexDirection: "column",
         "@media(max-width:600px)": {
@@ -702,7 +699,7 @@ const Main = () => {
                     <Typography style={{ color: "white", textAlign: "center" }}>Serving Rochester since 20xx</Typography>
                     {/* <i>every time</i> */}
                     <a href="tel:(585) 298-8934" class="bannerCallButton">(585) 298-8934</a>
-                    <Typography style={{ color: "white", textAlign: "center" }}>Call or Text Us</Typography>
+                    <Typography style={{ color: "white", textAlign: "center" }}>Free Estimates</Typography>
 
                 </div>
             </div>
@@ -713,7 +710,7 @@ const Main = () => {
                     </div>
                     <div className={classes.containerMarginBottomSmall}>
                         {/* <Typography className={classes.someOfWorkHeader}>Our Mission:</Typography> */}
-                        <Typography className={classes.someOfWorkHeader}>We strive to provide the best possible service, while meeting your insurance needs.</Typography>
+                        <Typography className={classes.someOfWorkHeader}>We</Typography>
                     </div>
                 </div>
             </section>
@@ -730,29 +727,38 @@ const Main = () => {
 
                 <div class="teamImageWrapper">
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
-                  
+                        <StaticImage className={classes.teamImage} src="../images/ST_deck_1.jpeg" />
+
                     </div>
                     <div class="teamNameImageWrapper">
                         <StaticImage className={classes.teamImage} src="../images/ST-fence_one.jpeg" />
-                  
+
                     </div>
                     <div class="teamNameImageWrapper">
                         <StaticImage className={classes.teamImage} src="../images/ST_walkway_one.jpeg" />
                     </div>
                     <div class="teamNameImageWrapper">
                         <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
-                  
+
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST-fence_one.jpeg" />
-                  
+                        <StaticImage className={classes.teamImage} src="../images/ST_deck_two.jpeg" />
+
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_walkway_one.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/ST_patio_two.jpeg" />
                     </div>
+                    <div class="teamNameImageWrapper">
+                        <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
 
+                    </div>
+                    <div class="teamNameImageWrapper">
+                        <StaticImage className={classes.teamImage} src="../images/ST_deck_two.jpeg" />
 
+                    </div>
+                    <div class="teamNameImageWrapper">
+                        <StaticImage className={classes.teamImage} src="../images/ST_siding_one.jpeg" />
+                    </div>
                 </div>
 
                 <div className={classes.containerSectionTwoScroll}>
@@ -766,13 +772,13 @@ const Main = () => {
             </div>
             <section class="productSectionWrapper">
                 <div>
-                    <Typography className={classes.someOfWorkHeaderProducts}>Products</Typography>
+                    <Typography className={classes.someOfWorkHeaderProducts}>Services</Typography>
                     <div class="productCardWrapper">
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/car_photo.jpg" />
+                            <StaticImage src="../images/ST_roof_one.jpeg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Auto
+                                    House,Roof Soft Wash
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
                                     Auto description auto description auto description auto description auto description auto description auto description auto description
@@ -781,10 +787,10 @@ const Main = () => {
 
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/house_pic.jpg" />
+                            <StaticImage src="../images/ST_concrete.jpeg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Home
+                                    Concrete, Deck, Fence Pressure Washing
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
                                     Home description Home description Home description Home description Home description Home description Home description Home description
@@ -792,10 +798,10 @@ const Main = () => {
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/apt_pic_2.jpg" />
+                            <StaticImage src="../images/ST_brick.jpeg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Renters
+                                    Brick, Paver Wash, Re-sanding
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
                                     Renters description Renters description Renters description Renters description Renters description Renters description Renters description Renters description
@@ -803,49 +809,17 @@ const Main = () => {
                             </CardContent>
                         </Card>
                         <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/new_motorcyle_pic.jpg" />
+                            <StaticImage src="../images/ST_gutter_one.jpeg" />
                             <CardContent>
                                 <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Motorcycle
+                                    Gutter Cleaning, Brightening
                                 </Typography>
                                 {/* <Typography variant="body2" color="text.secondary">
                                     Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description
                                 </Typography> */}
                             </CardContent>
                         </Card>
-                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/new_boat_pic.jpg" />
-                            <CardContent>
-                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Boat
-                                </Typography>
-                                {/* <Typography variant="body2" color="text.secondary">
-                                    Boat description Boat description Boat description Boat description Boat description Boat description Boat description Boat description
-                                </Typography> */}
-                            </CardContent>
-                        </Card>
-                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/beth_wedding_home_pic.jpeg" />
-                            <CardContent>
-                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Life
-                                </Typography>
-                                {/* <Typography variant="body2" color="text.secondary">
-                                    Life description Life description Life description Life description Life description Life description Life description Life description
-                                </Typography> */}
-                            </CardContent>
-                        </Card>
-                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/flood-photo.png" />
-                            <CardContent>
-                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Flood
-                                </Typography>
-                                {/* <Typography variant="body2" color="text.secondary">
-                                    Business description Business description Business description Business description Business description Business description Business description Business description
-                                </Typography> */}
-                            </CardContent>
-                        </Card>
+              
                     </div>
 
                     {/* {console.log(productInfo.map(obj => obj.imagePath))}
@@ -866,10 +840,10 @@ const Main = () => {
             <section style={{ minHeight: "300px" }} className={classes.container}>
                 <div className={classes.aboutWrapper}>
                     <div className={classes.aboutSectionWrapper}>
-                        <Typography className={classes.aboutTitleHeader}>Get a quote</Typography>
-                        <Typography className={classes.addressText}>Use the link below to get a free quote</Typography>
-                        <Button className={classes.quoteButtonLink} href="https://nwexpress.com/beth-rogers/multi-quote/getting-started?fbclid=IwAR3_P2WjSWAkt608SHBMEdq3BjuIp3ahR5jyoWmEqHdbTyKPXOIJZqG2mD8" target="_blank">
-                            Free Quote
+                        <Typography className={classes.aboutTitleHeader}>Get a Free Estimate</Typography>
+                        <Typography className={classes.addressText}>Please use the form below for a free estimate</Typography>
+                        <Button className={classes.quoteButtonLink} href="https://www.markate.com/" target="_blank">
+                            Free Estimate
                         </Button>
                     </div>
                 </div>
@@ -877,100 +851,21 @@ const Main = () => {
 
             <span className={classes.scrollToLocation} id="sectionFour"></span>
             <section style={{ minHeight: "300px" }} className={classes.container}>
-                <div className={classes.carrierWrapper}>
-                    <div className={classes.aboutSectionWrapper}>
-                        <Typography className={classes.someOfWorkHeaderProducts}>File a Claim</Typography>
-                        {/* <Typography className={classes.addressText}></Typography> */}
-                        <div class="carrierWrapperRoot">
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo/logo.svg" />
-                                <Typography>Nationwide</Typography>
-                                <a href="tel:1-800-421-3535" target="_blank">
-                                    1-800-421-3535
-                                </a>
-                            </div>
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo-progressive.svg" />
-                                <Typography>Progressive</Typography>
-                                <a href="tel:1-800-776-4737" target="_blank">
-                                    1-800-776-4737
-                                </a>
-                            </div>
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo-travelers.svg" />
-                                <Typography>Travelers</Typography>
-                                <a href="tel:1-800-238-6225" target="_blank">
-                                    1-800-238-6225
-                                </a>
-                            </div>
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo-farmers.webp" />
-                                <Typography>Farmers</Typography>
-                                <a href="tel:1-800-854-6011" target="_blank">
-                                    1-800-854-6011
-                                </a>
-                            </div>
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo-foremost.png" />
-                                <Typography>Foremost Star</Typography>
-                                <a href="tel:1-800-527-3907" target="_blank">
-                                    1-800-527-3907
-                                </a>
-                            </div>
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo-bristol-west.png" />
-                                <Typography>Bristol West</Typography>
-                                <a href="tel:1-800-274-7865" target="_blank">
-                                    1-800-274-7865
-                                </a>
-                            </div>
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo-hagerty.svg" />
-                                <Typography>Hagerty</Typography>
-                                <a href="tel:1-800-385-0274" target="_blank">
-                                    1-800-385-0274
-                                </a>
-                            </div>
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo-amer-modern.png" />
-                                <Typography>American Modern</Typography>
-                                <a href="tel:1-800-375-2075" target="_blank">
-                                    1-800-375-2075
-                                </a>
-                            </div>
-                            <div class="carrierWrapper">
-                                <StaticImage src="../images/logo-assurant.webp" />
-                                <Typography>Assurant Flood</Typography>
-                                <a href="tel:1-800-423-4403" target="_blank">
-                                    1-800-423-4403
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <div>Section (if needed)</div>
             </section>
 
 
             <span className={classes.scrollToLocation} id="sectionFive"></span>
 
             <section style={{ minHeight: "300px" }} className={classes.container}>
-                <div className={classes.aboutWrapper}>
-                    <div className={classes.aboutSectionWrapper}>
-                        <Typography className={classes.aboutTitleHeader}>Save on Your Insurance</Typography>
-                        <Typography className={classes.addressText}>Completing one of the Approved Defensive Driving Courses below will help you save on your insurance.</Typography>
-                        <Button className={classes.quoteButtonLink} href="https://dmv.ny.gov/pirp/online" target="_blank">
-                            Approved Courses
-                        </Button>
-                    </div>
-                </div>
+                <div>Section (if needed)</div>
             </section>
 
             <span className={classes.scrollToContact} id="contactForm"></span>
             <br />
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
-                    <div style={{ backgroundColor: "#6198ebb0" }}>
+                    <div>
                         <Typography className={classes.connectHeader}>Contact Us</Typography>
                         <br />
 
@@ -983,34 +878,18 @@ const Main = () => {
                             </a>
 
                         </div>
-                        <div class="mapWrapper">
-                            <Typography style={{ margin: "15px", color: "white" }}>4072 W Henrietta Rd, Rochester, NY 14623</Typography>
+                        {/* <div class="mapWrapper">
+                            <Typography style={{ margin: "15px", color: "black" }}>4072 W Henrietta Rd, Rochester, NY 14623</Typography>
                             <Button className={classes.getDirectionsLinkDark} href="https://www.google.com/maps/dir/?api=1&destination_place_id=ChIJmWIbp49L0YkRIDrRV_zTZyc&destination=direct" target="_blank">
                                 Get Directions
                             </Button>
                             <iframe style={{ margin: "25px" }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11658.336155770092!2d-77.6448535!3d43.0712153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d14b8fa71b6299%3A0x2767d3fc57d13a20!2sNationwide%20Insurance%3A%20Beth%20Rogers%20Agency%20Inc.!5e0!3m2!1sen!2sus!4v1693494349904!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
+                        </div> */}
                         <div style={{ backgroundColor: "white" }}>
-                            <Typography className={classes.connectHeader}>Hours</Typography>
-                            <div class="hoursWrapper">
-                                <div class="hoursDayTime">
-                                    <p>Monday - Thursday</p>
-                                    <p class="hoursTime">9:00 AM - 5:00 PM</p>
-                                </div>
-                                <div class="hoursDayTime">
-                                    <p>Friday</p>
-                                    <p class="hoursTime">9:00 AM - 4:30 PM</p>
-                                </div>
-                                <div class="hoursDayTime">
-                                    <p>Saturday - Sunday</p>
-                                    <p class="hoursTime">Closed</p>
-                                </div>
-
-                                {/* <p class="saturdayAppt">*<i>Saturday by Appointment Only</i></p> */}
-                            </div>
+                 
                             <div className={classes.reviewsWrapper}>
                                 <a className={classes.reviewLink}
-                                    href="https://g.page/r/CSA60Vf802cnEB0/review"
+                                    href=""
                                     target="_blank"
                                 >
                                     <Button

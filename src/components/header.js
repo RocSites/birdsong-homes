@@ -251,7 +251,7 @@ const Header = ({ siteTitle }) => {
             to="/#sectionTwo" title="Services">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#sectionThree" title="Get a Quote">
+            to="/#sectionThree" title="Get an Estimate">
           </AnchorLink>
           {/* <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#sectionFour" title="File a Claim">

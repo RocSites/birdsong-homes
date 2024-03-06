@@ -88,7 +88,6 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     padding: 50px 25px;
-    background-color: #0047bbb0;
 
 }
 
@@ -178,6 +177,7 @@ body {
 .teamNameImageWrapper {
     display: flex;
     flex-direction: column;
+    flex: 1 1 33%;
 }
 
 .hoursWrapper {
@@ -214,6 +214,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     padding: 16px;
+    flex-wrap: wrap;
 }
 
 .carrierWrapper {

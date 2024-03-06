@@ -89,14 +89,10 @@ const Layout = ({ children }) => {
         <main className={classes.mainContent}>{children}</main>
         <footer class="footerRoot">
           <div className={classes.footerContent}>
-            <a href="tel:(585) 321-0015" className={classes.footerPhone}>
+            <a href="tel:(585) 298-8934" className={classes.footerPhone}>
               <PhoneIcon className={classes.phoneIcon} />
-              (585) 321-0015
+              (585) 298-8934
             </a>
-            <div class="contactNumberWrapper">
-              <FaxIcon />
-              (585) 625-0460
-            </div>
             <div class="socialLinkWrapper">
               <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
                 <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
