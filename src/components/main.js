@@ -7,6 +7,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import bethRogersBuilding from "../images/office_photo-min.jpg"
+import houseWideOne from "../images/ST_house_one.jpeg"
+import houseTruck from "../images/ST_house_truck_one.jpeg"
+import housePool from "../images/ST_pool.jpeg"
+import houseRoof from "../images/ST_roof_one.jpeg"
 import kidBackgroundImage from "../images/kelli-mcclintock-kid-1.jpg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
@@ -110,12 +114,11 @@ const withStyles = makeStyles(() => ({
     someOfWorkHeaderProducts: {
         textAlign: "center",
         fontSize: "2rem",
-        color: "white",
-        backgroundColor: "#0047bb",
+        color: "#6198eb",
+        backgroundColor: "transparent",
         padding: "10px",
         width: "100%",
         margin: "auto",
-        borderBottom: "5px solid gold",
         "@media(max-width: 600px)": {
             // padding: "50px 25px",
         }
@@ -430,7 +433,7 @@ const withStyles = makeStyles(() => ({
         margin: "40px 0"
     },
     quoteButtonLink: {
-        backgroundColor: "#0047bb",
+        backgroundColor: "#6198eb",
         color: "white",
         textTransform: "none",
         width: "300px",
@@ -452,7 +455,7 @@ const withStyles = makeStyles(() => ({
         textAlign: "center",
         color: "white",
         padding: "10px",
-        backgroundColor: "#0047bb",
+        backgroundColor: "#6198eb",
         borderBottom: "5px solid gold"
         // textTransform: "uppercase"
     },
@@ -517,13 +520,13 @@ const withStyles = makeStyles(() => ({
     containerContactUs: {
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#0047bb4d"
+        backgroundColor: "#6198eb4d"
 
     },
     containerSectionTwoScroll: {
         display: "flex",
         flexDirection: "column",
-        // backgroundColor: "#0047bb"
+        // backgroundColor: "#6198eb"
     },
     containerMarginBottomSmall: {
         display: "flex",
@@ -542,7 +545,7 @@ const withStyles = makeStyles(() => ({
     },
     mainBanner: {
         display: "flex",
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${bethRogersBuilding})`,
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${houseWideOne})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         justifyContent: "flex-end",
@@ -552,7 +555,7 @@ const withStyles = makeStyles(() => ({
         }
     },
     mainBannerText: {
-        color: "gold",
+        color: "white",
         fontSize: "3.5rem",
         textAlign: "center",
         fontWeight: "bold",
@@ -601,7 +604,7 @@ const withStyles = makeStyles(() => ({
     aboutUsText: {
         lineHeight: 2,
         marginBottom: 0,
-        color: "white"
+        color: "#6198eb"
     }
 
 }))
@@ -695,10 +698,10 @@ const Main = () => {
             {/* <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen Wednesday, August 2nd</div> */}
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
-                    <Typography className={classes.mainBannerText}>Beth Rogers Agency <br /></Typography>
-                    <Typography style={{ color: "white", textAlign: "center" }}>A fourth-generation, local, friendly insurance agency</Typography>
+                    <Typography className={classes.mainBannerText}>Small & Tall Power Washing <br /></Typography>
+                    <Typography style={{ color: "white", textAlign: "center" }}>Serving Rochester since 20xx</Typography>
                     {/* <i>every time</i> */}
-                    <a href="tel:(585) 321-0015" class="bannerCallButton">(585) 321-0015</a>
+                    <a href="tel:(585) 298-8934" class="bannerCallButton">(585) 298-8934</a>
                     <Typography style={{ color: "white", textAlign: "center" }}>Call or Text Us</Typography>
 
                 </div>
@@ -718,41 +721,37 @@ const Main = () => {
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">
                     <div class="aboutUsTextWrapper">
-                        <Typography className={classes.aboutUsText}>We are a <b>local, fourth generation,</b>  friendly insurance agency. Our top priority is providing you with the best possible experience while meeting your insurance needs.
-                            <br /> <br /> Located in Henrietta, New York, we are licensed to serve all of New York.  You can call us at <a style={{ color: "#d4af37", fontWeight: "bold" }} href="tel:585-321-0015">585-321-0015</a>- no pressing numbers- either Mary, Ellie or Beth will answer the phone to greet you.
-                            <br /><br />
-                            If it is easier, text us at <a style={{ color: "#d4af37", fontWeight: "bold" }} href="tel:585-321-0015">585-321-0015</a> and we will respond promptly.</Typography>
+                        <Typography className={classes.aboutUsText}>About us text here</Typography>
                     </div>
-                    <StaticImage className={classes.teamImage} src="../images/new_sign_pic.jpg" />
+                    <StaticImage className={classes.teamImage} src="../images/ST_team.jpeg" />
                 </div>
 
-                <Typography className={classes.sectionTitleText}>Meet the Team</Typography>
+                <Typography className={classes.sectionTitleText}>Results/Recent Projects</Typography>
 
                 <div class="teamImageWrapper">
                     <div class="teamNameImageWrapper">
-                        <Typography className={classes.employeeNameText}>Beth Rogers</Typography>
-                        <StaticImage className={classes.teamImage} src="../images/beth_new_pic.jpg" />
-                        <a class="emailButtonLink" href="mailto:beth@bethrogersagency.com" target="_blank">
-                            <EmailIcon style={{ color: "white", marginRight: "10px" }} />
-                            Beth@bethrogersagency.com
-                        </a>
+                        <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
+                  
                     </div>
                     <div class="teamNameImageWrapper">
-                        <Typography className={classes.employeeNameText}>Ellie</Typography>
-                        <StaticImage className={classes.teamImage} src="../images/ellie_image_1.jpeg" />
-                        <a class="emailButtonLink" href="mailto:ellie@bethrogersagency.com" target="_blank">
-                            <EmailIcon style={{ color: "white", marginRight: "10px" }} />
-                            Ellie@bethrogersagency.com
-                        </a>
+                        <StaticImage className={classes.teamImage} src="../images/ST-fence_one.jpeg" />
+                  
                     </div>
                     <div class="teamNameImageWrapper">
-                        <Typography className={classes.employeeNameText}>Mary Rogers</Typography>
-                        <StaticImage className={classes.teamImage} src="../images/mary_image_1.jpeg" />
-                        <a class="emailButtonLink" href="mailto:mary@bethrogersagency.com" target="_blank">
-                            <EmailIcon style={{ color: "white", marginRight: "10px" }} />
-                            Mary@bethrogersagency.com
-                        </a>
+                        <StaticImage className={classes.teamImage} src="../images/ST_walkway_one.jpeg" />
                     </div>
+                    <div class="teamNameImageWrapper">
+                        <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
+                  
+                    </div>
+                    <div class="teamNameImageWrapper">
+                        <StaticImage className={classes.teamImage} src="../images/ST-fence_one.jpeg" />
+                  
+                    </div>
+                    <div class="teamNameImageWrapper">
+                        <StaticImage className={classes.teamImage} src="../images/ST_walkway_one.jpeg" />
+                    </div>
+
 
                 </div>
 
@@ -971,15 +970,15 @@ const Main = () => {
             <br />
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
-                    <div style={{ backgroundColor: "#0047bbb0" }}>
+                    <div style={{ backgroundColor: "#6198ebb0" }}>
                         <Typography className={classes.connectHeader}>Contact Us</Typography>
                         <br />
 
                         <div className={classes.phoneEmailWrapper}>
-                            <a href="tel:(585) 321-0015" className={classes.contactPhone}>
+                            <a href="tel:(585) 298-8934" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
                                     <PhoneIcon className={classes.phoneIcon} />
-                                    (585) 321-0015
+                                    (585) 298-8934
                                 </Button>
                             </a>
 

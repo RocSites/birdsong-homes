@@ -146,13 +146,12 @@ body {
     display: flex;
     justify-content: center;
     padding: 2rem 1rem;
-    background-color: #0047bbbd;
 }
 
 .aboutUsText {
     line-height: 2;
     margin-bottom: 0;
-    color: white;
+    color: #6198eb;
 }
 
 .aboutUsTextWrapper {
@@ -239,12 +238,12 @@ body {
 }
 
 .bannerCallButton {
-    background-color: #0047bb;
+    background-color: #6198eb;
     color: white;
     width: 200px;
     margin: 20px auto;
     border-radius: 35px;
-    border: 1px solid gold;
+    border: 1px solid white;
     padding: 5px;
     text-decoration: none;
     text-align: center;

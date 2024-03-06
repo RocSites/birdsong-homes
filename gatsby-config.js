@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Beth Rogers Agency Inc.`,
-    description: `We are a local, third generation, friendly insurance agency.`,
+    title: `Small & Tall Power Washing`,
+    description: `Residential and Commercial Soft Washing and Power Washing`,
     author: `Doug Kellermeyer`,
   },
   plugins: [

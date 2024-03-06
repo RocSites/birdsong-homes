@@ -98,17 +98,14 @@ const Layout = ({ children }) => {
               (585) 625-0460
             </div>
             <div class="socialLinkWrapper">
-              <a href="https://www.facebook.com/bethrogersagency/" target="_blank" class="socialLink">
+              <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
                 <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
-              </a>
-              <a href="https://www.linkedin.com/in/beth-rogers-378a2710/" target="_blank" class="socialLink">
-                <img className={classes.socialFacebookSpacing} src={LinkedInIcon} />
               </a>
             </div>
 
             <div style={{ width: "100%", border: "1px solid gold", marginBottom: "20px" }}></div>
-            <p className={classes.copyrightText}> © {new Date().getFullYear()} Beth Rogers Agency Inc.</p>
-            <p class="rocsitesText">Website created and maintained by <span><a href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
+            <p className={classes.copyrightText}> © {new Date().getFullYear()} Small & Tall Powerwashing</p>
+            <p class="rocsitesText">Website by <span><a href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
           </div>
         </footer>
       </div>

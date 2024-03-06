@@ -5,7 +5,9 @@ import { Typography, makeStyles } from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
 import chillGrillLogoOG from '../images/chill_logo_og.jpeg'
-import NationWideLogoBird from "../images/logo/logo.svg"
+import STLogoOne from "../images/smalltall_logo_1.png"
+import STLogoTwo from "../images/smalltall_logo_2.png"
+import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import coneIcon from "../images/cone_icon.png"
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -31,11 +33,10 @@ const withStyles = makeStyles(() => ({
     position: "fixed",
     display: "flex",
     // background: "#4c86d1",
-    backgroundColor: "transparent",
+    backgroundColor: "white",
     color: "white",
     justifyContent: "space-between",
     width: "100%",
-    height: "112px",
     top: 0,
     boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
     zIndex: 2,
@@ -58,7 +59,7 @@ const withStyles = makeStyles(() => ({
     padding: "1rem",
   },
   navButton: {
-    color: "gold",
+    color: "black",
     // fontWeight: "bold",
     textTransform: "none",
     margin: "auto 10px",
@@ -87,8 +88,10 @@ const withStyles = makeStyles(() => ({
   },
   navLogo: {
     display: "flex",
-    width: "60px",
+    width: "100px",
     margin: "auto",
+    marginRight: "15px",
+    marginLeft: "0px"
   },
   drawerItem: {
     "&:hover": {
@@ -108,13 +111,13 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "1rem",
     fontSize: "2.5rem",
-    color: "white",
+    color: "#6198eb",
     "@media(min-width: 601px)": {
       display: "none"
     }
   },
   hamburgerIconScroll: {
-    color: "#0047bb",
+    color: "#6198eb",
     margin: "1rem",
     fontSize: "2.5rem",
     "@media(min-width: 601px)": {
@@ -128,20 +131,20 @@ const withStyles = makeStyles(() => ({
   },
   navCallButton: {
     display: "flex",
-    backgroundColor: "#0047bb",
+    backgroundColor: "#6198eb",
     textDecoration: "none",
     alignItems: "center",
     padding: "8px 16px",
     color: "white",
     textTransform: "none",
-    border: "1px solid gold",
+    border: "1px solid white",
     borderRadius: "35px",
     height: "50px",
     margin: "auto 20px"
   },
   navCallButtonMobile: {
     display: "flex",
-    backgroundColor: "#0047bb",
+    backgroundColor: "#6198eb",
     padding: "8px 16px",
     color: "white",
     textTransform: "none",
@@ -172,7 +175,7 @@ const withStyles = makeStyles(() => ({
     alignItems: "center"
   },
   navLogoText: {
-    color: "gold"
+    color: "black"
   },
   navLogoTextScroll: {
     color: "black"
@@ -234,8 +237,10 @@ const Header = ({ siteTitle }) => {
       <div className={classes.navLeftWrapper}>
         <div className={classes.navBarTitle}>
           <Link to="/" className={classes.navLogoLink}>
-            <img className={classes.navLogo} src={NationWideLogoBird} alt="company logo" />
-            <Typography className={navbarScroll ? classes.navLogoTextScroll : classes.navLogoText}>Beth Rogers Agency</Typography>
+            {/* <WaterDropIcon className={classes.navLogo} alt="company logo" /> */}
+            <img src={STLogoOne} className={classes.navLogo} alt="company logo"/>
+            {/* <img src={STLogoTwo} className={classes.navLogo} alt="company logo"/> */}
+            <Typography className={navbarScroll ? classes.navLogoTextScroll : classes.navLogoText}>Small & Tall Power Washing</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
@@ -243,14 +248,14 @@ const Header = ({ siteTitle }) => {
             to="/#sectionOne" title="About Us">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#sectionTwo" title="Products">
+            to="/#sectionTwo" title="Services">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#sectionThree" title="Get a Quote">
           </AnchorLink>
-          <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
+          {/* <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#sectionFour" title="File a Claim">
-          </AnchorLink>
+          </AnchorLink> */}
           <AnchorLink className={classes.navCallButton}
             to="/#contactForm" title="Contact Us">
           </AnchorLink>
@@ -319,7 +324,7 @@ const Header = ({ siteTitle }) => {
 
               <Button
                 class="drawerItemLogin"
-                target="_blank" href="tel:(585) 321-0015"
+                target="_blank" href="tel:(585) 298-8934"
               >
                 <PhoneIcon class="drawerPhoneIcon" />
                 Call Us
@@ -328,11 +333,8 @@ const Header = ({ siteTitle }) => {
                 {/* <a href="" target="_blank" class="socialLink">
                   <img class="socialDrawer" src={InstagramIcon} />
                 </a> */}
-                <a href="https://www.facebook.com/bethrogersagency/" target="_blank" class="socialLink">
+                <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
                   <img class="socialDrawerFb" src={FacebookIcon} />
-                </a>
-                <a href="https://www.linkedin.com/in/beth-rogers-378a2710/" target="_blank" class="socialLink">
-                  <img className={classes.socialFacebookSpacing} src={LinkedInIcon} />
                 </a>
               </div>
             </List>
