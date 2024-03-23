@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
@@ -114,11 +114,12 @@ const withStyles = makeStyles(() => ({
     someOfWorkHeaderProducts: {
         textAlign: "center",
         fontSize: "2rem",
-        color: "#6198eb",
+        color: "#3b3a73",
         backgroundColor: "transparent",
         padding: "10px",
         width: "100%",
         margin: "auto",
+        fontWeight: "bold",
         "@media(max-width: 600px)": {
             // padding: "50px 25px",
         }
@@ -134,7 +135,8 @@ const withStyles = makeStyles(() => ({
         }
     },
     productTitleText: {
-        textAlign: "center"
+        textAlign: "center",
+        margin: "15px"
     },
     landingMessageWrapper: {
         display: "flex",
@@ -433,11 +435,16 @@ const withStyles = makeStyles(() => ({
         margin: "40px 0"
     },
     quoteButtonLink: {
-        backgroundColor: "#6198eb",
+        backgroundColor: "#3b3a73",
         color: "white",
         textTransform: "none",
         width: "300px",
-        borderRadius: "35px"
+        borderRadius: "35px",
+        '&:hover': {
+            backgroundColor: "#d51d35",
+            boxShadow: 'none',
+            cursor: "pointer"
+        },
     },
     getDirectionsLinkDark: {
         backgroundColor: "#333333",
@@ -453,7 +460,7 @@ const withStyles = makeStyles(() => ({
     connectHeader: {
         fontSize: "2rem",
         textAlign: "center",
-        color: "#6198eb",
+        color: "#3b3a73",
         padding: "10px",
         // textTransform: "uppercase"
     },
@@ -580,7 +587,8 @@ const withStyles = makeStyles(() => ({
     sectionTitleText: {
         fontSize: "2rem",
         textAlign: "center",
-        margin: "40px 0"
+        margin: "40px 0",
+        fontWeight: "bold"
     },
     teamImage: {
         maxWidth: "600px",
@@ -601,13 +609,42 @@ const withStyles = makeStyles(() => ({
     aboutUsText: {
         lineHeight: 2,
         marginBottom: 0,
-        color: "#6198eb"
+        color: "white",
+        backgroundColor: "#3b3a73",
+        padding: "20px",
+        borderRadius: "16px",
+        margin: "15px"
     }
 
 }))
 
 const Main = () => {
     const classes = withStyles();
+
+    const [isFlippedOne, setFlippedOne] = useState(false);
+    const [isFlippedTwo, setFlippedTwo] = useState(false);
+    const [isFlippedThree, setFlippedThree] = useState(false);
+    const [isFlippedFour, setFlippedFour] = useState(false);
+    const [isFlippedFive, setFlippedFive] = useState(false);
+
+    const handleFlip = (serviceName, enabled) => (e) => {
+        console.log("hover")
+        if (serviceName === "card1") {
+            setFlippedOne(enabled)
+        } else if (serviceName === "card2") {
+            setFlippedTwo(enabled)
+        } else if (serviceName === "card3") {
+            setFlippedThree(enabled)
+        } else if (serviceName === "card4") {
+            setFlippedFour(enabled)
+        } else if (serviceName === "card5") {
+            setFlippedFive(enabled)
+        }
+    }
+
+   
+
+
     const { mobileImage, desktopImage } = useStaticQuery(graphql`
     query { 
       desktopImage: file(relativePath: { eq: "yassine-khalfalli-roc-image.jpg" }) {
@@ -665,13 +702,6 @@ const Main = () => {
 
     ]
 
-    const FiveStar = () => {
-        return (
-            <div className={classes.fiveStar}>
-                <StarRateIcon /><StarRateIcon /><StarRateIcon /><StarRateIcon /><StarRateIcon />
-            </div>
-        )
-    }
 
     const ProductCard = ({ imagePath, title, description }) => {
         return (
@@ -692,33 +722,30 @@ const Main = () => {
 
     return (
         <div className={classes.mainRoot}>
-            {/* <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen Wednesday, August 2nd</div> */}
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
                     <Typography className={classes.mainBannerText}>Small & Tall Power Washing <br /></Typography>
-                    <Typography style={{ color: "white", textAlign: "center" }}>Serving Rochester since 20xx</Typography>
+                    <Typography style={{ color: "white", textAlign: "center" }}>Serving Rochester since 2021</Typography>
                     {/* <i>every time</i> */}
                     <a href="tel:(585) 298-8934" class="bannerCallButton">(585) 298-8934</a>
                     <Typography style={{ color: "white", textAlign: "center" }}>Free Estimates</Typography>
 
                 </div>
             </div>
-            <section class="sectionOneSectionWrapper">
-                <div className={classes.containerSectionTwoScroll}>
-                    <div className={classes.container}>
-                        <span className={classes.scrollToSectionOne} id="sectionOne"></span>
-                    </div>
-                    <div className={classes.containerMarginBottomSmall}>
-                        {/* <Typography className={classes.someOfWorkHeader}>Our Mission:</Typography> */}
-                        <Typography className={classes.someOfWorkHeader}>We</Typography>
-                    </div>
-                </div>
-            </section>
+            <span className={classes.scrollToSectionOne} id="sectionOne"></span>
+
             <section class="aboutSectionWrapper">
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">
                     <div class="aboutUsTextWrapper">
-                        <Typography className={classes.aboutUsText}>About us text here</Typography>
+                        <Typography className={classes.aboutUsText}>Small &amp; Tall Power Washing LLC is your trusted and insured house washing company; serving Monroe
+                            County, Wayne County, and the surrounding areas. Our three owner/operators are local first responders
+                            who risk their lives every day in service to their communities.</Typography>
+                        <Typography className={classes.aboutUsText}>At Small &amp; Tall Power Washing, we pride
+                            ourselves on working our hardest, putting the community first, and always prioritizing our valued
+                            customers. Your satisfaction and support are the greatest compliments we receive and it is what drives
+                            us to continue to beautify the areas we serve.</Typography>
+
                     </div>
                     <StaticImage className={classes.teamImage} src="../images/ST_team.jpeg" />
                 </div>
@@ -774,52 +801,168 @@ const Main = () => {
                 <div>
                     <Typography className={classes.someOfWorkHeaderProducts}>Services</Typography>
                     <div class="productCardWrapper">
-                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/ST_roof_one.jpeg" />
-                            <CardContent>
-                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    House,Roof Soft Wash
-                                </Typography>
-                                {/* <Typography variant="body2" color="text.secondary">
-                                    Auto description auto description auto description auto description auto description auto description auto description auto description
-                                </Typography> */}
-                            </CardContent>
+                        <div
+                            className={`flip-card ${isFlippedOne ? "flipped" : ""}`}
+                            id="card1"
+                            onMouseOver={handleFlip("card1", true)}
+                            onMouseOut={handleFlip("card1", false)}
+                            onClick={handleFlip("card1", !isFlippedOne)}
+                        >
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <div className="card-content">
+                                        <StaticImage src="../images/ST_pool.jpeg" />
+                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                            Residential House Wash
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className="flip-card-back">
+                                    <div className="card-content">
+                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                            Your home’s siding is a perfect place for mold, mildew, fungi, dirt, and other
+                                            organic material to build up and become an eyesore. We use the industry’s best equipment and
+                                            products to safely remove all organic material and bring your home back to its original shine. Our
+                                            equipment uses a low pressure/ high volume pump system to carefully wash your house in safe yet
+                                            effective soaps and chemicals that kill and remove all organic material. Your house is rinsed clean and
+                                            will never look better!
+                                        </Typography>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                             onMouseOver={handleFlip("card2", true)}
+                             onMouseOut={handleFlip("card2", false)}
+                             onClick={handleFlip("card2", !isFlippedTwo)}
+                            // onMouseEnter={handleFlip("card2", true)}
+                            // onMouseLeave={handleFlip("card2", false)}
+                            className={`flip-card ${isFlippedTwo ? "flipped" : ""
+                                }`}
+                            id="card2"
+                        >
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <div className="card-content">
+                                        <StaticImage src="../images/ST_roof_one.jpeg" />
+                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                            Residential Roof Cleaning
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className="flip-card-back">
+                                    <div className="card-content">
+                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                            Over time your roof will collect organic contaminants such as moss, mold,
+                                            fungi, and lichen. Lichen is, most notably, an indicator of significant damage to your roof shingles. These
+                                            organic contaminants will breakdown the limestone in your shingles, causing granule loss and advanced
+                                            aging of your roof shingles. Moss is yet another indicator that your roof is suffering damage. Our roof
+                                            cleaning service safely applies the necessary chemicals to kill and remove these organic materials. This
+                                            process will not only preserve the integrity of your roof but it will also restore the original appearance of
+                                            your roof.
+                                        </Typography>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                              onMouseOver={handleFlip("card3", true)}
+                              onMouseOut={handleFlip("card3", false)}
+                              onClick={handleFlip("card3", !isFlippedThree)}
+                            // onMouseEnter={handleFlip("card3", true)}
+                            // onMouseLeave={handleFlip("card3", false)}
+                            className={`flip-card ${isFlippedThree ? "flipped" : ""
+                                }`}
+                            id="card3"
+                        >
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <div className="card-content">
+                                        <StaticImage src="../images/ST_gutter_one.jpeg" />
+                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                            Gutter Brightening
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className="flip-card-back">
+                                    <div className="card-content">
+                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                            The outer surface of your gutter system can, over time, accumulate striped stains as
+                                            water overflows the gutters during heavy rain and/or during the spring thaw. These stains may become
+                                            noticeably prominent after a house wash. We offer our gutter brightening service to address this very
+                                            issue. We use an additional method to remove these stains and bring a new shine to your gutters.
+                                            Restoring the shine to your gutter system will be the final touch needed to elevate your home’s curb
+                                            appeal to its utmost potential.
+                                        </Typography>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                           onMouseOver={handleFlip("card4", true)}
+                           onMouseOut={handleFlip("card4", false)}
+                           onClick={handleFlip("card4", !isFlippedFour)}
+                            className={`flip-card ${isFlippedFour ? "flipped" : ""
+                                }`}
+                            id="card4"
+                        >
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <div className="card-content">
+                                        <StaticImage src="../images/ST_concrete.jpeg" />
+                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                            Concrete Cleaning
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className="flip-card-back">
+                                    <div className="card-content">
+                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                            You concrete driveway/patio/walkway is extremely porous and permeable. This
+                                            gives dirt, mold, and fungi the opportunity to embed themselves in your concrete surfaces. Over time
+                                            this can drastically reduce your concrete’s visual appeal as well as its overall quality and longevity. We
+                                            use the industry’s top formulated chemicals to penetrate the concrete and ensure the organic material
+                                            is eliminated. After a short wait, a high pressure surface cleaner is used to safely rinse away the
+                                            chemical and dead organic material; leaving behind a clean and bright concrete surface.
+                                        </Typography>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            onMouseOver={handleFlip("card5", true)}
+                            onMouseOut={handleFlip("card5", false)}
+                            onClick={handleFlip("card5", !isFlippedFive)}
+                            className={`flip-card ${isFlippedFive ? "flipped" : ""
+                                }`}
+                            id="card5"
+                        >
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <div className="card-content">
+                                        <StaticImage src="../images/ST_deck_1.jpeg" />
+                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                            Decks and Fencing
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className="flip-card-back">
+                                    <div className="card-content">
+                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                            Mold, mildew, moss, and fungi seem to find their way onto every conceivable
+                                            surface. Our trucks come equipped with the industry’s top performing equipment as well as products
+                                            specifically designed to eliminate organic material then rejuvenate the condition of your wood framed
+                                            deck and fencing. We have numerous post-cleaning treatments that condition and revitalize the
+                                            appearance of your wood framed structures; giving your outdoor space a youthful appearance as well as
+                                            extending the life of your deck and fencing. Have vinyl fencing or a deck laid with Trex? Not a problem
+                                            whatsoever. Our highest quality equipment and our years of experience will bring out the glowing white
+                                            shine of your vinyl fencing and bring your Trex decking back to life!
+                                        </Typography>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                        </Card>
-                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/ST_concrete.jpeg" />
-                            <CardContent>
-                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Concrete, Deck, Fence Pressure Washing
-                                </Typography>
-                                {/* <Typography variant="body2" color="text.secondary">
-                                    Home description Home description Home description Home description Home description Home description Home description Home description
-                                </Typography> */}
-                            </CardContent>
-                        </Card>
-                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/ST_brick.jpeg" />
-                            <CardContent>
-                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Brick, Paver Wash, Re-sanding
-                                </Typography>
-                                {/* <Typography variant="body2" color="text.secondary">
-                                    Renters description Renters description Renters description Renters description Renters description Renters description Renters description Renters description
-                                </Typography> */}
-                            </CardContent>
-                        </Card>
-                        <Card className={classes.productCard} sx={{ maxWidth: 345 }}>
-                            <StaticImage src="../images/ST_gutter_one.jpeg" />
-                            <CardContent>
-                                <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                    Gutter Cleaning, Brightening
-                                </Typography>
-                                {/* <Typography variant="body2" color="text.secondary">
-                                    Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description Motorcycle description
-                                </Typography> */}
-                            </CardContent>
-                        </Card>
-              
                     </div>
 
                     {/* {console.log(productInfo.map(obj => obj.imagePath))}
@@ -849,7 +992,7 @@ const Main = () => {
                 </div>
             </section>
 
-            <span className={classes.scrollToLocation} id="sectionFour"></span>
+            {/* <span className={classes.scrollToLocation} id="sectionFour"></span>
             <section style={{ minHeight: "300px" }} className={classes.container}>
                 <div>Section (if needed)</div>
             </section>
@@ -861,7 +1004,7 @@ const Main = () => {
                 <div>Section (if needed)</div>
             </section>
 
-            <span className={classes.scrollToContact} id="contactForm"></span>
+            <span className={classes.scrollToContact} id="contactForm"></span> */}
             <br />
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
@@ -886,7 +1029,7 @@ const Main = () => {
                             <iframe style={{ margin: "25px" }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11658.336155770092!2d-77.6448535!3d43.0712153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d14b8fa71b6299%3A0x2767d3fc57d13a20!2sNationwide%20Insurance%3A%20Beth%20Rogers%20Agency%20Inc.!5e0!3m2!1sen!2sus!4v1693494349904!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div> */}
                         <div style={{ backgroundColor: "white" }}>
-                 
+
                             <div className={classes.reviewsWrapper}>
                                 <a className={classes.reviewLink}
                                     href=""

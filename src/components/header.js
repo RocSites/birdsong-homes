@@ -5,8 +5,7 @@ import { Typography, makeStyles } from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
 import chillGrillLogoOG from '../images/chill_logo_og.jpeg'
-import STLogoOne from "../images/smalltall_logo_1.png"
-import STLogoTwo from "../images/smalltall_logo_2.png"
+import STLogo from "../images/logo/logo.jpeg"
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import coneIcon from "../images/cone_icon.png"
 import Drawer from '@material-ui/core/Drawer';
@@ -40,6 +39,7 @@ const withStyles = makeStyles(() => ({
     top: 0,
     boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
     zIndex: 2,
+    // padding: "1rem"
   },
   navBarRootScroll: {
     position: "fixed",
@@ -53,10 +53,10 @@ const withStyles = makeStyles(() => ({
     top: 0,
     boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
     zIndex: 2,
+    // padding: "1rem"
   },
   navBarTitle: {
     maxWidth: 960,
-    padding: "1rem",
   },
   navButton: {
     color: "black",
@@ -111,13 +111,13 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "1rem",
     fontSize: "2.5rem",
-    color: "#6198eb",
+    color: "#3b3a73",
     "@media(min-width: 601px)": {
       display: "none"
     }
   },
   hamburgerIconScroll: {
-    color: "#6198eb",
+    color: "#3b3a73",
     margin: "1rem",
     fontSize: "2.5rem",
     "@media(min-width: 601px)": {
@@ -131,7 +131,8 @@ const withStyles = makeStyles(() => ({
   },
   navCallButton: {
     display: "flex",
-    backgroundColor: "#6198eb",
+    backgroundColor: "#3b3a73",
+    // backgroundColor:"#d51d35",
     textDecoration: "none",
     alignItems: "center",
     padding: "8px 16px",
@@ -140,7 +141,12 @@ const withStyles = makeStyles(() => ({
     border: "1px solid white",
     borderRadius: "35px",
     height: "50px",
-    margin: "auto 20px"
+    margin: "auto 20px",
+    '&:hover': {
+      backgroundColor: "#d51d35",
+      boxShadow: 'none',
+      cursor: "pointer"
+  },
   },
   navCallButtonMobile: {
     display: "flex",
@@ -171,15 +177,12 @@ const withStyles = makeStyles(() => ({
     color: 'black',
     textDecoration: `none`,
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+    margin: "10px"
   },
   navLogoText: {
-    color: "black"
+    color: "black",
+    margin: "auto"
   },
-  navLogoTextScroll: {
-    color: "black"
-  }
 }))
 
 
@@ -238,9 +241,9 @@ const Header = ({ siteTitle }) => {
         <div className={classes.navBarTitle}>
           <Link to="/" className={classes.navLogoLink}>
             {/* <WaterDropIcon className={classes.navLogo} alt="company logo" /> */}
-            <img src={STLogoOne} className={classes.navLogo} alt="company logo"/>
+            <img src={STLogo} className={classes.navLogo} alt="company logo"/>
             {/* <img src={STLogoTwo} className={classes.navLogo} alt="company logo"/> */}
-            <Typography className={navbarScroll ? classes.navLogoTextScroll : classes.navLogoText}>Small & Tall Power Washing</Typography>
+            <Typography className={classes.navLogoText}>Small & Tall Power Washing</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
@@ -309,14 +312,14 @@ const Header = ({ siteTitle }) => {
                   to="/#sectionOne" title="About Us">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionTwo" title="Products">
+                  to="/#sectionTwo" title="Services">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionThree" title="Get a Quote">
+                  to="/#sectionThree" title="Free Estimate">
                 </AnchorLink>
-                <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionFour" title="Carriers">
-                </AnchorLink>
+                {/* <AnchorLink className={classes.navButtonMobile}
+                  to="/#sectionFour" title="Section Four">
+                </AnchorLink> */}
                 <AnchorLink className={classes.navButtonMobile}
                   to="/#contactForm" title="Contact Us">
                 </AnchorLink>
