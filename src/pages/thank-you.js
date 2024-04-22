@@ -13,7 +13,10 @@ const withStyles = makeStyles((theme) => ({
     display: "flex",
     fontSize: "2.0rem",
     marginLeft:"auto",
-    marginRight: "auto"
+    marginRight: "auto",
+    marginTop: "45px",
+    lineHeight: "2.5rem",
+    textAlign: "center"
   },
   thankYouMessageWrapper: {
     display: "flex",
