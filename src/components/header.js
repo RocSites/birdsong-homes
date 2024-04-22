@@ -4,10 +4,8 @@ import { Link } from "gatsby"
 import { Typography, makeStyles } from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
-import chillGrillLogoOG from '../images/chill_logo_og.jpeg'
 import STLogo from "../images/logo/logo.jpeg"
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
-import coneIcon from "../images/cone_icon.png"
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -15,7 +13,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from "../images/facebook_icon4.svg"
-import LinkedInIcon from "../images/linkedin_icon_blue.svg"
 import InstagramIcon from "../images/instagram_icon4.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 

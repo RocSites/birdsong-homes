@@ -1,28 +1,22 @@
 import React, { useState } from 'react'
-import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import bethRogersBuilding from "../images/office_photo-min.jpg"
 import houseWideOne from "../images/ST_house_one.jpeg"
-import houseTruck from "../images/ST_house_truck_one.jpeg"
-import housePool from "../images/ST_pool.jpeg"
-import houseRoof from "../images/ST_roof_one.jpeg"
-import kidBackgroundImage from "../images/kelli-mcclintock-kid-1.jpg"
-import fiveStar from '../images/fiveStar.png'
-import Divider from '@material-ui/core/Divider'
+import truckTwo from "../images/ST_truck_2.jpeg"
 import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@mui/icons-material/Email';
-import StarRateIcon from '@material-ui/icons/StarRate';
-import FacebookIcon from "../images/facebook_icon4.svg"
-import InstagramIcon from "../images/instagram_icon4.svg"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import GoogleIcon from "../images/google_icon.png"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
@@ -265,10 +259,8 @@ const withStyles = makeStyles(() => ({
     phoneEmailWrapper: {
         display: "flex",
         justifyContent: "center",
-        "@media(max-width: 600px)": {
-            flexDirection: "column",
-            textAlign: "center"
-        }
+        flexDirection: "column",
+        textAlign: "center"
     },
     contactPhone: {
         color: "black",
@@ -525,6 +517,7 @@ const withStyles = makeStyles(() => ({
     containerContactUs: {
         display: "flex",
         flexDirection: "column",
+        marginBottom: "100px"
 
     },
     containerSectionTwoScroll: {
@@ -580,8 +573,11 @@ const withStyles = makeStyles(() => ({
         margin: "auto",
         width: "100%",
         flexDirection: "column",
+        "& a": {
+            textDecoration: "none"
+        },
         "@media(max-width:600px)": {
-            margin: "30% auto"
+            margin: "48% auto"
         }
     },
     sectionTitleText: {
@@ -629,94 +625,19 @@ const Main = () => {
 
     const handleFlip = (serviceName, enabled) => (e) => {
         console.log("hover")
-        if (serviceName === "card1") {
-            setFlippedOne(enabled)
-        } else if (serviceName === "card2") {
-            setFlippedTwo(enabled)
-        } else if (serviceName === "card3") {
-            setFlippedThree(enabled)
-        } else if (serviceName === "card4") {
-            setFlippedFour(enabled)
-        } else if (serviceName === "card5") {
-            setFlippedFive(enabled)
-        }
-    }
-
-   
-
-
-    const { mobileImage, desktopImage } = useStaticQuery(graphql`
-    query { 
-      desktopImage: file(relativePath: { eq: "yassine-khalfalli-roc-image.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      mobileImage: file(relativePath: { eq: "yassine-khalfalli-roc-image.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 650, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      
-    }
-  `)
-
-    const sources = [
-        mobileImage.childImageSharp.fluid,
-        {
-            ...desktopImage.childImageSharp.fluid,
-            media: `(min-width: 650px)`
-        }
-    ]
-
-    const productInfo = [
-        {
-            title: "Auto",
-            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
-            description: "auto insurance description"
-        },
-        {
-            title: "Commercial",
-            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
-            description: "commercial insurance description"
-        },
-        {
-            title: "Farm",
-            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
-            description: "farm insurance description"
-        },
-        {
-            title: "Home",
-            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
-            description: "home insurance description"
-        },
-        {
-            title: "Powersports",
-            imagePath: "../images/yassine-khalfalli-roc-image.jpg",
-            description: "powersports insurance description"
-        },
-
-    ]
-
-
-    const ProductCard = ({ imagePath, title, description }) => {
-        return (
-            <Card sx={{ maxWidth: 345 }}>
-                <StaticImage alt="" src={imagePath} />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {description}
-                    </Typography>
-                </CardContent>
-            </Card>
-        )
+        // if (serviceName === "card1") {
+        //     setFlippedOne(enabled)
+        // } else if (serviceName === "card2") {
+        //     setFlippedTwo(enabled)
+        // } else if (serviceName === "card3") {
+        //     setFlippedThree(enabled)
+        // } else if (serviceName === "card4") {
+        //     setFlippedFour(enabled)
+        // } else if (serviceName === "card5") {
+        //     setFlippedFive(enabled)
+        // } else if (serviceName === "card7") {
+        //     setFlippedFive(enabled)
+        // }
     }
 
 
@@ -728,8 +649,9 @@ const Main = () => {
                     <Typography style={{ color: "white", textAlign: "center" }}>Serving Rochester since 2021</Typography>
                     {/* <i>every time</i> */}
                     <a href="tel:585-568-7149" class="bannerCallButton">(585) 568-7149</a>
-                    <Typography style={{ color: "white", textAlign: "center" }}>Free Estimates</Typography>
-
+                    <AnchorLink to="/#sectionThree" title="Free Estimates">
+                        <Typography class="freeEstimateScrollButton">Free Estimates</Typography>
+                    </AnchorLink>
                 </div>
             </div>
             <span className={classes.scrollToSectionOne} id="sectionOne"></span>
@@ -765,7 +687,7 @@ const Main = () => {
                         <StaticImage className={classes.teamImage} src="../images/ST_walkway_one.jpeg" />
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/ST_siding_four.jpeg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
@@ -775,12 +697,13 @@ const Main = () => {
                     <div class="teamNameImageWrapper">
                         <StaticImage className={classes.teamImage} src="../images/ST_patio_two.jpeg" />
                     </div>
+
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/ST_siding_five.jpeg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_deck_two.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
@@ -802,57 +725,58 @@ const Main = () => {
                     <Typography className={classes.someOfWorkHeaderProducts}>Services</Typography>
                     <div class="productCardWrapper">
                         <div
-                            className={`flip-card ${isFlippedOne ? "flipped" : ""}`}
+                            class="flip-card"
                             id="card1"
-                            onMouseOver={handleFlip("card1", true)}
-                            onMouseOut={handleFlip("card1", false)}
-                            onClick={handleFlip("card1", !isFlippedOne)}
                         >
                             <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <div className="card-content">
-                                        <StaticImage src="../images/ST_pool.jpeg" />
-                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                            Residential House Wash
-                                        </Typography>
-                                    </div>
+                                <div className="card-content">
+                                    <StaticImage src="../images/ST_pool.jpeg" />
+                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                        Residential House Wash
+                                    </Typography>
                                 </div>
-                                <div className="flip-card-back">
-                                    <div className="card-content">
-                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                <div>
+                                    <Accordion>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1-content"
+                                            id="panel1-header"
+                                        >
+                                            More
+                                        </AccordionSummary>
+                                        <AccordionDetails>
                                             Your home’s siding is a perfect place for mold, mildew, fungi, dirt, and other
                                             organic material to build up and become an eyesore. We use the industry’s best equipment and
                                             products to safely remove all organic material and bring your home back to its original shine. Our
                                             equipment uses a low pressure/ high volume pump system to carefully wash your house in safe yet
                                             effective soaps and chemicals that kill and remove all organic material. Your house is rinsed clean and
                                             will never look better!
-                                        </Typography>
-                                    </div>
+                                        </AccordionDetails>
+                                    </Accordion>
                                 </div>
                             </div>
                         </div>
                         <div
-                             onMouseOver={handleFlip("card2", true)}
-                             onMouseOut={handleFlip("card2", false)}
-                             onClick={handleFlip("card2", !isFlippedTwo)}
-                            // onMouseEnter={handleFlip("card2", true)}
-                            // onMouseLeave={handleFlip("card2", false)}
-                            className={`flip-card ${isFlippedTwo ? "flipped" : ""
-                                }`}
+                            class="flip-card"
                             id="card2"
                         >
                             <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <div className="card-content">
-                                        <StaticImage src="../images/ST_roof_one.jpeg" />
-                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                            Residential Roof Cleaning
-                                        </Typography>
-                                    </div>
+                                <div className="card-content">
+                                    <StaticImage src="../images/ST_roof_one.jpeg" />
+                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                        Residential Roof Cleaning
+                                    </Typography>
                                 </div>
-                                <div className="flip-card-back">
-                                    <div className="card-content">
-                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                <div>
+                                    <Accordion>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1-content"
+                                            id="panel1-header"
+                                        >
+                                            More
+                                        </AccordionSummary>
+                                        <AccordionDetails>
                                             Over time your roof will collect organic contaminants such as moss, mold,
                                             fungi, and lichen. Lichen is, most notably, an indicator of significant damage to your roof shingles. These
                                             organic contaminants will breakdown the limestone in your shingles, causing granule loss and advanced
@@ -860,95 +784,96 @@ const Main = () => {
                                             cleaning service safely applies the necessary chemicals to kill and remove these organic materials. This
                                             process will not only preserve the integrity of your roof but it will also restore the original appearance of
                                             your roof.
-                                        </Typography>
-                                    </div>
+                                        </AccordionDetails>
+                                    </Accordion>
                                 </div>
                             </div>
                         </div>
                         <div
-                              onMouseOver={handleFlip("card3", true)}
-                              onMouseOut={handleFlip("card3", false)}
-                              onClick={handleFlip("card3", !isFlippedThree)}
-                            // onMouseEnter={handleFlip("card3", true)}
-                            // onMouseLeave={handleFlip("card3", false)}
-                            className={`flip-card ${isFlippedThree ? "flipped" : ""
-                                }`}
+                            class="flip-card"
                             id="card3"
                         >
                             <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <div className="card-content">
-                                        <StaticImage src="../images/ST_gutter_one.jpeg" />
-                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                            Gutter Brightening
-                                        </Typography>
-                                    </div>
+                                <div className="card-content">
+                                    <StaticImage src="../images/ST_gutter_brightenint.jpeg" />
+                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                        Gutter Brightening
+                                    </Typography>
                                 </div>
-                                <div className="flip-card-back">
-                                    <div className="card-content">
-                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                <div>
+                                    <Accordion>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1-content"
+                                            id="panel1-header"
+                                        >
+                                            More
+                                        </AccordionSummary>
+                                        <AccordionDetails>
                                             The outer surface of your gutter system can, over time, accumulate striped stains as
                                             water overflows the gutters during heavy rain and/or during the spring thaw. These stains may become
                                             noticeably prominent after a house wash. We offer our gutter brightening service to address this very
                                             issue. We use an additional method to remove these stains and bring a new shine to your gutters.
                                             Restoring the shine to your gutter system will be the final touch needed to elevate your home’s curb
                                             appeal to its utmost potential.
-                                        </Typography>
-                                    </div>
+                                        </AccordionDetails>
+                                    </Accordion>
                                 </div>
                             </div>
                         </div>
                         <div
-                           onMouseOver={handleFlip("card4", true)}
-                           onMouseOut={handleFlip("card4", false)}
-                           onClick={handleFlip("card4", !isFlippedFour)}
-                            className={`flip-card ${isFlippedFour ? "flipped" : ""
-                                }`}
+                            class="flip-card"
                             id="card4"
                         >
                             <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <div className="card-content">
-                                        <StaticImage src="../images/ST_concrete.jpeg" />
-                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                            Concrete Cleaning
-                                        </Typography>
-                                    </div>
+                                <div className="card-content">
+                                    <StaticImage src="../images/ST_concrete.jpeg" />
+                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                        Concrete Cleaning
+                                    </Typography>
                                 </div>
-                                <div className="flip-card-back">
-                                    <div className="card-content">
-                                        <Typography class="backCardText" variant="body2" color="text.secondary">
-                                            You concrete driveway/patio/walkway is extremely porous and permeable. This
+                                <div>
+                                    <Accordion>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1-content"
+                                            id="panel1-header"
+                                        >
+                                            More
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            Your concrete driveway/patio/walkway is extremely porous and permeable. This
                                             gives dirt, mold, and fungi the opportunity to embed themselves in your concrete surfaces. Over time
                                             this can drastically reduce your concrete’s visual appeal as well as its overall quality and longevity. We
                                             use the industry’s top formulated chemicals to penetrate the concrete and ensure the organic material
                                             is eliminated. After a short wait, a high pressure surface cleaner is used to safely rinse away the
                                             chemical and dead organic material; leaving behind a clean and bright concrete surface.
-                                        </Typography>
-                                    </div>
+                                        </AccordionDetails>
+                                    </Accordion>
                                 </div>
                             </div>
                         </div>
                         <div
-                            onMouseOver={handleFlip("card5", true)}
-                            onMouseOut={handleFlip("card5", false)}
-                            onClick={handleFlip("card5", !isFlippedFive)}
-                            className={`flip-card ${isFlippedFive ? "flipped" : ""
-                                }`}
+                            class="flip-card"
                             id="card5"
                         >
                             <div className="flip-card-inner">
-                                <div className="flip-card-front">
-                                    <div className="card-content">
-                                        <StaticImage src="../images/ST_deck_1.jpeg" />
-                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                            Decks and Fencing
-                                        </Typography>
-                                    </div>
+                                <div className="card-content">
+                                    <StaticImage src="../images/ST_deck_1.jpeg" />
+                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                        Decks and Fencing
+                                    </Typography>
                                 </div>
-                                <div className="flip-card-back">
-                                    <div className="card-content">
-                                        <Typography class="backCardText" variant="body2" color="text.secondary">
+                                <div>
+                                    <Accordion>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1-content"
+                                            id="panel1-header"
+                                        >
+                                            More
+                                        </AccordionSummary>
+                                        <AccordionDetails>
                                             Mold, mildew, moss, and fungi seem to find their way onto every conceivable
                                             surface. Our trucks come equipped with the industry’s top performing equipment as well as products
                                             specifically designed to eliminate organic material then rejuvenate the condition of your wood framed
@@ -957,21 +882,39 @@ const Main = () => {
                                             extending the life of your deck and fencing. Have vinyl fencing or a deck laid with Trex? Not a problem
                                             whatsoever. Our highest quality equipment and our years of experience will bring out the glowing white
                                             shine of your vinyl fencing and bring your Trex decking back to life!
-                                        </Typography>
-                                    </div>
+                                        </AccordionDetails>
+                                    </Accordion>
                                 </div>
                             </div>
                         </div>
-
+                        <div
+                            class="flip-card"
+                            id="card6"
+                        >
+                            <div className="flip-card-inner">
+                                <div className="card-content">
+                                <StaticImage src="../images/ST_cams_photo.jpeg" />
+                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                            Commercial
+                                        </Typography>
+                                </div>
+                                <div>
+                                    <Accordion>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1-content"
+                                            id="panel1-header"
+                                        >
+                                            More
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                        Revitalize your property's appearance with our commercial power washing services. Our experienced team utilizes state-of-the-art equipment to remove dirt, grime, and stains from a variety of surfaces, including concrete, brick, siding, and more. Whether it's revitalizing a storefront, parking lot, or industrial facility, we tailor our services to meet your specific needs, restoring surfaces to their pristine condition. Enhance curb appeal, maintain cleanliness, and leave a lasting impression with our reliable and efficient commercial power washing solutions. Trust us to transform your space, leaving it looking fresh and inviting for customers and clients alike.
+                                        </AccordionDetails>
+                                    </Accordion>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    {/* {console.log(productInfo.map(obj => obj.imagePath))}
-
-                    <img src={productInfo[0].imagePath}/>
-
-                    {productInfo.length > 0 ? productInfo.map(obj =>
-                        <ProductCard key={obj.title} imagePath={obj.imagePath} title={obj.title} description={obj.description} />
-                    ) : null} */}
                 </div>
 
 
@@ -986,25 +929,13 @@ const Main = () => {
                         <Typography className={classes.aboutTitleHeader}>Get a Free Estimate</Typography>
                         <Typography className={classes.addressText}>Please use the form below for a free estimate</Typography>
                         <div className="markateFormWrapper">
-                        <iframe id="markate-widget-contact-iframe" src="https://www.markate.com/public/widget/contact?id=1e9a9a7c1d65ccda6ff03ac63dddd7da:38520:9f82ff06" width="100%" height="1800" scrolling="no" frameborder="0" allowTransparency="true" style={{border:"none", overflow:"hidden"}}></iframe>
+                            <iframe id="markate-widget-contact-iframe" src="https://www.markate.com/public/widget/contact?id=1e9a9a7c1d65ccda6ff03ac63dddd7da:38520:9f82ff06" width="100%" height="1800" scrolling="no" frameborder="0" allowTransparency="true" style={{ border: "none", overflow: "hidden" }}></iframe>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* <span className={classes.scrollToLocation} id="sectionFour"></span>
-            <section style={{ minHeight: "300px" }} className={classes.container}>
-                <div>Section (if needed)</div>
-            </section>
-
-
-            <span className={classes.scrollToLocation} id="sectionFive"></span>
-
-            <section style={{ minHeight: "300px" }} className={classes.container}>
-                <div>Section (if needed)</div>
-            </section>
-
-            <span className={classes.scrollToContact} id="contactForm"></span> */}
+            <span className={classes.scrollToContact} id="contactForm"></span> 
             <br />
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
@@ -1013,24 +944,27 @@ const Main = () => {
                         <br />
 
                         <div className={classes.phoneEmailWrapper}>
-                            <a href="tel:585-568-7149" className={classes.contactPhone}>
-                                <Button className={classes.contactButton}>
+                            <a href="tel:585-568-7149" class="contactUsButtonStyled">
+                                <Button style={{textTransform: "none", color: "#3b3a73"}}>
                                     <PhoneIcon className={classes.phoneIcon} />
                                     (585) 568-7149
                                 </Button>
                             </a>
+                            <div className={classes.contactWrapper}>
+                                {/* <Typography>General Questions</Typography> */}
+                                <a href="mailto:smallandtallpw@gmail.com" class="contactUsButtonStyled">
+                                    <Button style={{textTransform: "none", color: "#3b3a73"}}>
+                                        <EmailIcon className={classes.phoneIcon} />
+                                        Email Us
+                                    </Button>
+                                </a>
+                            </div>
 
                         </div>
-                        {/* <div class="mapWrapper">
-                            <Typography style={{ margin: "15px", color: "black" }}>4072 W Henrietta Rd, Rochester, NY 14623</Typography>
-                            <Button className={classes.getDirectionsLinkDark} href="https://www.google.com/maps/dir/?api=1&destination_place_id=ChIJmWIbp49L0YkRIDrRV_zTZyc&destination=direct" target="_blank">
-                                Get Directions
-                            </Button>
-                            <iframe style={{ margin: "25px" }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11658.336155770092!2d-77.6448535!3d43.0712153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d14b8fa71b6299%3A0x2767d3fc57d13a20!2sNationwide%20Insurance%3A%20Beth%20Rogers%20Agency%20Inc.!5e0!3m2!1sen!2sus!4v1693494349904!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div> */}
+              
                         <div style={{ backgroundColor: "white" }}>
 
-                            <div className={classes.reviewsWrapper}>
+                            {/* <div className={classes.reviewsWrapper}>
                                 <a className={classes.reviewLink}
                                     href=""
                                     target="_blank"
@@ -1044,7 +978,7 @@ const Main = () => {
                                         </div>
                                     </Button>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>

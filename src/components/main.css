@@ -160,14 +160,9 @@ body {
 }
 
 .flip-card {
-    perspective: 1000px;
-    height: 455px;
     width: 345px;
     margin: 15px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
 
@@ -243,6 +238,10 @@ body {
 
 .markateFormWrapper {
     width: 50%;
+}
+
+.markateFormWrapper iframe {
+    max-height: 1200px;
 }
 
 .teamNameImageWrapper {
@@ -325,6 +324,40 @@ body {
     background-color: #d51d35;
 }
 
+
+.freeEstimateScrollButton {
+    background-color: white;
+    color: #3b3a73;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 35px;
+    border: 1px solid #3b3a73;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.freeEstimateScrollButton:hover {
+    background-color: #d51d35;
+}
+
+.contactUsButtonStyled {
+    display: flex;
+    background-color: white;
+    color: #3b3a73;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 35px;
+    border: 1px solid #3b3a73;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
 .sectionWrapper {
     display: flex;
     justify-content: center;
@@ -400,6 +433,12 @@ body {
     color: white;
 }
 
+.footerContactWrapper {
+    display: flex;
+    justify-content: center;
+    margin: auto
+}
+
 .rocsitesText {
     font-size: 0.7rem;
     margin-bottom: 15px;
@@ -431,7 +470,7 @@ body {
 .socialLinkWrapper {
     display: flex;
     justify-content: center;
-    margin: 20px 0 40px 0;
+    margin: 20px;
 }
 
 .socialLinkWrapperNav {

@@ -7,7 +7,6 @@ import PhoneIcon from '@material-ui/icons/Phone'
 import FaxIcon from '@mui/icons-material/Fax';
 import Typography from '@material-ui/core/Typography'
 import FacebookIcon from "../images/facebook_icon4_white.svg"
-import LinkedInIcon from "../images/linkedin_icon.svg"
 import "./layout.css"
 
 const withStyles = makeStyles(() => ({
@@ -90,15 +89,18 @@ const Layout = ({ children }) => {
         <main className={classes.mainContent}>{children}</main>
         <footer class="footerRoot">
           <div className={classes.footerContent}>
-            <a href="tel:585-568-7149" className={classes.footerPhone}>
-              <PhoneIcon className={classes.phoneIcon} />
-              (585) 568-7149
-            </a>
-            <div class="socialLinkWrapper">
-              <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
-                <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
+            <div class="footerContactWrapper">
+              <div class="socialLinkWrapper">
+                <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
+                  <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
+                </a>
+              </div>
+              <a href="tel:585-568-7149" className={classes.footerPhone}>
+                <PhoneIcon className={classes.phoneIcon} />
+                (585) 568-7149
               </a>
             </div>
+
 
             <div style={{ width: "100%", border: "1px solid #d51d35", marginBottom: "20px" }}></div>
             <p className={classes.copyrightText}> © {new Date().getFullYear()} Small & Tall Powerwashing</p>
