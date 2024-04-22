@@ -580,6 +580,18 @@ const withStyles = makeStyles(() => ({
             margin: "48% auto"
         }
     },
+    freeEstimateScrollButton: {
+        backgroundColor: "white",
+        color: "#3b3a73",
+        width: "200px",
+        margin: "20px auto",
+        borderRadius: "35px",
+        border: "1px solid #3b3a73",
+        padding: "5px",
+        textDecoration: "none",
+        textAlign: "center",
+        cursor: "pointer",
+    },
     sectionTitleText: {
         fontSize: "2rem",
         textAlign: "center",
@@ -650,7 +662,7 @@ const Main = () => {
                     {/* <i>every time</i> */}
                     <a href="tel:585-568-7149" class="bannerCallButton">(585) 568-7149</a>
                     <AnchorLink to="/#sectionThree" title="Free Estimates">
-                        <Typography class="freeEstimateScrollButton">Free Estimates</Typography>
+                        <Typography className={classes.freeEstimateScrollButton}>Free Estimates</Typography>
                     </AnchorLink>
                 </div>
             </div>
