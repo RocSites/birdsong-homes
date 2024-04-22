@@ -720,6 +720,7 @@ const Main = () => {
             <div className={classes.containerSectionTwoScroll}>
                 <span className={classes.scrollToSectionOne} id="sectionTwo"></span>
             </div>
+            <br />
             <section class="productSectionWrapper">
                 <div>
                     <Typography className={classes.someOfWorkHeaderProducts}>Services</Typography>
@@ -893,10 +894,10 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                <StaticImage src="../images/ST_cams_photo.jpeg" />
-                                        <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                            Commercial
-                                        </Typography>
+                                    <StaticImage src="../images/ST_cams_photo.jpeg" />
+                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
+                                        Commercial
+                                    </Typography>
                                 </div>
                                 <div>
                                     <Accordion>
@@ -908,7 +909,7 @@ const Main = () => {
                                             More
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                        Revitalize your property's appearance with our commercial power washing services. Our experienced team utilizes state-of-the-art equipment to remove dirt, grime, and stains from a variety of surfaces, including concrete, brick, siding, and more. Whether it's revitalizing a storefront, parking lot, or industrial facility, we tailor our services to meet your specific needs, restoring surfaces to their pristine condition. Enhance curb appeal, maintain cleanliness, and leave a lasting impression with our reliable and efficient commercial power washing solutions. Trust us to transform your space, leaving it looking fresh and inviting for customers and clients alike.
+                                            Revitalize your property's appearance with our commercial power washing services. Our experienced team utilizes state-of-the-art equipment to remove dirt, grime, and stains from a variety of surfaces, including concrete, brick, siding, and more. Whether it's revitalizing a storefront, parking lot, or industrial facility, we tailor our services to meet your specific needs, restoring surfaces to their pristine condition. Enhance curb appeal, maintain cleanliness, and leave a lasting impression with our reliable and efficient commercial power washing solutions. Trust us to transform your space, leaving it looking fresh and inviting for customers and clients alike.
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -935,7 +936,40 @@ const Main = () => {
                 </div>
             </section>
 
-            <span className={classes.scrollToContact} id="contactForm"></span> 
+            <span className={classes.scrollToContact} id="testimonials"></span>
+            <br />
+
+            <section class="py-5 section-bubble4">
+                <div className={classes.containerContactUs}>
+                    <div>
+                        <Typography className={classes.connectHeader}>Testimonials</Typography>
+                        <br />
+                        <div class="testimonialCardWrapper">
+                            <div class="testimonialCard">
+                                <p>We had Small & Tall power wash our house, concrete patio and concrete driveway.  Then they sealed all the concrete.  Roger & Sal were incredible!! They went above and beyond our expectations, even spraying our problem moss with a solution that killed it immediately.  Amazing!  We give them a rating of 5++ and will look to them for any upcoming jobs we have.</p>
+                                <p>-Becky</p>
+                            </div>
+                            <div class="testimonialCard">
+                                <p>Sal did an outstanding job power washing my house and cleaning the gutters. He is very  professional knowledgeable and courteous.
+                                    My siding looks like it’s new!
+                                    I highly recommend this company.</p>
+                                <p>-Karen</p>
+                            </div>
+                            <div class="testimonialCard">
+                                <p>When we purchased our house we knew that the exterior needed work. Couldn’t be more pleased with the job that was done to restore our siding/roof and also the overflowing gutters. House looks totally different. I would highly recommend this hard working team to anyone. Super easy to schedule, got the quote up front and over all great communication.</p>
+                                <p>-Hannah</p>
+                            </div>
+                            <div class="testimonialCard">
+                                <p>Couldn’t believe the difference in my siding. I didn’t know my house was so dirty until it was cleaned by Small and Tall! Would highly recommend to anyone and very fair pricing!</p>
+                                <p>-Christopher</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <span className={classes.scrollToContact} id="contactForm"></span>
             <br />
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
@@ -945,7 +979,7 @@ const Main = () => {
 
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:585-568-7149" class="contactUsButtonStyled">
-                                <Button style={{textTransform: "none", color: "#3b3a73"}}>
+                                <Button style={{ textTransform: "none", color: "#3b3a73" }}>
                                     <PhoneIcon className={classes.phoneIcon} />
                                     (585) 568-7149
                                 </Button>
@@ -953,7 +987,7 @@ const Main = () => {
                             <div className={classes.contactWrapper}>
                                 {/* <Typography>General Questions</Typography> */}
                                 <a href="mailto:smallandtallpw@gmail.com" class="contactUsButtonStyled">
-                                    <Button style={{textTransform: "none", color: "#3b3a73"}}>
+                                    <Button style={{ textTransform: "none", color: "#3b3a73" }}>
                                         <EmailIcon className={classes.phoneIcon} />
                                         Email Us
                                     </Button>
@@ -961,7 +995,7 @@ const Main = () => {
                             </div>
 
                         </div>
-              
+
                         <div style={{ backgroundColor: "white" }}>
 
                             {/* <div className={classes.reviewsWrapper}>

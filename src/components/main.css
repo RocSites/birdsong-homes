@@ -357,6 +357,23 @@ body {
     justify-content: center;
 }
 
+.testimonialCard {
+    background-color: #3b3a73;
+    width: 300px;
+
+    margin: 1rem;
+    color: white;
+    border-radius: 16px;
+    padding: 25px 20px;
+}
+
+.testimonialCardWrapper {
+    display: flex;
+    margin: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 
 .sectionWrapper {
     display: flex;
@@ -533,6 +550,14 @@ body {
 }
 
 @media(max-width:600px) {
+
+    .testimonialCardWrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .testimonialCard {
+        width: auto;
+    }
     .menuLink {
         font-size: 1.25rem;
     }

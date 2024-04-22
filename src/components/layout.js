@@ -38,11 +38,10 @@ const withStyles = makeStyles(() => ({
   },
   copyrightText: {
     marginTop: "auto",
-    marginBottom: "auto",
+    marginBottom: "25px",
     color: "white",
-    "@media(max-width: 600px)": {
-      textAlign: "center"
-    }
+    textAlign: "center",
+    fontWeight: "bold"
   },
   dougDesignText: {
     fontSize: "0.7rem"
@@ -90,15 +89,16 @@ const Layout = ({ children }) => {
         <footer class="footerRoot">
           <div className={classes.footerContent}>
             <div class="footerContactWrapper">
+
+              <a href="tel:585-568-7149" className={classes.footerPhone}>
+                <PhoneIcon className={classes.phoneIcon} />
+                (585) 568-7149
+              </a>
               <div class="socialLinkWrapper">
                 <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
                   <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
                 </a>
               </div>
-              <a href="tel:585-568-7149" className={classes.footerPhone}>
-                <PhoneIcon className={classes.phoneIcon} />
-                (585) 568-7149
-              </a>
             </div>
 
 
