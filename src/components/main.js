@@ -755,7 +755,7 @@ const Main = () => {
                                             aria-controls="panel1-content"
                                             id="panel1-header"
                                         >
-                                            More
+                                            <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
                                             Your home’s siding is a perfect place for mold, mildew, fungi, dirt, and other
@@ -784,10 +784,10 @@ const Main = () => {
                                     <Accordion>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
-                                            aria-controls="panel1-content"
-                                            id="panel1-header"
+                                            aria-controls="panel2-content"
+                                            id="panel2-header"
                                         >
-                                            More
+                                            <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
                                             Over time your roof will collect organic contaminants such as moss, mold,
@@ -817,10 +817,10 @@ const Main = () => {
                                     <Accordion>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
-                                            aria-controls="panel1-content"
-                                            id="panel1-header"
+                                            aria-controls="panel3-content"
+                                            id="panel3-header"
                                         >
-                                            More
+                                            <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
                                             The outer surface of your gutter system can, over time, accumulate striped stains as
@@ -849,10 +849,10 @@ const Main = () => {
                                     <Accordion>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
-                                            aria-controls="panel1-content"
-                                            id="panel1-header"
+                                            aria-controls="panel4-content"
+                                            id="panel4-header"
                                         >
-                                            More
+                                            <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
                                             Your concrete driveway/patio/walkway is extremely porous and permeable. This
@@ -881,10 +881,10 @@ const Main = () => {
                                     <Accordion>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
-                                            aria-controls="panel1-content"
-                                            id="panel1-header"
+                                            aria-controls="panel5-content"
+                                            id="panel5-header"
                                         >
-                                            More
+                                            <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
                                             Mold, mildew, moss, and fungi seem to find their way onto every conceivable
@@ -915,10 +915,10 @@ const Main = () => {
                                     <Accordion>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
-                                            aria-controls="panel1-content"
-                                            id="panel1-header"
+                                            aria-controls="panel6-content"
+                                            id="panel6-header"
                                         >
-                                            More
+                                            <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
                                             Revitalize your property's appearance with our commercial power washing services. Our experienced team utilizes state-of-the-art equipment to remove dirt, grime, and stains from a variety of surfaces, including concrete, brick, siding, and more. Whether it's revitalizing a storefront, parking lot, or industrial facility, we tailor our services to meet your specific needs, restoring surfaces to their pristine condition. Enhance curb appeal, maintain cleanliness, and leave a lasting impression with our reliable and efficient commercial power washing solutions. Trust us to transform your space, leaving it looking fresh and inviting for customers and clients alike.

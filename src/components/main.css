@@ -305,6 +305,10 @@ body {
     align-items: end;
 }
 
+.moreText {
+    margin-bottom: 0;
+}
+
 .scrollToLocation {
     height: 100px;
     background-color: white;
