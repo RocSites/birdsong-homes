@@ -808,7 +808,7 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/ST_gutter_brightenint.jpeg" />
+                                    <StaticImage src="../images/gutter_bright_2.png" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
                                         Gutter Brightening
                                     </Typography>
