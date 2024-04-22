@@ -727,7 +727,7 @@ const Main = () => {
                     <Typography className={classes.mainBannerText}>Small & Tall Power Washing <br /></Typography>
                     <Typography style={{ color: "white", textAlign: "center" }}>Serving Rochester since 2021</Typography>
                     {/* <i>every time</i> */}
-                    <a href="tel:(585) 298-8934" class="bannerCallButton">(585) 298-8934</a>
+                    <a href="tel:585-568-7149" class="bannerCallButton">(585) 568-7149</a>
                     <Typography style={{ color: "white", textAlign: "center" }}>Free Estimates</Typography>
 
                 </div>
@@ -985,9 +985,9 @@ const Main = () => {
                     <div className={classes.aboutSectionWrapper}>
                         <Typography className={classes.aboutTitleHeader}>Get a Free Estimate</Typography>
                         <Typography className={classes.addressText}>Please use the form below for a free estimate</Typography>
-                        <Button className={classes.quoteButtonLink} href="https://www.markate.com/" target="_blank">
-                            Free Estimate
-                        </Button>
+                        <div className="markateFormWrapper">
+                        <iframe id="markate-widget-contact-iframe" src="https://www.markate.com/public/widget/contact?id=1e9a9a7c1d65ccda6ff03ac63dddd7da:38520:9f82ff06" width="100%" height="1800" scrolling="no" frameborder="0" allowTransparency="true" style={{border:"none", overflow:"hidden"}}></iframe>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1013,10 +1013,10 @@ const Main = () => {
                         <br />
 
                         <div className={classes.phoneEmailWrapper}>
-                            <a href="tel:(585) 298-8934" className={classes.contactPhone}>
+                            <a href="tel:585-568-7149" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
                                     <PhoneIcon className={classes.phoneIcon} />
-                                    (585) 298-8934
+                                    (585) 568-7149
                                 </Button>
                             </a>
 

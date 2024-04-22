@@ -241,6 +241,10 @@ body {
     z-index: 2;
 }
 
+.markateFormWrapper {
+    width: 50%;
+}
+
 .teamNameImageWrapper {
     display: flex;
     flex-direction: column;
@@ -492,6 +496,10 @@ body {
 @media(max-width:600px) {
     .menuLink {
         font-size: 1.25rem;
+    }
+
+    .markateFormWrapper {
+        width: 100%;
     }
 
     .socialLink {}

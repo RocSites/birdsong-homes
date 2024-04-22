@@ -90,9 +90,9 @@ const Layout = ({ children }) => {
         <main className={classes.mainContent}>{children}</main>
         <footer class="footerRoot">
           <div className={classes.footerContent}>
-            <a href="tel:(585) 298-8934" className={classes.footerPhone}>
+            <a href="tel:585-568-7149" className={classes.footerPhone}>
               <PhoneIcon className={classes.phoneIcon} />
-              (585) 298-8934
+              (585) 568-7149
             </a>
             <div class="socialLinkWrapper">
               <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
