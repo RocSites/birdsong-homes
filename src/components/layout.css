@@ -611,7 +611,7 @@ pre tt:after {
 .socialLink > img {
   margin: auto;
   width: 25px;
-  
+  margin-bottom: 3px;
 }
 
 

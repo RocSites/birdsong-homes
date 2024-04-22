@@ -72,13 +72,13 @@ const withStyles = makeStyles(() => ({
     display: "flex",
     color: "white",
     margin: "10px",
-    "@media(max-width: 600px)": {
+    "@media(max-width: 960px)": {
       display: "none"
     }
   },
   navBarHamburgerDrawerWrapper: {
     display: "none",
-    "@media(max-width: 601px)": {
+    "@media(max-width: 961px)": {
       display: "flex",
       margin: "auto"
     }
@@ -109,7 +109,7 @@ const withStyles = makeStyles(() => ({
     margin: "1rem",
     fontSize: "2.5rem",
     color: "#3b3a73",
-    "@media(min-width: 601px)": {
+    "@media(min-width: 961px)": {
       display: "none"
     }
   },
@@ -117,7 +117,7 @@ const withStyles = makeStyles(() => ({
     color: "#3b3a73",
     margin: "1rem",
     fontSize: "2.5rem",
-    "@media(min-width: 601px)": {
+    "@media(min-width: 961px)": {
       display: "none"
     }
   },
@@ -154,7 +154,7 @@ const withStyles = makeStyles(() => ({
     borderRadius: "35px",
     height: "50px",
     margin: "auto 20px",
-    "@media(max-width: 600px)": {
+    "@media(max-width: 960px)": {
       fontSize: "0.75rem",
       margin: "auto"
     }

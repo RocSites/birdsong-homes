@@ -655,7 +655,7 @@ const Main = () => {
                 </div>
             </div>
             <span className={classes.scrollToSectionOne} id="sectionOne"></span>
-
+            <br/>
             <section class="aboutSectionWrapper">
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">

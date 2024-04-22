@@ -549,30 +549,7 @@ body {
     }
 }
 
-@media(max-width:600px) {
-
-    .testimonialCardWrapper {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .testimonialCard {
-        width: auto;
-    }
-    .menuLink {
-        font-size: 1.25rem;
-    }
-
-    .markateFormWrapper {
-        width: 100%;
-    }
-
-    .socialLink {}
-
-    .aboutSectionWrapper iframe {
-        width: 90%;
-        margin: auto;
-    }
-
+@media(max-width:960px) {
     .socialLinkWrapperNav {
         display: none;
     }
@@ -589,7 +566,15 @@ body {
     .aboutWrapper {
         flex-direction: column;
         padding: 1rem;
+        justify-content: center;
+        align-items: center;
     }
+
+    .aboutSectionWrapper iframe {
+        width: 90%;
+        margin: auto;
+    }
+
 
     .aboutUsText {
         width: 100%;
@@ -597,12 +582,39 @@ body {
 
     .teamImageWrapper {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .aboutUsTextWrapper {
         margin-right: 0;
         width: 100%;
     }
+
+}
+
+@media(max-width:600px) {
+
+    .testimonialCardWrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .testimonialCard {
+        width: auto;
+    }
+
+    .menuLink {
+        font-size: 1.25rem;
+    }
+
+    .markateFormWrapper {
+        width: 100%;
+    }
+
+    .socialLink {}
+
+
 
     .hoursDayTime {
         margin: auto;
