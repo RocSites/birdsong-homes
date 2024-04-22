@@ -688,7 +688,7 @@ const Main = () => {
 
                 <div class="teamImageWrapper">
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_deck_1.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/ST-roof-four.jpeg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
