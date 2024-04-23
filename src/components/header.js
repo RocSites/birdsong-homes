@@ -251,10 +251,13 @@ const Header = ({ siteTitle }) => {
             to="/#sectionTwo" title="Services">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#sectionThree" title="Get an Estimate">
+            to="/#sectionThree" title="Free Estimate">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#testimonials" title="Testimonials">
+          </AnchorLink>
+          <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
+            to="/#areasserved" title="Areas Served">
           </AnchorLink>
           <AnchorLink className={classes.navCallButton}
             to="/#contactForm" title="Contact Us">
@@ -316,6 +319,9 @@ const Header = ({ siteTitle }) => {
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
                   to="/#testimonials" title="Testimonials">
+                </AnchorLink>
+                <AnchorLink className={classes.navButtonMobile}
+                  to="/#areasserved" title="Areas Served">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
                   to="/#contactForm" title="Contact Us">

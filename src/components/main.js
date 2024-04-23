@@ -667,7 +667,7 @@ const Main = () => {
                 </div>
             </div>
             <span className={classes.scrollToSectionOne} id="sectionOne"></span>
-            <br/>
+            <br />
             <section class="aboutSectionWrapper">
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">
@@ -1008,27 +1008,44 @@ const Main = () => {
 
                         </div>
 
-                        <div style={{ backgroundColor: "white" }}>
-
-                            {/* <div className={classes.reviewsWrapper}>
-                                <a className={classes.reviewLink}
-                                    href=""
-                                    target="_blank"
-                                >
-                                    <Button
-                                        className={classes.reviewButton}
-                                    >
-                                        <div className={classes.reviewStarWrapper}>
-                                            <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
-                                            <img className={classes.socialFooterMargin} src={GoogleIcon} />
-                                        </div>
-                                    </Button>
-                                </a>
-                            </div> */}
-                        </div>
-
                     </div>
                 </div>
+            </section>
+            <span className={classes.scrollToContact} id="areasserved"></span>
+            <br />
+
+            <section>
+                <Typography className={classes.connectHeader}>Areas Served</Typography>
+                <div class="areasServedWrapper">
+                    <div class="areasServedSubWrapper">
+                        <p class="areasServedHeader">Monroe County</p>
+                        <ul>
+                            <li>Rochester</li>
+                            <li>Penfield</li>
+                            <li>Pittsford</li>
+                            <li>Hilton</li>
+                            <li>Webster</li>
+                            <li>Henrietta</li>
+                            <li>Greece</li>
+                            <li>Irondeqoiut</li>
+                            <li>Fairport</li>
+                        </ul>
+                    </div>
+                    <div class="areasServedSubWrapper">
+                        <p class="areasServedHeader">Wayne County</p>
+                        <ul>
+                            <li>Ontario</li>
+                            <li>Williamson</li>
+                            <li>Sodus</li>
+                            <li>Macedon</li>
+                            <li>Palmyra</li>
+                            <li>Lyons</li>
+                            <li>Clyde</li>
+                            <li>Wolcott</li>
+                        </ul>
+                    </div>
+                </div>
+
             </section>
 
         </div>

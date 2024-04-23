@@ -305,6 +305,20 @@ body {
     align-items: end;
 }
 
+.areasServedWrapper {
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.areasServedHeader {
+    font-weight: bold;
+}
+
+.areasServedSubWrapper {
+    margin: 20px;
+}
+
 .moreText {
     margin-bottom: 0;
     margin-left: 10px;
