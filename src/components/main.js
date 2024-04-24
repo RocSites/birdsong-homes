@@ -1027,7 +1027,7 @@ const Main = () => {
                             <li>Webster</li>
                             <li>Henrietta</li>
                             <li>Greece</li>
-                            <li>Irondeqoiut</li>
+                            <li>Irondequoit</li>
                             <li>Fairport</li>
                         </ul>
                     </div>
