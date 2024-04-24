@@ -103,7 +103,7 @@ const Layout = ({ children }) => {
 
 
             <div style={{ width: "100%", border: "1px solid #d51d35", marginBottom: "20px" }}></div>
-            <p className={classes.copyrightText}> © {new Date().getFullYear()} Small & Tall Powerwashing</p>
+            <p className={classes.copyrightText}> © {new Date().getFullYear()} Small & Tall Powerwashing, LLC</p>
             <p class="rocsitesText">Website by <span><a href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
           </div>
         </footer>
