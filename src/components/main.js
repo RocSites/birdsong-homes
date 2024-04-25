@@ -1045,7 +1045,7 @@ const Main = () => {
                         </ul>
                     </div>
                 </div>
-                <p style={{textAlign: "center"}}>Other areas please inquire</p>
+                <p style={{textAlign: "center"}}>Other areas please inquire. We would be happy to serve nearby areas!</p>
 
             </section>
 
