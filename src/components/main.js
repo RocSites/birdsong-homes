@@ -628,30 +628,7 @@ const withStyles = makeStyles(() => ({
 
 const Main = () => {
     const classes = withStyles();
-
-    const [isFlippedOne, setFlippedOne] = useState(false);
-    const [isFlippedTwo, setFlippedTwo] = useState(false);
-    const [isFlippedThree, setFlippedThree] = useState(false);
-    const [isFlippedFour, setFlippedFour] = useState(false);
-    const [isFlippedFive, setFlippedFive] = useState(false);
-
-    const handleFlip = (serviceName, enabled) => (e) => {
-        console.log("hover")
-        // if (serviceName === "card1") {
-        //     setFlippedOne(enabled)
-        // } else if (serviceName === "card2") {
-        //     setFlippedTwo(enabled)
-        // } else if (serviceName === "card3") {
-        //     setFlippedThree(enabled)
-        // } else if (serviceName === "card4") {
-        //     setFlippedFour(enabled)
-        // } else if (serviceName === "card5") {
-        //     setFlippedFive(enabled)
-        // } else if (serviceName === "card7") {
-        //     setFlippedFive(enabled)
-        // }
-    }
-
+    console.log(process.env)
 
     return (
         <div className={classes.mainRoot}>
