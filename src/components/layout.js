@@ -90,20 +90,20 @@ const Layout = ({ children }) => {
           <div className={classes.footerContent}>
             <div class="footerContactWrapper">
 
-              <a href="tel:585-568-7149" className={classes.footerPhone}>
+              <a href="tel:585" className={classes.footerPhone}>
                 <PhoneIcon className={classes.phoneIcon} />
-                (585) 568-7149
+                (585)
               </a>
-              <div class="socialLinkWrapper">
+              {/* <div class="socialLinkWrapper">
                 <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
                   <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
                 </a>
-              </div>
+              </div> */}
             </div>
 
 
             <div style={{ width: "100%", border: "1px solid #d51d35", marginBottom: "20px" }}></div>
-            <p className={classes.copyrightText}> © {new Date().getFullYear()} Small & Tall Powerwashing, LLC</p>
+            <p className={classes.copyrightText}> © {new Date().getFullYear()} Birdsong Homes</p>
             <p class="rocsitesText">Website by <span><a href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
           </div>
         </footer>

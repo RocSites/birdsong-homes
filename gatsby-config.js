@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Small & Tall Power Washing`,
+    title: `Birdsong Homes`,
     description: `Residential and Commercial Soft Washing and Power Washing`,
     author: `Doug Kellermeyer`,
   },
@@ -30,13 +30,13 @@ module.exports = {
         icon: `src/images/logo/logo.jpeg`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-21MRM05XCR"
-      }
-    }
+    // `gatsby-plugin-gatsby-cloud`,
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: ""
+    //   }
+    // }
     
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

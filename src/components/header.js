@@ -240,7 +240,7 @@ const Header = ({ siteTitle }) => {
             {/* <WaterDropIcon className={classes.navLogo} alt="company logo" /> */}
             <img src={STLogo} className={classes.navLogo} alt="company logo"/>
             {/* <img src={STLogoTwo} className={classes.navLogo} alt="company logo"/> */}
-            <Typography className={classes.navLogoText}>Small & Tall Power Washing</Typography>
+            <Typography className={classes.navLogoText}>Birdsong Homes</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
@@ -248,16 +248,16 @@ const Header = ({ siteTitle }) => {
             to="/#sectionOne" title="About Us">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#sectionTwo" title="Services">
+            to="/#sectionTwo" title="Home/Floor Plans">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#sectionThree" title="Free Estimate">
+            to="/#sectionThree" title="The Neighborhood">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#testimonials" title="Testimonials">
+            to="/#testimonials" title="Amenities">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#areasserved" title="Areas Served">
+            to="/#areasserved" title="Schedule a Tour">
           </AnchorLink>
           <AnchorLink className={classes.navCallButton}
             to="/#contactForm" title="Contact Us">
@@ -309,19 +309,20 @@ const Header = ({ siteTitle }) => {
             <List>
               <div className={classes.drawerLinkWrapper}>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionOne" title="About Us">
+                  to="/#sectionOne" title="
+                  ">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionTwo" title="Services">
+                  to="/#sectionTwo" title="Home/Floor Plans">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionThree" title="Free Estimate">
+                  to="/#sectionThree" title="The Neighborhood">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#testimonials" title="Testimonials">
+                  to="/#testimonials" title="Amenities">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#areasserved" title="Areas Served">
+                  to="/#areasserved" title="Schedule a Tour">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
                   to="/#contactForm" title="Contact Us">
@@ -330,7 +331,7 @@ const Header = ({ siteTitle }) => {
 
               <Button
                 class="drawerItemLogin"
-                target="_blank" href="tel:585-568-7149"
+                target="_blank" href="tel:585-"
               >
                 <PhoneIcon class="drawerPhoneIcon" />
                 Call Us
@@ -339,9 +340,9 @@ const Header = ({ siteTitle }) => {
                 {/* <a href="" target="_blank" class="socialLink">
                   <img class="socialDrawer" src={InstagramIcon} />
                 </a> */}
-                <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
+                {/* <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
                   <img class="socialDrawerFb" src={FacebookIcon} />
-                </a>
+                </a> */}
               </div>
             </List>
 

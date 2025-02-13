@@ -17,6 +17,8 @@ import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import Recaptcha from "../components/recaptcha"
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
@@ -634,13 +636,12 @@ const Main = () => {
         <div className={classes.mainRoot}>
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
-                    <Typography className={classes.mainBannerText}>Small & Tall Power Washing <br /></Typography>
-                    <Typography style={{ color: "white", textAlign: "center" }}>Serving Rochester since 2021</Typography>
+                    <Typography className={classes.mainBannerText}>Birdsong Homes <br /></Typography>
                     {/* <i>every time</i> */}
-                    <a href="tel:585-568-7149" class="bannerCallButton">(585) 568-7149</a>
-                    <AnchorLink to="/#sectionThree" title="Free Estimates">
+                    <a href="tel:585-" class="bannerCallButton">(585)</a>
+                    {/* <AnchorLink to="/#sectionThree" title="Free Estimates">
                         <Typography className={classes.freeEstimateScrollButton}>Free Estimates</Typography>
-                    </AnchorLink>
+                    </AnchorLink> */}
                 </div>
             </div>
             <span className={classes.scrollToSectionOne} id="sectionOne"></span>
@@ -649,54 +650,49 @@ const Main = () => {
                 <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
                 <div class="aboutWrapper">
                     <div class="aboutUsTextWrapper">
-                        <Typography className={classes.aboutUsText}>Small &amp; Tall Power Washing LLC is your trusted and insured house washing company; serving Monroe
-                            County, Wayne County, and the surrounding areas. Our three owner/operators are local first responders
-                            who risk their lives every day in service to their communities.</Typography>
-                        <Typography className={classes.aboutUsText}>At Small &amp; Tall Power Washing, we pride
-                            ourselves on working our hardest, putting the community first, and always prioritizing our valued
-                            customers. Your satisfaction and support are the greatest compliments we receive and it is what drives
-                            us to continue to beautify the areas we serve.</Typography>
+                        <Typography className={classes.aboutUsText}>Paragraph One</Typography>
+                        <Typography className={classes.aboutUsText}>Paragraph Two</Typography>
 
                     </div>
-                    <StaticImage className={classes.teamImage} src="../images/ST_team.jpeg" />
+                    <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
                 </div>
 
                 <Typography className={classes.sectionTitleText}>Results/Recent Projects</Typography>
 
                 <div class="teamImageWrapper">
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST-roof-four.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST-fence_one.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_walkway_one.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_siding_four.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_deck_two.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_patio_two.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
                     </div>
 
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_siding_five.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_patio_1.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
 
                     </div>
                     <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/ST_siding_one.jpeg" />
+                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
                     </div>
                 </div>
 
@@ -712,7 +708,7 @@ const Main = () => {
             <br />
             <section class="productSectionWrapper">
                 <div>
-                    <Typography className={classes.someOfWorkHeaderProducts}>Services</Typography>
+                    <Typography className={classes.someOfWorkHeaderProducts}>Home/Floor Plans</Typography>
                     <div class="productCardWrapper">
                         <div
                             class="flip-card"
@@ -720,9 +716,9 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/ST_pool.jpeg" />
+                                    <StaticImage src="../images/alex-haney-food.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Residential House Wash
+                                        Title
                                     </Typography>
                                 </div>
                                 <div>
@@ -735,12 +731,7 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            Your home’s siding is a perfect place for mold, mildew, fungi, dirt, and other
-                                            organic material to build up and become an eyesore. We use the industry’s best equipment and
-                                            products to safely remove all organic material and bring your home back to its original shine. Our
-                                            equipment uses a low pressure/ high volume pump system to carefully wash your house in safe yet
-                                            effective soaps and chemicals that kill and remove all organic material. Your house is rinsed clean and
-                                            will never look better!
+                                            Paragraph
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -752,9 +743,9 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/ST_roof_one.jpeg" />
+                                    <StaticImage src="../images/alex-haney-food.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Residential Roof Cleaning
+                                        Title
                                     </Typography>
                                 </div>
                                 <div>
@@ -767,13 +758,7 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            Over time your roof will collect organic contaminants such as moss, mold,
-                                            fungi, and lichen. Lichen is, most notably, an indicator of significant damage to your roof shingles. These
-                                            organic contaminants will breakdown the limestone in your shingles, causing granule loss and advanced
-                                            aging of your roof shingles. Moss is yet another indicator that your roof is suffering damage. Our roof
-                                            cleaning service safely applies the necessary chemicals to kill and remove these organic materials. This
-                                            process will not only preserve the integrity of your roof but it will also restore the original appearance of
-                                            your roof.
+                                            Paragraph
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -785,9 +770,9 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/gutter_bright_2.png" />
+                                    <StaticImage src="../images/alex-haney-food.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Gutter Brightening
+                                        Title
                                     </Typography>
                                 </div>
                                 <div>
@@ -800,12 +785,7 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            The outer surface of your gutter system can, over time, accumulate striped stains as
-                                            water overflows the gutters during heavy rain and/or during the spring thaw. These stains may become
-                                            noticeably prominent after a house wash. We offer our gutter brightening service to address this very
-                                            issue. We use an additional method to remove these stains and bring a new shine to your gutters.
-                                            Restoring the shine to your gutter system will be the final touch needed to elevate your home’s curb
-                                            appeal to its utmost potential.
+                                            Paragraph
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -817,9 +797,9 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/ST_concrete.jpeg" />
+                                    <StaticImage src="../images/alex-haney-food.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Concrete Cleaning
+                                        Title
                                     </Typography>
                                 </div>
                                 <div>
@@ -832,12 +812,7 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            Your concrete driveway/patio/walkway is extremely porous and permeable. This
-                                            gives dirt, mold, and fungi the opportunity to embed themselves in your concrete surfaces. Over time
-                                            this can drastically reduce your concrete’s visual appeal as well as its overall quality and longevity. We
-                                            use the industry’s top formulated chemicals to penetrate the concrete and ensure the organic material
-                                            is eliminated. After a short wait, a high pressure surface cleaner is used to safely rinse away the
-                                            chemical and dead organic material; leaving behind a clean and bright concrete surface.
+                                            Paragraph
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -849,9 +824,9 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/ST_deck_1.jpeg" />
+                                    <StaticImage src="../images/alex-haney-food.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Decks and Fencing
+                                        Title
                                     </Typography>
                                 </div>
                                 <div>
@@ -864,14 +839,7 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            Mold, mildew, moss, and fungi seem to find their way onto every conceivable
-                                            surface. Our trucks come equipped with the industry’s top performing equipment as well as products
-                                            specifically designed to eliminate organic material then rejuvenate the condition of your wood framed
-                                            deck and fencing. We have numerous post-cleaning treatments that condition and revitalize the
-                                            appearance of your wood framed structures; giving your outdoor space a youthful appearance as well as
-                                            extending the life of your deck and fencing. Have vinyl fencing or a deck laid with Trex? Not a problem
-                                            whatsoever. Our highest quality equipment and our years of experience will bring out the glowing white
-                                            shine of your vinyl fencing and bring your Trex decking back to life!
+                                            Paragraph
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -883,9 +851,9 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/ST_cams_photo.jpeg" />
+                                    <StaticImage src="../images/alex-haney-food.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Commercial
+                                        Title
                                     </Typography>
                                 </div>
                                 <div>
@@ -898,7 +866,7 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            Revitalize your property's appearance with our commercial power washing services. Our experienced team utilizes state-of-the-art equipment to remove dirt, grime, and stains from a variety of surfaces, including concrete, brick, siding, and more. Whether it's revitalizing a storefront, parking lot, or industrial facility, we tailor our services to meet your specific needs, restoring surfaces to their pristine condition. Enhance curb appeal, maintain cleanliness, and leave a lasting impression with our reliable and efficient commercial power washing solutions. Trust us to transform your space, leaving it looking fresh and inviting for customers and clients alike.
+                                            Paragraph
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -916,11 +884,8 @@ const Main = () => {
             <section style={{ minHeight: "300px" }} className={classes.container}>
                 <div className={classes.aboutWrapper}>
                     <div className={classes.aboutSectionWrapper}>
-                        <Typography className={classes.aboutTitleHeader}>Get a Free Estimate</Typography>
-                        <Typography className={classes.addressText}>Please use the form below for a free estimate</Typography>
-                        <div className="markateFormWrapper">
-                            <iframe id="markate-widget-contact-iframe" src="https://www.markate.com/public/widget/contact?id=1e9a9a7c1d65ccda6ff03ac63dddd7da:38520:9f82ff06" width="100%" height="1800" scrolling="no" frameborder="0" allowTransparency="true" style={{ border: "none", overflow: "hidden" }}></iframe>
-                        </div>
+                        <Typography className={classes.aboutTitleHeader}>The Neighborhood</Typography>
+
                     </div>
                 </div>
             </section>
@@ -931,26 +896,23 @@ const Main = () => {
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
                     <div>
-                        <Typography className={classes.connectHeader}>Testimonials</Typography>
+                        <Typography className={classes.connectHeader}>Amenities</Typography>
                         <br />
                         <div class="testimonialCardWrapper">
                             <div class="testimonialCard">
-                                <p>We had Small & Tall power wash our house, concrete patio and concrete driveway.  Then they sealed all the concrete.  Roger & Sal were incredible!! They went above and beyond our expectations, even spraying our problem moss with a solution that killed it immediately.  Amazing!  We give them a rating of 5++ and will look to them for any upcoming jobs we have.</p>
-                                <p>-Becky</p>
+                                <p>Amentity info...</p>
                             </div>
                             <div class="testimonialCard">
-                                <p>Sal did an outstanding job power washing my house and cleaning the gutters. He is very  professional knowledgeable and courteous.
-                                    My siding looks like it’s new!
-                                    I highly recommend this company.</p>
-                                <p>-Karen</p>
+                                <p>Amentity info...</p>
+
                             </div>
                             <div class="testimonialCard">
-                                <p>When we purchased our house we knew that the exterior needed work. Couldn’t be more pleased with the job that was done to restore our siding/roof and also the overflowing gutters. House looks totally different. I would highly recommend this hard working team to anyone. Super easy to schedule, got the quote up front and over all great communication.</p>
-                                <p>-Hannah</p>
+                                <p>Amentity info...</p>
+
                             </div>
                             <div class="testimonialCard">
-                                <p>Couldn’t believe the difference in my siding. I didn’t know my house was so dirty until it was cleaned by Small and Tall! Would highly recommend to anyone and very fair pricing!</p>
-                                <p>-Christopher</p>
+                                <p>Amentity info...</p>
+
                             </div>
                         </div>
 
@@ -959,6 +921,55 @@ const Main = () => {
             </section>
 
             <span className={classes.scrollToContact} id="contactForm"></span>
+
+            <section>
+                <Typography className={classes.connectHeader}>Schedule a Tour/Check for Lot Availability & Pricing</Typography>
+                <div class="areasServedWrapper">
+                    <div class="formRoot">
+                        <form
+                            name="Birdsong Homes Contact Form"
+                            method="POST"
+                            data-netlify="true"
+                            action="/thank-you"
+                        >
+                            <input type="hidden" name="form-name" value="Birdsong Homes Contact Form" />
+                            <div class="formEmail">
+                                <label style={{ marginRight: "10px" }}>Name</label>
+                                <input type="text" name="name" />
+                            </div>
+                            <div class="formEmail">
+                                <label style={{ marginRight: "10px" }}>Email</label>
+                                <input type="email" name="email" />
+                            </div>
+                            <div class="formEmail">
+                                <label style={{ marginRight: "10px" }}>Phone</label>
+                                <input type="tel" name="phone" />
+                            </div>
+                            <div class="formTextArea">
+                                <label>Thoughts or questions?</label>
+                                <textarea name="message" />
+                            </div>
+                            <div style={{ margin: "10px" }}>
+                                <GoogleReCaptchaProvider reCaptchaKey="6LengNYqAAAAAKZhx9NMnz8yfaVzQlYv01bbjBBp">
+                                    <Recaptcha />
+                                </GoogleReCaptchaProvider>
+                            </div>
+                            <div
+                                class="submitButtonWrapper"
+                            >
+                                <button
+                                    class="submitButton"
+                                    type="submit"
+                                >Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
+            
+            <span className={classes.scrollToContact} id="areasserved"></span>
             <br />
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
@@ -967,15 +978,15 @@ const Main = () => {
                         <br />
 
                         <div className={classes.phoneEmailWrapper}>
-                            <a href="tel:585-568-7149" class="contactUsButtonStyled">
+                            <a href="tel:585-" class="contactUsButtonStyled">
                                 <Button style={{ textTransform: "none", color: "#3b3a73" }}>
                                     <PhoneIcon className={classes.phoneIcon} />
-                                    (585) 568-7149
+                                    (585)
                                 </Button>
                             </a>
                             <div className={classes.contactWrapper}>
                                 {/* <Typography>General Questions</Typography> */}
-                                <a href="mailto:smallandtallpw@gmail.com" class="contactUsButtonStyled">
+                                <a href="mailto:" class="contactUsButtonStyled">
                                     <Button style={{ textTransform: "none", color: "#3b3a73" }}>
                                         <EmailIcon className={classes.phoneIcon} />
                                         Email Us
@@ -987,43 +998,6 @@ const Main = () => {
 
                     </div>
                 </div>
-            </section>
-            <span className={classes.scrollToContact} id="areasserved"></span>
-            <br />
-
-            <section>
-                <Typography className={classes.connectHeader}>Areas Served</Typography>
-                <div class="areasServedWrapper">
-                    <div class="areasServedSubWrapper">
-                        <p class="areasServedHeader">Monroe County</p>
-                        <ul>
-                            <li>Rochester</li>
-                            <li>Penfield</li>
-                            <li>Pittsford</li>
-                            <li>Hilton</li>
-                            <li>Webster</li>
-                            <li>Henrietta</li>
-                            <li>Greece</li>
-                            <li>Irondequoit</li>
-                            <li>Fairport</li>
-                        </ul>
-                    </div>
-                    <div class="areasServedSubWrapper">
-                        <p class="areasServedHeader">Wayne County</p>
-                        <ul>
-                            <li>Ontario</li>
-                            <li>Williamson</li>
-                            <li>Sodus</li>
-                            <li>Macedon</li>
-                            <li>Palmyra</li>
-                            <li>Lyons</li>
-                            <li>Clyde</li>
-                            <li>Wolcott</li>
-                        </ul>
-                    </div>
-                </div>
-                <p style={{textAlign: "center"}}>Other areas please inquire. We would be happy to serve nearby areas!</p>
-
             </section>
 
         </div>
