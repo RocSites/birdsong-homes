@@ -1,5 +1,5 @@
-# Beth Rogers Agency Inc. 
-### Website for Beth Rogers Agency Inc, an insurance agency
+# Birdsong Homes
+### Website for Birdsong Homes
 
 ## Quick start
 
