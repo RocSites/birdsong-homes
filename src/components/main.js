@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import houseWideOne from "../images/new-housebinyaminmellish.jpg"
 import birdSongTrail from "../images/birdsong_trail_sunny_hernandez.png"
+import redHouseTwo from "../images/zac-gudakov-red-house-2.jpg"
+import Neighborhood from "../images/birdsong_map.png"
 //credit - https://www.newyorkupstate.com/western-ny/2021/04/visit-a-fairy-village-on-a-magical-trail-in-upstate-new-york.html
 import truckTwo from "../images/ST_truck_2.jpeg"
 import PhoneIcon from '@material-ui/icons/Phone'
@@ -604,10 +606,10 @@ const withStyles = makeStyles(() => ({
         fontWeight: "bold"
     },
     teamImage: {
-        maxWidth: "600px",
+        // height: "48em !important",
+        maxWidth: "50%",
         padding: "10px",
         borderRadius: "10px",
-        height: "100%",
         margin: "20px",
         "@media(max-width:600px)": {
             width: "90%",
@@ -658,58 +660,30 @@ const Main = () => {
                         <div class="aboutTextDetails">
                             <ul>
                                 <li>Packages from the $xxx,000</li>
-                                <li>two</li>
+                                <li>Honeoye Falls-Lima Central School District</li>
+                                <li>1+ Acre lots</li>
+                                <li>City sewer</li>
+                                <li>Mature scrollToServices</li>
+                                <li>Next to Birdsong Trail</li>
                             </ul>
                         </div>
-
+                        <div style={{ margin: "15px" }}>
+                            <h4>For more information contact:</h4>
+                            <div>
+                                <img style={{ borderRadius: "50px" }} src="https://placehold.co/100x100" />
+                                <p style={{ marginBottom: "10px" }}>Name</p>
+                                <a href="tel: 585-xxx-xxxx">(585) xxx-xxxx</a>
+                                <br />
+                                <a href="mailto:name@clintwoodapartments.com">name@clintwoodapartments.com</a>
+                            </div>
+                        </div>
                     </div>
-                    <StaticImage className={classes.teamImage} src="../images/birdsong_trail_sunny_hernandez.png" />
+                    <img style={{ width: "48%", objectFit: "cover", aspectRatio: "1", borderRadius: "16px", margin: "15px" }} src={redHouseTwo} />
+                    {/* <StaticImage className={classes.teamImage} src="../images/birdsong_trail_sunny_hernandez.png" /> */}
+                    {/* <StaticImage className={classes.teamImage} height={"48em"} src="../images/zac-gudakov-red-house-2.jpg" /> */}
+
                 </div>
 
-                <Typography className={classes.sectionTitleText}>Results/Recent Projects</Typography>
-
-                <div class="teamImageWrapper">
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-
-                    </div>
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-
-                    </div>
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-                    </div>
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-
-                    </div>
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-
-                    </div>
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-                    </div>
-
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-
-                    </div>
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-
-                    </div>
-                    <div class="teamNameImageWrapper">
-                        <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
-                    </div>
-                </div>
-
-                <div className={classes.containerSectionTwoScroll}>
-                    <div className={classes.container}>
-                        <span className={classes.scrollToSectionOne} id="sectionOne"></span>
-                    </div>
-                </div>
             </section>
             <div className={classes.containerSectionTwoScroll}>
                 <span className={classes.scrollToSectionOne} id="sectionTwo"></span>
@@ -725,9 +699,9 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/alex-haney-food.jpg" />
+                                    <StaticImage src="../images/house_plans_example.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Title
+                                        House Plan Option 1
                                     </Typography>
                                 </div>
                                 <div>
@@ -740,7 +714,18 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            Paragraph
+                                            <ul>
+                                                <li><strong>Single-story, open-concept design</strong> with high ceilings and seamless flow.</li>
+                                                <li><strong>3 bedrooms, 2 bathrooms</strong>, including a master suite with walk-in closet.</li>
+                                                <li><strong>Modern kitchen</strong> with island seating, energy-efficient appliances, and pantry.</li>
+                                                <li><strong>Indoor-outdoor living</strong> with a covered patio and large sliding glass doors.</li>
+                                                <li><strong>Two-car garage</strong> with extra storage and a dedicated laundry room.</li>
+                                                <li><strong>Energy-efficient features</strong>, including insulated windows and solar-ready roofing.</li>
+                                                <li><strong>Spacious living areas</strong> designed for comfort and natural light.</li>
+                                                <li><strong>Flexible customization</strong> with optional home office or flex space.</li>
+                                                <li><strong>Sustainable materials</strong> and eco-friendly construction options available.</li>
+                                                <li><strong>High-quality finishes</strong> with multiple design choices for personalization.</li>
+                                            </ul>
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -752,9 +737,9 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/alex-haney-food.jpg" />
+                                    <StaticImage src="../images/house_plans_example.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Title
+                                        Home Plan Option 2
                                     </Typography>
                                 </div>
                                 <div>
@@ -767,7 +752,18 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            Paragraph
+                                            <ul>
+                                                <li><strong>Single-story, open-concept design</strong> with high ceilings and seamless flow.</li>
+                                                <li><strong>3 bedrooms, 2 bathrooms</strong>, including a master suite with walk-in closet.</li>
+                                                <li><strong>Modern kitchen</strong> with island seating, energy-efficient appliances, and pantry.</li>
+                                                <li><strong>Indoor-outdoor living</strong> with a covered patio and large sliding glass doors.</li>
+                                                <li><strong>Two-car garage</strong> with extra storage and a dedicated laundry room.</li>
+                                                <li><strong>Energy-efficient features</strong>, including insulated windows and solar-ready roofing.</li>
+                                                <li><strong>Spacious living areas</strong> designed for comfort and natural light.</li>
+                                                <li><strong>Flexible customization</strong> with optional home office or flex space.</li>
+                                                <li><strong>Sustainable materials</strong> and eco-friendly construction options available.</li>
+                                                <li><strong>High-quality finishes</strong> with multiple design choices for personalization.</li>
+                                            </ul>
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
@@ -779,13 +775,13 @@ const Main = () => {
                         >
                             <div className="flip-card-inner">
                                 <div className="card-content">
-                                    <StaticImage src="../images/alex-haney-food.jpg" />
+                                    <StaticImage src="../images/house_plans_example.jpg" />
                                     <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Title
+                                        Home Plan Option 3
                                     </Typography>
                                 </div>
                                 <div>
-                                    <Accordion>
+                                    <Accordion defaultExpanded={true}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon />}
                                             aria-controls="panel3-content"
@@ -794,93 +790,24 @@ const Main = () => {
                                             <p class="moreText">More</p>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            Paragraph
+                                            <ul>
+                                                <li><strong>Single-story, open-concept design</strong> with high ceilings and seamless flow.</li>
+                                                <li><strong>3 bedrooms, 2 bathrooms</strong>, including a master suite with walk-in closet.</li>
+                                                <li><strong>Modern kitchen</strong> with island seating, energy-efficient appliances, and pantry.</li>
+                                                <li><strong>Indoor-outdoor living</strong> with a covered patio and large sliding glass doors.</li>
+                                                <li><strong>Two-car garage</strong> with extra storage and a dedicated laundry room.</li>
+                                                <li><strong>Energy-efficient features</strong>, including insulated windows and solar-ready roofing.</li>
+                                                <li><strong>Spacious living areas</strong> designed for comfort and natural light.</li>
+                                                <li><strong>Flexible customization</strong> with optional home office or flex space.</li>
+                                                <li><strong>Sustainable materials</strong> and eco-friendly construction options available.</li>
+                                                <li><strong>High-quality finishes</strong> with multiple design choices for personalization.</li>
+                                            </ul>
                                         </AccordionDetails>
                                     </Accordion>
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="flip-card"
-                            id="card4"
-                        >
-                            <div className="flip-card-inner">
-                                <div className="card-content">
-                                    <StaticImage src="../images/alex-haney-food.jpg" />
-                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Title
-                                    </Typography>
-                                </div>
-                                <div>
-                                    <Accordion>
-                                        <AccordionSummary
-                                            expandIcon={<ExpandMoreIcon />}
-                                            aria-controls="panel4-content"
-                                            id="panel4-header"
-                                        >
-                                            <p class="moreText">More</p>
-                                        </AccordionSummary>
-                                        <AccordionDetails>
-                                            Paragraph
-                                        </AccordionDetails>
-                                    </Accordion>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="flip-card"
-                            id="card5"
-                        >
-                            <div className="flip-card-inner">
-                                <div className="card-content">
-                                    <StaticImage src="../images/alex-haney-food.jpg" />
-                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Title
-                                    </Typography>
-                                </div>
-                                <div>
-                                    <Accordion>
-                                        <AccordionSummary
-                                            expandIcon={<ExpandMoreIcon />}
-                                            aria-controls="panel5-content"
-                                            id="panel5-header"
-                                        >
-                                            <p class="moreText">More</p>
-                                        </AccordionSummary>
-                                        <AccordionDetails>
-                                            Paragraph
-                                        </AccordionDetails>
-                                    </Accordion>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="flip-card"
-                            id="card6"
-                        >
-                            <div className="flip-card-inner">
-                                <div className="card-content">
-                                    <StaticImage src="../images/alex-haney-food.jpg" />
-                                    <Typography className={classes.productTitleText} gutterBottom variant="h5" component="div">
-                                        Title
-                                    </Typography>
-                                </div>
-                                <div>
-                                    <Accordion>
-                                        <AccordionSummary
-                                            expandIcon={<ExpandMoreIcon />}
-                                            aria-controls="panel6-content"
-                                            id="panel6-header"
-                                        >
-                                            <p class="moreText">More</p>
-                                        </AccordionSummary>
-                                        <AccordionDetails>
-                                            Paragraph
-                                        </AccordionDetails>
-                                    </Accordion>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -894,6 +821,26 @@ const Main = () => {
                 <div className={classes.aboutWrapper}>
                     <div className={classes.aboutSectionWrapper}>
                         <Typography className={classes.aboutTitleHeader}>The Neighborhood</Typography>
+                        <div style={{ display: "flex" }}>
+                            <img style={{ width: "50%", margin: "15px", borderRadius: "16px", maxHeight: "700px" }} src={Neighborhood} />
+
+                            <div class="aboutUsTextWrapperTwo">
+                                <h2 class="aboutTextHeader">Park Description, Birdsong Trail, etc.
+                                </h2>
+                                <div class="aboutTextDetailsTwo">
+                                    <ul>
+                                        <li>descriptions</li>
+                                        <li>descriptions</li>
+                                        <li>descriptions</li>
+                                        <li>descriptions</li>
+                                        <li>descriptions</li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>
@@ -905,7 +852,7 @@ const Main = () => {
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
                     <div>
-                        <Typography className={classes.connectHeader}>Amenities</Typography>
+                        <Typography className={classes.connectHeader}>Photo Gallery/Amentities</Typography>
                         <br />
                         <div class="testimonialCardWrapper">
                             <div class="testimonialCard">

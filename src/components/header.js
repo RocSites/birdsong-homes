@@ -42,7 +42,7 @@ const withStyles = makeStyles(() => ({
     position: "fixed",
     display: "flex",
     // background: "#4c86d1",
-    backgroundColor: "black",
+    backgroundColor: "white",
     color: "white",
     justifyContent: "space-between",
     width: "100%",
@@ -108,13 +108,13 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "1rem",
     fontSize: "2.5rem",
-    color: "#5e5d60",
+    color: "black",
     "@media(min-width: 961px)": {
       display: "none"
     }
   },
   hamburgerIconScroll: {
-    color: "#5e5d60",
+    color: "black",
     margin: "1rem",
     fontSize: "2.5rem",
     "@media(min-width: 961px)": {
@@ -218,9 +218,9 @@ const Header = ({ siteTitle }) => {
   //logo scroll function
   const changeColor = () => {
     if (window.scrollY >= 60) {
-      setNavBarColor("black")
-    } else {
       setNavBarColor("white")
+    } else {
+      setNavBarColor("transparent")
     }
   }
 
@@ -245,7 +245,7 @@ const Header = ({ siteTitle }) => {
         </div>
         <div className={classes.navBarButtonWrapper}>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#sectionOne" title="About Us">
+            to="/#sectionOne" title="About">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#sectionTwo" title="Home/Floor Plans">
@@ -309,8 +309,7 @@ const Header = ({ siteTitle }) => {
             <List>
               <div className={classes.drawerLinkWrapper}>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionOne" title="
-                  ">
+                  to="/#sectionOne" title="About">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
                   to="/#sectionTwo" title="Home/Floor Plans">
