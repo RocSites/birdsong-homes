@@ -240,7 +240,7 @@ const Header = ({ siteTitle }) => {
             {/* <WaterDropIcon className={classes.navLogo} alt="company logo" /> */}
             <img src={STLogo} className={classes.navLogo} alt="company logo"/>
             {/* <img src={STLogoTwo} className={classes.navLogo} alt="company logo"/> */}
-            <Typography className={classes.navLogoText}>Branford Management</Typography>
+            {/* <Typography className={classes.navLogoText}>Branford Management</Typography> */}
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>

@@ -640,7 +640,7 @@ const Main = () => {
         <div className={classes.mainRoot}>
             <div className={classes.mainBanner}>
                 <div className={classes.mainBannerTextWrapper}>
-                    <Typography className={classes.mainBannerText}>Birdsong Homes <br /></Typography>
+                    <Typography className={classes.mainBannerText}>Birdsong Homes, LLC <br /></Typography>
                     {/* <i>every time</i> */}
                     {/* <a href="tel:585-" class="bannerCallButton">(585)</a> */}
                     {/* <AnchorLink to="/#sectionThree" title="Free Estimates">
@@ -663,7 +663,7 @@ const Main = () => {
                                 <li>Honeoye Falls-Lima Central School District</li>
                                 <li>1+ Acre lots</li>
                                 <li>City sewer</li>
-                                <li>Mature scrollToServices</li>
+                                <li>Mature trees</li>
                                 <li>Next to Birdsong Trail</li>
                             </ul>
                         </div>
@@ -672,14 +672,14 @@ const Main = () => {
                             <div>
                                 <img style={{ borderRadius: "50px" }} src="https://placehold.co/100x100" />
                                 <p style={{ marginBottom: "10px" }}>Name</p>
-                                <a href="tel: 585-xxx-xxxx">(585) xxx-xxxx</a>
+                                <a href="tel: 585-xxx-xxxx" style={{color: "white", textDecoration: "none"}}>(585) xxx-xxxx</a>
                                 <br />
-                                <a href="mailto:name@clintwoodapartments.com">name@clintwoodapartments.com</a>
+                                <a style={{color: "white", textDecoration: "none"}} href="mailto:name@clintwoodapartments.com">name@clintwoodapartments.com</a>
                             </div>
                         </div>
                     </div>
-                    <img style={{ width: "48%", objectFit: "cover", aspectRatio: "1", borderRadius: "16px", margin: "15px" }} src={redHouseTwo} />
-                    {/* <StaticImage className={classes.teamImage} src="../images/birdsong_trail_sunny_hernandez.png" /> */}
+                    {/* <img style={{ width: "48%", objectFit: "cover", aspectRatio: "1", borderRadius: "16px", margin: "15px" }} src={redHouseTwo} /> */}
+                    <StaticImage className={classes.teamImage} src="../images/birdsong_trail_sunny_hernandez.png" />
                     {/* <StaticImage className={classes.teamImage} height={"48em"} src="../images/zac-gudakov-red-house-2.jpg" /> */}
 
                 </div>
@@ -691,7 +691,7 @@ const Main = () => {
             <br />
             <section class="productSectionWrapper">
                 <div>
-                    <Typography className={classes.someOfWorkHeaderProducts}>Home/Floor Plans</Typography>
+                    <Typography className={classes.someOfWorkHeaderProducts}>Maps</Typography>
                     <div class="productCardWrapper">
                         <div
                             class="flip-card"
