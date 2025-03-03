@@ -167,7 +167,7 @@ body {
 
 .drawerItemLogin {
     display: flex;
-    background-color: #3b3a73;
+    background-color: #5e5d60;
     padding: 8px 16px;
     color: black;
     text-decoration: none;
@@ -220,13 +220,36 @@ body {
 .aboutUsText {
     line-height: 2;
     margin-bottom: 0;
-    color: #6198eb;
+    color: #5e5d60;
 }
 
 .aboutUsTextWrapper {
     padding: 1rem 0;
     margin-right: 1rem;
     width: 50%;
+    color: white;
+    background-color: #5e5d60;
+    margin-bottom: 0;
+    color: white;
+    padding: 30px;
+    border-radius: 1em;
+    margin: 15px;
+}
+
+.aboutTextDetails {
+    background-color: #5e5d60;
+    margin-bottom: 0;
+    color: white;
+    padding: 30px;
+    border-radius: 1em;
+    margin: 15px;
+}
+
+.aboutTextHeader {
+    margin: 15px;
+    text-align: center;
+    line-height: 2em;
+    color: white;
 }
 
 .flip-card {
@@ -403,7 +426,7 @@ body {
 }
 
 .bannerCallButton {
-    background-color: #3b3a73;
+    background-color: #5e5d60;
     color: white;
     width: 200px;
     margin: 20px auto;
@@ -421,11 +444,11 @@ body {
 
 .freeEstimateScrollButton {
     background-color: white;
-    color: #3b3a73;
+    color: #5e5d60;
     width: 200px;
     margin: 20px auto;
     border-radius: 35px;
-    border: 1px solid #3b3a73;
+    border: 1px solid #5e5d60;
     padding: 5px;
     text-decoration: none;
     text-align: center;
@@ -439,11 +462,11 @@ body {
 .contactUsButtonStyled {
     display: flex;
     background-color: white;
-    color: #3b3a73;
+    color: #5e5d60;
     width: 200px;
     margin: 20px auto;
     border-radius: 35px;
-    border: 1px solid #3b3a73;
+    border: 1px solid #5e5d60;
     padding: 10px;
     text-decoration: none;
     text-align: center;
@@ -452,7 +475,7 @@ body {
 }
 
 .testimonialCard {
-    background-color: #3b3a73;
+    background-color: #5e5d60;
     width: 300px;
 
     margin: 1rem;
@@ -540,7 +563,7 @@ body {
 
 .footerRoot {
     display: flex;
-    background-color: #3b3a73;
+    background-color: #5e5d60;
     color: white;
 }
 

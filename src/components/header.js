@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { Typography, makeStyles } from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
-import STLogo from "../images/logo/logo.jpeg"
+import STLogo from "../images/logo/logo.svg"
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -29,7 +29,7 @@ const withStyles = makeStyles(() => ({
     position: "fixed",
     display: "flex",
     // background: "#4c86d1",
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     color: "white",
     justifyContent: "space-between",
     width: "100%",
@@ -42,7 +42,7 @@ const withStyles = makeStyles(() => ({
     position: "fixed",
     display: "flex",
     // background: "#4c86d1",
-    backgroundColor: "white",
+    backgroundColor: "black",
     color: "white",
     justifyContent: "space-between",
     width: "100%",
@@ -108,13 +108,13 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "1rem",
     fontSize: "2.5rem",
-    color: "#3b3a73",
+    color: "#5e5d60",
     "@media(min-width: 961px)": {
       display: "none"
     }
   },
   hamburgerIconScroll: {
-    color: "#3b3a73",
+    color: "#5e5d60",
     margin: "1rem",
     fontSize: "2.5rem",
     "@media(min-width: 961px)": {
@@ -128,7 +128,7 @@ const withStyles = makeStyles(() => ({
   },
   navCallButton: {
     display: "flex",
-    backgroundColor: "#3b3a73",
+    backgroundColor: "#5e5d60",
     // backgroundColor:"#d51d35",
     textDecoration: "none",
     alignItems: "center",
@@ -198,7 +198,7 @@ const Header = ({ siteTitle }) => {
   const [navbarScroll, setNavbarScroll] = useState(false)
 
   //logo scroll when active
-  const [navBarColor, setNavBarColor] = useState("white")
+  const [navBarColor, setNavBarColor] = useState("black")
 
   //navbar scroll changeBackground function
   const changeBackground = () => {
@@ -218,7 +218,7 @@ const Header = ({ siteTitle }) => {
   //logo scroll function
   const changeColor = () => {
     if (window.scrollY >= 60) {
-      setNavBarColor("blue")
+      setNavBarColor("black")
     } else {
       setNavBarColor("white")
     }
@@ -240,7 +240,7 @@ const Header = ({ siteTitle }) => {
             {/* <WaterDropIcon className={classes.navLogo} alt="company logo" /> */}
             <img src={STLogo} className={classes.navLogo} alt="company logo"/>
             {/* <img src={STLogoTwo} className={classes.navLogo} alt="company logo"/> */}
-            <Typography className={classes.navLogoText}>Birdsong Homes</Typography>
+            <Typography className={classes.navLogoText}>Branford Management</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>

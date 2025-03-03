@@ -4,7 +4,9 @@ import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
 import { StaticImage } from "gatsby-plugin-image"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import houseWideOne from "../images/ST_house_one.jpeg"
+import houseWideOne from "../images/new-housebinyaminmellish.jpg"
+import birdSongTrail from "../images/birdsong_trail_sunny_hernandez.png"
+//credit - https://www.newyorkupstate.com/western-ny/2021/04/visit-a-fairy-village-on-a-magical-trail-in-upstate-new-york.html
 import truckTwo from "../images/ST_truck_2.jpeg"
 import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@mui/icons-material/Email';
@@ -110,7 +112,7 @@ const withStyles = makeStyles(() => ({
     someOfWorkHeaderProducts: {
         textAlign: "center",
         fontSize: "2rem",
-        color: "#3b3a73",
+        color: "#5e5d60",
         backgroundColor: "transparent",
         padding: "10px",
         width: "100%",
@@ -429,7 +431,7 @@ const withStyles = makeStyles(() => ({
         margin: "40px 0"
     },
     quoteButtonLink: {
-        backgroundColor: "#3b3a73",
+        backgroundColor: "#5e5d60",
         color: "white",
         textTransform: "none",
         width: "300px",
@@ -454,7 +456,7 @@ const withStyles = makeStyles(() => ({
     connectHeader: {
         fontSize: "2rem",
         textAlign: "center",
-        color: "#3b3a73",
+        color: "#5e5d60",
         padding: "10px",
         // textTransform: "uppercase"
     },
@@ -561,7 +563,8 @@ const withStyles = makeStyles(() => ({
         fontFamily: "'Montserrat', sans-serif !important",
         zIndex: 1,
         height: "fit-content",
-        opacity: "0.85",
+        opacity: "0.75",
+        backgroundColor: "black",
         // borderRadius: "35px",
         padding: "20px",
         "@media(max-width:600px)": {
@@ -584,11 +587,11 @@ const withStyles = makeStyles(() => ({
     },
     freeEstimateScrollButton: {
         backgroundColor: "white",
-        color: "#3b3a73",
+        color: "#5e5d60",
         width: "200px",
         margin: "20px auto",
         borderRadius: "35px",
-        border: "1px solid #3b3a73",
+        border: "1px solid #5e5d60",
         padding: "5px",
         textDecoration: "none",
         textAlign: "center",
@@ -620,8 +623,7 @@ const withStyles = makeStyles(() => ({
         lineHeight: 2,
         marginBottom: 0,
         color: "white",
-        backgroundColor: "#3b3a73",
-        padding: "20px",
+        backgroundColor: "#5e5d60",
         borderRadius: "16px",
         margin: "15px"
     }
@@ -638,7 +640,7 @@ const Main = () => {
                 <div className={classes.mainBannerTextWrapper}>
                     <Typography className={classes.mainBannerText}>Birdsong Homes <br /></Typography>
                     {/* <i>every time</i> */}
-                    <a href="tel:585-" class="bannerCallButton">(585)</a>
+                    {/* <a href="tel:585-" class="bannerCallButton">(585)</a> */}
                     {/* <AnchorLink to="/#sectionThree" title="Free Estimates">
                         <Typography className={classes.freeEstimateScrollButton}>Free Estimates</Typography>
                     </AnchorLink> */}
@@ -647,14 +649,21 @@ const Main = () => {
             <span className={classes.scrollToSectionOne} id="sectionOne"></span>
             <br />
             <section class="aboutSectionWrapper">
-                <Typography className={classes.someOfWorkHeaderProducts}>About Us</Typography>
+                <Typography className={classes.someOfWorkHeaderProducts}>About Birdsong Homes</Typography>
                 <div class="aboutWrapper">
+
                     <div class="aboutUsTextWrapper">
-                        <Typography className={classes.aboutUsText}>Paragraph One</Typography>
-                        <Typography className={classes.aboutUsText}>Paragraph Two</Typography>
+                        <h2 class="aboutTextHeader">A new luxury neighborhood in the Honeoye Falls-Lima Central School District.
+                        </h2>
+                        <div class="aboutTextDetails">
+                            <ul>
+                                <li>Packages from the $xxx,000</li>
+                                <li>two</li>
+                            </ul>
+                        </div>
 
                     </div>
-                    <StaticImage className={classes.teamImage} src="../images/alex-haney-food.jpg" />
+                    <StaticImage className={classes.teamImage} src="../images/birdsong_trail_sunny_hernandez.png" />
                 </div>
 
                 <Typography className={classes.sectionTitleText}>Results/Recent Projects</Typography>
@@ -968,7 +977,7 @@ const Main = () => {
 
             </section>
 
-            
+
             <span className={classes.scrollToContact} id="areasserved"></span>
             <br />
             <section class="py-5 section-bubble4">
@@ -979,7 +988,7 @@ const Main = () => {
 
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:585-" class="contactUsButtonStyled">
-                                <Button style={{ textTransform: "none", color: "#3b3a73" }}>
+                                <Button style={{ textTransform: "none", color: "#5e5d60" }}>
                                     <PhoneIcon className={classes.phoneIcon} />
                                     (585)
                                 </Button>
@@ -987,7 +996,7 @@ const Main = () => {
                             <div className={classes.contactWrapper}>
                                 {/* <Typography>General Questions</Typography> */}
                                 <a href="mailto:" class="contactUsButtonStyled">
-                                    <Button style={{ textTransform: "none", color: "#3b3a73" }}>
+                                    <Button style={{ textTransform: "none", color: "#5e5d60" }}>
                                         <EmailIcon className={classes.phoneIcon} />
                                         Email Us
                                     </Button>
