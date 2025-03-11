@@ -655,25 +655,24 @@ const Main = () => {
                 <div class="aboutWrapper">
 
                     <div class="aboutUsTextWrapper">
-                        <h2 class="aboutTextHeader">A new luxury neighborhood in the Honeoye Falls-Lima Central School District.
+                        <h2 class="aboutTextHeader">8 Exclusive Home Sites
                         </h2>
                         <div class="aboutTextDetails">
-                            <ul>
+                            {/* <ul>
                                 <li>Packages from the $xxx,000</li>
                                 <li>Honeoye Falls-Lima Central School District</li>
                                 <li>1+ Acre lots</li>
                                 <li>City sewer</li>
                                 <li>Mature trees</li>
                                 <li>Next to Birdsong Trail</li>
-                            </ul>
+                            </ul> */}
                         </div>
                         <div style={{ margin: "15px" }}>
                             <h4>For more information contact:</h4>
                             <div>
-                                <img style={{ borderRadius: "50px" }} src="https://placehold.co/100x100" />
-                                <p style={{ marginBottom: "10px" }}>Name</p>
-                                <a href="tel: 585-xxx-xxxx" style={{color: "white", textDecoration: "none"}}>(585) xxx-xxxx</a>
-                                <br />
+                                {/* <img style={{ borderRadius: "50px" }} src="https://placehold.co/100x100" /> */}
+                                {/* <p style={{ marginBottom: "10px" }}>Name</p> */}
+                                {/* <a href="tel: 585-xxx-xxxx" style={{color: "white", textDecoration: "none"}}>(585) xxx-xxxx</a> */}
                                 <a style={{color: "white", textDecoration: "none"}} href="mailto:name@clintwoodapartments.com">name@clintwoodapartments.com</a>
                             </div>
                         </div>
@@ -815,7 +814,7 @@ const Main = () => {
 
             </section>
 
-            <span className={classes.scrollToLocation} id="sectionThree"></span>
+            {/* <span className={classes.scrollToLocation} id="sectionThree"></span>
 
             <section style={{ minHeight: "300px" }} className={classes.container}>
                 <div className={classes.aboutWrapper}>
@@ -844,12 +843,12 @@ const Main = () => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <span className={classes.scrollToContact} id="testimonials"></span>
             <br />
 
-            <section class="py-5 section-bubble4">
+            {/* <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
                     <div>
                         <Typography className={classes.connectHeader}>Photo Gallery/Amentities</Typography>
@@ -874,10 +873,10 @@ const Main = () => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <span className={classes.scrollToContact} id="contactForm"></span>
-
+                <br/>
             <section>
                 <Typography className={classes.connectHeader}>Schedule a Tour/Check for Lot Availability & Pricing</Typography>
                 <div class="areasServedWrapper">
@@ -925,7 +924,7 @@ const Main = () => {
             </section>
 
 
-            <span className={classes.scrollToContact} id="areasserved"></span>
+            <span className={classes.scrollToContact} id="contactUs"></span>
             <br />
             <section class="py-5 section-bubble4">
                 <div className={classes.containerContactUs}>
@@ -934,18 +933,18 @@ const Main = () => {
                         <br />
 
                         <div className={classes.phoneEmailWrapper}>
-                            <a href="tel:585-" class="contactUsButtonStyled">
+                            {/* <a href="tel:585-" class="contactUsButtonStyled">
                                 <Button style={{ textTransform: "none", color: "#5e5d60" }}>
                                     <PhoneIcon className={classes.phoneIcon} />
                                     (585)
                                 </Button>
-                            </a>
+                            </a> */}
                             <div className={classes.contactWrapper}>
                                 {/* <Typography>General Questions</Typography> */}
                                 <a href="mailto:" class="contactUsButtonStyled">
                                     <Button style={{ textTransform: "none", color: "#5e5d60" }}>
                                         <EmailIcon className={classes.phoneIcon} />
-                                        Email Us
+                                        Send us an email
                                     </Button>
                                 </a>
                             </div>

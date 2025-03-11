@@ -40,7 +40,7 @@ const withStyles = makeStyles(() => ({
     marginTop: "auto",
     marginBottom: "25px",
     color: "white",
-    textAlign: "center",
+    textAlign: "left",
     fontWeight: "bold"
   },
   dougDesignText: {
@@ -90,10 +90,10 @@ const Layout = ({ children }) => {
           <div className={classes.footerContent}>
             <div class="footerContactWrapper">
 
-              <a href="tel:585" className={classes.footerPhone}>
+              {/* <a href="tel:585" className={classes.footerPhone}>
                 <PhoneIcon className={classes.phoneIcon} />
                 (585)
-              </a>
+              </a> */}
               {/* <div class="socialLinkWrapper">
                 <a href="https://www.facebook.com/p/Small-Tall-Power-Washing-100076344693110/" target="_blank" class="socialLink">
                   <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
@@ -102,8 +102,7 @@ const Layout = ({ children }) => {
             </div>
 
 
-            <div style={{ width: "100%", border: "1px solid #d51d35", marginBottom: "20px" }}></div>
-            <p className={classes.copyrightText}> © {new Date().getFullYear()} Birdsong Homes</p>
+            <p className={classes.copyrightText}> © {new Date().getFullYear()} Birdsong Homes, LLC</p>
             <p class="rocsitesText">Website by <span><a href="https://www.rocsites.com/" target="_blank">RocSites</a></span></p>
           </div>
         </footer>

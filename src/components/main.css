@@ -490,7 +490,7 @@ body {
     display: flex;
     background-color: white;
     color: #5e5d60;
-    width: 200px;
+    width: 250px;
     margin: 20px auto;
     border-radius: 35px;
     border: 1px solid #5e5d60;
@@ -604,7 +604,7 @@ body {
     font-size: 0.7rem;
     margin-bottom: 15px;
     color: white;
-    text-align: center;
+    text-align: left;
 }
 
 .rocsitesText a {

@@ -5,6 +5,7 @@ import { Typography, makeStyles } from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
 import STLogo from "../images/logo/logo.svg"
+import STLogoWhite from "../images/logo/logo_white.svg"
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -43,20 +44,19 @@ const withStyles = makeStyles(() => ({
     display: "flex",
     // background: "#4c86d1",
     backgroundColor: "white",
-    color: "white",
     justifyContent: "space-between",
     width: "100%",
     height: "112px",
     top: 0,
     boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
-    zIndex: 2,
+    zIndex: 2
     // padding: "1rem"
   },
   navBarTitle: {
     maxWidth: 960,
   },
   navButton: {
-    color: "black",
+    color: "white",
     // fontWeight: "bold",
     textTransform: "none",
     margin: "auto 10px",
@@ -143,7 +143,7 @@ const withStyles = makeStyles(() => ({
       backgroundColor: "#d51d35",
       boxShadow: 'none',
       cursor: "pointer"
-  },
+    },
   },
   navCallButtonMobile: {
     display: "flex",
@@ -171,14 +171,17 @@ const withStyles = makeStyles(() => ({
     textDecoration: "none"
   },
   navLogoLink: {
-    color: 'black',
     textDecoration: `none`,
     display: "flex",
     margin: "10px"
   },
   navLogoText: {
-    color: "black",
-    margin: "auto"
+    margin: "auto",
+    color: "white"
+  },
+  navLogoTextScroll: {
+    margin: "auto",
+    color: "black"
   },
 }))
 
@@ -238,9 +241,13 @@ const Header = ({ siteTitle }) => {
         <div className={classes.navBarTitle}>
           <Link to="/" className={classes.navLogoLink}>
             {/* <WaterDropIcon className={classes.navLogo} alt="company logo" /> */}
-            <img src={STLogo} className={classes.navLogo} alt="company logo"/>
+            {navbarScroll ? (
+              <img src={STLogo} className={classes.navLogo} alt="company logo" />
+
+            ) : <img src={STLogoWhite} className={classes.navLogo} alt="company logo" />
+            }
             {/* <img src={STLogoTwo} className={classes.navLogo} alt="company logo"/> */}
-            {/* <Typography className={classes.navLogoText}>Branford Management</Typography> */}
+            <Typography className={navbarScroll ? classes.navLogoTextScroll : classes.navLogoText}>Birdsong Homes, LLC</Typography>
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
@@ -248,19 +255,19 @@ const Header = ({ siteTitle }) => {
             to="/#sectionOne" title="About">
           </AnchorLink>
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#sectionTwo" title="Home/Floor Plans">
+            to="/#sectionTwo" title="Maps">
           </AnchorLink>
-          <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
+          {/* <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#sectionThree" title="The Neighborhood">
-          </AnchorLink>
-          <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
+          </AnchorLink> */}
+          {/* <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
             to="/#testimonials" title="Amenities">
-          </AnchorLink>
+          </AnchorLink> */}
           <AnchorLink className={navbarScroll ? classes.navButtonScroll : classes.navButton}
-            to="/#areasserved" title="Schedule a Tour">
+            to="/#contactForm" title="Schedule a Tour">
           </AnchorLink>
           <AnchorLink className={classes.navCallButton}
-            to="/#contactForm" title="Contact Us">
+            to="/#contactUs" title="Contact Us">
           </AnchorLink>
 
 
@@ -312,19 +319,19 @@ const Header = ({ siteTitle }) => {
                   to="/#sectionOne" title="About">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#sectionTwo" title="Home/Floor Plans">
+                  to="/#sectionTwo" title="Maps">
                 </AnchorLink>
-                <AnchorLink className={classes.navButtonMobile}
+                {/* <AnchorLink className={classes.navButtonMobile}
                   to="/#sectionThree" title="The Neighborhood">
-                </AnchorLink>
+                </AnchorLink> */}
                 <AnchorLink className={classes.navButtonMobile}
                   to="/#testimonials" title="Amenities">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#areasserved" title="Schedule a Tour">
+                  to="/#contactForm" title="Schedule a Tour">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#contactForm" title="Contact Us">
+                  to="/#contactUs" title="Contact Us">
                 </AnchorLink>
               </div>
 
