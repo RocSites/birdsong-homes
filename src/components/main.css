@@ -222,6 +222,8 @@ body {
 .aboutWrapper {
     display: flex;
     justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
     padding: 2rem 1rem;
 }
 
@@ -314,6 +316,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 497px;
+}
+
+.moreInfoWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
 }
 
 .flip-card-front,

@@ -594,7 +594,7 @@ const withStyles = makeStyles(() => ({
     },
     teamImage: {
         // height: "48em !important",
-        maxWidth: "50%",
+        maxWidth: "80%",
         padding: "10px",
         borderRadius: "10px",
         margin: "20px",
@@ -638,13 +638,11 @@ const Main = () => {
             <span className={classes.scrollToSectionOne} id="sectionOne"></span>
             <br />
             <section class="aboutSectionWrapper">
-                <Typography className={classes.someOfWorkHeaderProducts}>About Birdsong Homes</Typography>
+                {/* <Typography className={classes.someOfWorkHeaderProducts}>About Birdsong Homes</Typography> */}
                 <div class="aboutWrapper">
 
                     <div class="aboutUsTextWrapper">
-                        <h2 class="aboutTextHeader">8 Exclusive Home Sites
-                        </h2>
-                        <div class="aboutTextDetails">
+                        {/* <div class="aboutTextDetails"> */}
                             {/* <ul>
                                 <li>Packages from the $xxx,000</li>
                                 <li>Honeoye Falls-Lima Central School District</li>
@@ -653,19 +651,22 @@ const Main = () => {
                                 <li>Mature trees</li>
                                 <li>Next to Birdsong Trail</li>
                             </ul> */}
-                        </div>
-                        <div style={{ margin: "15px" }}>
+                        {/* </div> */}
+                        <div class="moreInfoWrapper">
                             <h4>For more information contact:</h4>
                             <div>
                                 {/* <img style={{ borderRadius: "50px" }} src="https://placehold.co/100x100" /> */}
                                 {/* <p style={{ marginBottom: "10px" }}>Name</p> */}
                                 {/* <a href="tel: 585-xxx-xxxx" style={{color: "white", textDecoration: "none"}}>(585) xxx-xxxx</a> */}
-                                <a style={{color: "white", textDecoration: "none"}} href="mailto:name@clintwoodapartments.com">name@clintwoodapartments.com</a>
+                                <a style={{ color: "white", textDecoration: "none" }} href="mailto:info@clintwoodapartments.com">info@clintwoodapartments.com</a>
                             </div>
                         </div>
                     </div>
                     {/* <img style={{ width: "48%", objectFit: "cover", aspectRatio: "1", borderRadius: "16px", margin: "15px" }} src={redHouseTwo} /> */}
-                    <StaticImage className={classes.teamImage} src="../images/birdsong_trail_sunny_hernandez.png" />
+                    <StaticImage className={classes.teamImage} src="../images/birdsong_sign_1edited.png" />
+                    <StaticImage className={classes.teamImage} src="../images/birdsong_sign_2_edited.png" />
+                    <StaticImage className={classes.teamImage} src="../images/birdsong_sign_4_edited.png" />
+
                     {/* <StaticImage className={classes.teamImage} height={"48em"} src="../images/zac-gudakov-red-house-2.jpg" /> */}
 
                 </div>
@@ -680,9 +681,9 @@ const Main = () => {
                     <Typography className={classes.someOfWorkHeaderProducts}>Maps</Typography>
                     {/* <CardGroup/> */}
                     <div class="mapWrapper">
-                        <StaticImage class="mapImage" src="../images/zoomed_out_sat.png"/>
-                        <StaticImage class="mapImage" src="../images/map_zoomed_in.png"/>
-                        <StaticImage class="mapImage" src="../images/map_lot_lines.png"/>
+                        <StaticImage class="mapImage" src="../images/zoomed_out_sat.png" />
+                        <StaticImage class="mapImage" src="../images/map_zoomed_in.png" />
+                        <StaticImage class="mapImage" src="../images/map_lot_lines.png" />
                     </div>
                 </div>
 
@@ -752,7 +753,7 @@ const Main = () => {
             </section> */}
 
             <span className={classes.scrollToContact} id="contactForm"></span>
-                <br/>
+            <br />
             <section>
                 <Typography className={classes.connectHeader}>Schedule a Tour/Check for Lot Availability & Pricing</Typography>
                 <div class="areasServedWrapper">
