@@ -40,12 +40,20 @@ body {
     aspect-ratio: 1/1;
 }
 
-.chillBlock {
-    background-color: #b9d9eb;
+.productTitleText {
+    text-align: center;
+    margin: 15px;
 }
 
-.grillBlock {
-    background-color: #f03d3dcf;
+.mapWrapper {   
+    display: flex;
+    justify-content: center;    
+}
+
+.mapImage {
+    max-width: 800px;
+    border-radius: 34px;
+    margin: 10px;;
 }
 
 .menuLink {
